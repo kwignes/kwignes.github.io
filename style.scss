@@ -189,4 +189,21 @@ main.container {
     }
 }
 
+.PageNavigation {
+    overflow: auto;
+}
+a.prev {
+    float: left;
+}
+a.next {
+    float: right;
+}
+
 @import 'highlights';
+
+figure.highlight code {
+    background: #fff;
+    color: inherit;
+    padding: 0;
+    font-size: 100%;
+}
