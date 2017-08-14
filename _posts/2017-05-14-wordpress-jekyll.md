@@ -2,9 +2,8 @@
 layout: post
 title: "WordPress to Jekyll"
 categories: [Jekyll]
-tags: 
-- Jekyll
 ---
+   <img src="{{ site.url }}/img/wordpress.jpeg" alt="Kris Wignes">
 
 <p>Finally got around to putting this site together - powered by Jekyll and hosted on GitHub. The setup was smooth thanks to great documentation by <a href="http://jmcglone.com/guides/github-pages/" target="_blank">Jonathan McGlone</a>.</p>
 

@@ -3,18 +3,21 @@ layout: post
 title: "Troubleshooting WampServer Orange Icon"
 categories: [WAMP]
 ---
+   <img src="{{ site.url }}/img/wamp.jpeg" alt="Kris Wignes">
 
 
 <p>The WAMP orange icon occurs when there's an issue connecting to localhost. Common reasons are from mis-configured ports, Skype interference, and missing services. If you experience this problem, here are a number of ways to troubleshoot the network.</p>
 
-<a href="#install-service">Install Apache Service</a><br>
-<a href="#skype">Turn off Port 80 in Skype</a><br>
-<a href="#wwwps">Stop World Wide Web Publishing Service</a><br>
-<a href="#service-started">Make Sure Apache and MySQL is started</a><br>
-<a href="#uninstall-servers">Uninstall Servers Incompatible with WAMP</a><br>
-<a href="#packages">Ensure Microsoft Redistributable Packages are Installed</a><br>
-<a href="#firewall">Adjust Firewall and Anti-Virus Settings</a><br>
-<a href="#change-port">Change Port Number for Apache</a>
+<ul>
+<li><a href="#install-service">Install Apache Service</a></li>
+<li><a href="#skype">Turn off Port 80 in Skype</a></li>
+<li><a href="#wwwps">Stop World Wide Web Publishing Service</a></li>
+<li><a href="#service-started">Make Sure Apache and MySQL is started</a></li>
+<li><a href="#uninstall-servers">Uninstall Servers Incompatible with WAMP</a></li>
+<li><a href="#packages">Ensure Microsoft Redistributable Packages are Installed</a></li>
+<li><a href="#firewall">Adjust Firewall and Anti-Virus Settings</a></li>
+<li><a href="#change-port">Change Port Number for Apache</a></li>
+</ul>
 
 <hr>
 <h3 id="install-service">Install Apache Service</h3>

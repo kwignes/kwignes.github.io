@@ -1,7 +1,11 @@
 ---
 layout: post
 title: "Single-Page Application (SPA) with AngularJS Routing and Animation"
+categories: [JavaScript]
 ---
+
+   <img src="{{ site.url }}/img/angular.jpeg" alt="Kris Wignes">
+
 
 <p>AngularJS is a JavaScript framework for building web-apps. It extends HTML syntax with directives that provide specific behavior to the DOM and uses the Model View Controller (MVC) pattern to separate logic (controller) from the data (Model) and what the user sees (View).</p>
 

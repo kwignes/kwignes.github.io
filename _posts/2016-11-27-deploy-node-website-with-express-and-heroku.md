@@ -3,6 +3,7 @@ layout: post
 title: "Deploy a Node Website with Express and Heroku"
 categories: [JavaScript]
 ---
+   <img src="{{ site.url }}/img/code.jpeg" alt="Kris Wignes">
 
 <p>Node.js is a server-side JavaScript environment built on Google Chrome’s engine. It allows you to write JS on the server for quick front and back-end development. In this tutorial, we're going to install Node and use NPM (Node Package Manager) to include dependencies for our project. Once our website is up an running, we will deploy it to Heroku, a cloud application platform.</p>
 
