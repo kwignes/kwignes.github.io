@@ -10,7 +10,7 @@ layout: default
   {% for post in site.posts %}
 
     <li><a href="{{ post.url }}">
-	    <h3>{{ post.title }}</h3>
+	    <h3>{{ post.title }} <span class="arrow-show">»</span></h3>
 	        <div class="date">
 		    {{ post.date | date: "%B %e, %Y" }}
 		  </div>
