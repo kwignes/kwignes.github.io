@@ -135,7 +135,8 @@ hr {
 
   @media screen and (max-width: 768px) {
 a.logo {
-  top: .24em;
+  top: .4em;
+  margin-left: 20px;
 }
 }
 
@@ -202,7 +203,7 @@ nav ul li {
   color: #fff;
   display: none;
   font-size: 20px;
-    margin: 10px 15px 4px;
+    margin: 10px 15px;
   font-family: bold;
   position: relative;
   padding-left: 1.25em;
@@ -211,8 +212,8 @@ nav ul li {
 .mobile-icon:before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0.2em;
+  right: 35px;
+  top: 0.4em;
   width: 1.2em;
   height: 0.16em;
   background: white;
@@ -248,6 +249,14 @@ nav ul li {
       text-align: left;
       padding: 0;
     }
+nav ul li:first-child {
+        border-top: 1px solid #333;
+    padding-top: 10px;
+  }
+
+  nav ul li:last-child {
+    display: none;
+  }
 
     nav ul li a {
       width: 100%;
