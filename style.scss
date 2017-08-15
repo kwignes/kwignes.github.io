@@ -9,14 +9,15 @@
 
 @import "normalize";
 html {
-  height: 100%;
-  color: #444;
+      position: relative;
+    min-height: 100%;
+  color: #333;
   font: 400 1em/1.6 'Open Sans', sans-serif;
   text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3, h4 ,h5, h6 {
-  color: #222;
+  color: #333;
 }
 
 h1 {
@@ -124,6 +125,7 @@ hr {
     position: absolute;
     z-index: 999;
     top: .37em;
+    font-weight: 600;
     margin-left: 60px;
     font-weight: 600;
     &:hover, &:focus, &:active {
@@ -173,17 +175,24 @@ nav ul li {
   display: inline-block;
   text-transform: uppercase;
   font-weight: 600;
-  padding: 15px;
   margin: 0;
   letter-spacing: 1px;
   a {
-  color: #fff;   
+  color: #fff;  
+  padding: 15px; 
+  display: block;
+      &:focus {
+    background-color: #363636;
+    color: #fff;
+  }
+  &:hover {
+    text-shadow: 0 0 30px #fefcc9;
+    color: #fff;
+  }
   }
 }
 
- nav a:hover {
-  color: #ccc;
-}
+
 /* Mobile navigation */
 .mobile-icon {
   width: 100%;
@@ -271,6 +280,9 @@ nav ul li {
     color: #888;
     margin-bottom: 0;
   }
+  .arrow-show {
+    display: none;
+  }
   p {
     color: #444;
     margin-bottom: 0;
@@ -290,11 +302,18 @@ nav ul li {
     }
     }
   }
+  a {
+    color: #333;
+    display: block;
+  }
   a:hover {
     color: #888;
   }
   a:hover h3 {
     color: #bd4147;
+  }
+  a:hover .arrow-show {
+    display: inline-block;
   }
   .date {
     font-size: 12px;
@@ -338,7 +357,7 @@ ul.posts {
     font-size: .8125em;
   }
   .post-categories {
-    margin-bottom: 1.5em;
+    margin: .5em 0 1.5em;
     a {
       text-decoration: none;
     }
@@ -390,7 +409,7 @@ ul.posts {
 }
 
 main.container {
-    margin: 6em auto 4em;
+    margin: 6em auto;
 }
 
 
@@ -477,7 +496,7 @@ padding:.5em;
 #thankyouBlock {
 text-align:center;
 color:rgba(255,255,255,0.6);
-background:#414a4f;
+background:#222222;
 padding:1em;
 margin:1em;
 border:1px #ccc solid;
@@ -490,8 +509,26 @@ div#thankyouBlock p {
 
 footer {
   font-size: 12px;
-  text-align: center;
   text-transform: uppercase;
+
+  clear: both;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    clear: both;
+    position: absolute;
+    bottom: 0;
+    clear: both;
+    height: auto;
+    margin-top: 3em;
+    color: #9ba1a6;
+    background-color: #f2f3f3;
+    border-top: 1px solid #dddddd;
+    p {
+      margin: 0;
+      padding: 15px 60px;
+    }
 }
 
 
