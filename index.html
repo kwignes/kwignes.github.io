@@ -2,28 +2,49 @@
 layout: default
 ---
 
+<main class="container">
+
+<div class="intro">
+<h1>Hi, I'm Kris Wignes,</h1>
+<p>I'm a Front-end Developer from Vancouver, BC. I build responsive websites specializing in HTML, CSS, JavaScript, and WordPress. Check out some of my latest work below or if you have a project in mind feel free to <a href="/contact/">get in touch</a> and I will get back to you as soon as I can.</p>
+</div>
+
+<h2>Work</h2>
+
+<div class="flex-grid-thirds projects">
+  <div class="col fade-in one"><a class="tiac" href="http://tiac.travel/" target="_blank">
+  <span>Tourism Industry Association of Canada</span></a>
+  <p>Coming Soon<br>
+  Website Development</p>
+  </div>
+  <div class="col fade-in two"><a class="reibc" href="https://www.reibc.org/" target="_blank"><span>Real Estate Institute of British Columbia</span></a>
+  <p>Support &amp; Maintenance</p>
+  </div>  
+  <div class="col fade-in three"><a class="western" href="http://westernelement.ca/" target="_blank"><span>Western Element Engineering</span></a>
+  <p>Website Development</p>
+  </div>
 
 
-<section id="hm-post">
-   <h1>Articles</h1>
-     <ul>
-  {% for post in site.posts %}
+</div>
 
-    <li><a href="{{ post.url }}">
-	    <h3>{{ post.title }} <span class="arrow-show">»</span></h3>
-	        <div class="date">
-		    {{ post.date | date: "%B %e, %Y" }}
-		  </div>
-	    {{ post.content | strip_html | truncatewords: 25 }}
-    </a></li>
 
-  {% endfor %}
-      </ul>
-</section>
+<div class="flex-grid-thirds projects">
+ 
 
-<section>
+  
+  <div class="col fade-in four"><a class="session" href="https://github.com/kwignes/secure_session_login" target="_blank"><span>BCIT Database Project</span></a>
+  <p>PHP &amp; MySQL</p>
+  </div>
+
+  <div class="col fade-in five"><a class="reg-form" href="http://dev-cb-technical-test.pantheonsite.io/" target="_blank"><span>Registration Form</span></a>
+  <p>WordPress Mockup</p>
+  </div>
+</div>
+
+</main>
+
 	<!-- projects -->
-	<h2>Recent Projects</h2>
+<!-- 	<h1>Projects</h1>
 		<ul>
 		    <li><a href="#">Tourism Industry Association of Canada</a><small> › Web development, 2017, <code>Coming soon</code></small></li>
 
@@ -31,6 +52,12 @@ layout: default
 
 		    <li><a href="https://www.mdpac.ca/" target="_blank">Medical Psychotherapy Association Canada</a><small> › Web development, 2017</small></li>	
 
-		</ul>
-	</section>
+		    <li><a href="https://www.reibc.org/" target="_blank">Real Estate Institute of British Columbia</a><small> › Support &amp; maintenance, 2016</small></li>
 
+		    <li><a href="/activity-profile/">Activity Profile</a><small> › App development, 2016</small></li>	
+
+		   	<li><a href="https://github.com/kwignes/secure_session_login" target="_blank">Secure Session</a><small> › BCIT Database Project, 2015</small></li>
+
+		    <li><a href="http://dev-cb-technical-test.pantheonsite.io/" target="_blank">Registration Form</a><small> › Wordpress, 2015</small></li>
+		</ul>
+ -->

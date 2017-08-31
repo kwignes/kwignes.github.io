@@ -3,7 +3,7 @@ layout: post
 title: "Troubleshooting WampServer Orange Icon"
 categories: [WAMP]
 ---
-   <img src="{{ site.url }}/img/wamp.jpeg" alt="Kris Wignes">
+   <img src="{{ site.url }}/img/wamp.jpg" alt="Kris Wignes">
 
 
 <p>The WAMP orange icon occurs when there's an issue connecting to localhost. Common reasons are from mis-configured ports, Skype interference, and missing services. If you experience this problem, here are a number of ways to troubleshoot the network.</p>
