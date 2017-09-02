@@ -31,7 +31,6 @@ h1 {
 
 h2 {
   font-size: 1.433em;
-  padding-bottom: .5em;
   margin: 2em 0 1em;
 }
 h3 {
@@ -59,6 +58,7 @@ pre {
   overflow: auto;
   border: 1px solid #ddd;
   padding: 10px;
+  font-size: 14px;
 }
 
 a {
@@ -100,18 +100,18 @@ hr {
 
 
 .btn {
-  -webkit-transition: background-color .2s;
-  transition: background-color .2s;
+
   display: inline-block;
   padding: .3em 1em;
   background-color: #0085c3;
+  border: 1px solid #0085c3;  
   color: #fff;
   cursor: pointer;
   font-size: .7125em;
   line-height: normal;
   text-decoration: none;
   &:hover, &:active, &:focus {
-    background-color: #EEE;
+    color: #fff;
   }
 }
 
@@ -421,7 +421,7 @@ header {
 // Intro
 
 .intro {
-  max-width: 570px;
+  max-width: 590px;
   font-size: 18px;
   margin-bottom: 4em;
 }
@@ -470,26 +470,35 @@ header {
     background-position: center;
     padding: 20px 15px;
     color: #333;
+    position: relative;
 }
 .projects a span {
-    background-color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+    color: #fff;
     padding: 10px;
     font-weight: bold;
     font-size: 14px;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;    
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(bottom,transparent 50%,rgba(0,0,0,.6) 100%);
+    background-image: linear-gradient(to top,transparent 50%,rgba(0,0,0,.6) 100%);  
 }
 .projects a:hover span, .projects a:active span, .projects a:focus span {
-  background-color: yellow;
+
 }
 .tiac {
-  background: url(img/jason-blackeye-209586.jpg);
+  background: url(img/tiac.jpg);
 }
 .western {
-  background: url(img/western-element.jpeg);
+  background: url(img/nvan.jpg);
 }
 .reibc {
-  background: url(img/reibc.jpeg);
+  background: url(img/reibc2.jpeg);
 }
 .session {
   background: url(img/secure-login.jpg);
@@ -526,33 +535,33 @@ header {
 }
 
 .fade-in.one {
--webkit-animation-delay: 0.3s;
--moz-animation-delay: 0.3s;
-animation-delay: 0.3s;
+-webkit-animation-delay: 0.1s;
+-moz-animation-delay: 0.1s;
+animation-delay: 0.1s;
 }
 
 .fade-in.two {
--webkit-animation-delay: 0.8s;
--moz-animation-delay:0.8s;
-animation-delay: 0.8s;
+-webkit-animation-delay: 0.5s;
+-moz-animation-delay:0.5s;
+animation-delay: 0.5s;
 }
 
 .fade-in.three {
+-webkit-animation-delay: 0.9s;
+-moz-animation-delay: 0.9s;
+animation-delay: 0.9s;
+}
+
+.fade-in.four {
 -webkit-animation-delay: 1.3s;
 -moz-animation-delay: 1.3s;
 animation-delay: 1.3s;
 }
 
-.fade-in.four {
--webkit-animation-delay: 1.8s;
--moz-animation-delay: 1.8s;
-animation-delay: 1.8s;
-}
-
 .fade-in.five {
--webkit-animation-delay: 2.3s;
--moz-animation-delay: 2.3s;
-animation-delay: 2.3s;
+-webkit-animation-delay: 1.7s;
+-moz-animation-delay: 1.7s;
+animation-delay: 1.7s;
 }
 
 
@@ -584,8 +593,12 @@ animation-delay: 2.3s;
 #hm-post {
   h2 {
     margin: 0;
-    font-size: 2em;
+    font-size: 1.8em;
     color: #3b3b3b;
+    line-height: 1.4;
+    &:hover, &:active, &:focus {
+      color: #0085c3;
+    }
   }
   p {
     color: #444;
@@ -610,7 +623,7 @@ animation-delay: 2.3s;
     display: block;
   }
   a:hover {
-    color: #888;
+    color: #0085c3;
   }
   a:hover h3 {
     color: #0085c3;
@@ -664,6 +677,17 @@ ul.posts {
     }
 }
 
+.read-more {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.read-more a:after {
+    font-family: FontAwesome;
+    content: '\f105';
+    padding-left: 10px;
+}
+
 .date {
   display: block;
   padding-bottom: .5em;
@@ -714,13 +738,13 @@ main.page-container {
 
 @media screen and (min-width: 768px) {
 main.container {
-    margin: 10em auto 5em;
+    margin: 12em auto 5em;
 }
 main.post-container {
-    margin: 10em auto 5em;
+    margin: 12em auto 5em;
 }
 main.page-container {
-     margin: 10em auto 5em;
+     margin: 12em auto 5em;
 }
 }
 
@@ -747,10 +771,20 @@ main.page-container {
 
 a.prev {
   float: left;
+    &:before {
+    font-family: FontAwesome;
+    content: '\f104';
+    padding-right: 8px;
+  }
 }
 
 a.next {
   float: right;
+  &:after {
+    font-family: FontAwesome;
+    content: '\f105';
+    padding-left: 8px;
+  }
 }
 
 
@@ -781,10 +815,14 @@ padding:.5em;
 width:100%;
 margin:.5em 0;
 color:#555;
-    border: 1px solid #fff;
+    border: 1px solid #eee;
     max-width: 300px;
     background-color: #eef4f4;
     display: block;
+}
+
+.contact-rap p:first-of-type {
+    margin-bottom: 2em;
 }
 
 
@@ -793,7 +831,7 @@ margin:.5em 0;
 width:100%;
 height:10em;
 padding:.5em;
-    border: 1px solid #fff;
+    border: 1px solid #eee;
     background-color: #eef4f4;
 }
 
@@ -801,10 +839,15 @@ padding:.5em;
     padding: .7em;
     cursor: pointer;
     background: #0085c3;
+    border: 1px solid #0085c3;
     color: #fff;
     max-width: 120px;
     font-size: 16px;
-    border: none;
+    &:hover, &:active, &:focus {
+      color: #0085c3;
+      background: #fff;
+      border: 1px solid #0085c3;
+    }
 }
 
 #thankyouBlock {
@@ -828,11 +871,17 @@ table {
 }
 
 table, td, th {
-    border: 1px solid #ddd;
     padding: 5px;
 }
+
 table td {
   width: 150px;
+  &:before {
+    font-family: FontAwesome;
+    content: '\f105';
+    padding-right: 10px;
+    color: #bbb;
+  }
 }
 
 footer {
@@ -847,9 +896,15 @@ footer {
     .social {
       float: right;
       .fa {
-        color: #cccccc;
+        
         font-size: 24px;
         margin-left: 15px;
+      }
+      a {
+        color: #cccccc;
+        &:hover, &:focus, &:active {
+          color: #0085c3;
+        }
       }
     }
 }
