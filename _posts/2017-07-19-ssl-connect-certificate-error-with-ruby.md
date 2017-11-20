@@ -5,7 +5,6 @@ categories: [Ruby]
 tags: 
 - Ruby
 ---
-   <img src="{{ site.url }}/img/ruby.jpg" alt="SSL Ruby Error">
 
 <p>While setting up a static environment, I came across this error from running: <code>gem install github-pages</code> (a gem for syncing Jekyll with GitHub Pages):</p>
 
