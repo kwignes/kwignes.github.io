@@ -2,29 +2,29 @@
 layout: default
 ---
 
-<main class="post-container">
 
 <article class="post">
+  <div class="post-intro">
 
   <h1>{{ page.title }}</h1>
 
     <div class="date">
     {{ page.date | date: "%B %e, %Y" }}
-  </div>
+    </div>
   
-  <div class="post-categories">
-  {% if post %}
-    {% assign categories = post.categories %}
-  {% else %}
-    {% assign categories = page.categories %}
-  {% endif %}
-  {% for category in categories %}
-  <p class="category"><a class="btn" href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a></p>
-  {% unless forloop.last %}&nbsp;{% endunless %}
-  {% endfor %}
+    <div class="post-categories">
+    {% if post %}
+      {% assign categories = post.categories %}
+    {% else %}
+      {% assign categories = page.categories %}
+    {% endif %}
+    {% for category in categories %}
+    <p><a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a></p>
+    {% unless forloop.last %}&nbsp;{% endunless %}
+    {% endfor %}
+    </div>
 </div>
 
-<hr>
   <div class="entry">
     {{ content }}
     <div class="footer-action">
@@ -41,4 +41,3 @@ layout: default
   {% include disqus.html %}
 </article>
 
-</main>
