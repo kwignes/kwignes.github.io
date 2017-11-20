@@ -2,7 +2,7 @@
 ---
 
 $primary: #777;
-$heading: #111;
+$heading: #333;
 $link: #0085c3;
 $font_family_1: 'Open Sans', sans-serif;
 
@@ -65,7 +65,7 @@ pre {
   font-family: monospace;
   font-size: 1em;
   overflow: auto;
-  border: 1px solid #ddd;
+  border: 1px solid #eee;
   padding: 10px;
   font-size: 14px;
   code {
@@ -125,7 +125,7 @@ header {
   display: block;
   width: 100%;
   overflow: auto;
-  border-bottom: 1px solid #eee;
+  background: #f7f9f9;
 }
 
 .container {
@@ -175,11 +175,11 @@ header {
     -webkit-tap-highlight-color: transparent;
     text-decoration: none;
     padding: 0.7em 1em 0.7em 0;
-    color: $primary;
+    color: #fff;
     width: 100%;
     float: left;
     &:hover {
-      color: $link;
+      color: #fff;
     }
   }
 }
@@ -313,19 +313,15 @@ header {
     line-height: 76px;
     text-align: center;
     color: $primary;
-    font-size: 14px;
+    font-size: 12px;
     border-top: 0;
     float: left;
     margin: 0;
-    font-weight: 400;
+    font-weight: 700;
     text-transform: uppercase;
+    &:hover, &:active, &:focus {
+      color: $primary;
     }
-    ul {
-      ul {
-        a {
-          display: none;
-        }
-      }
     }
   }
 }
@@ -342,7 +338,7 @@ header {
       }
       .nav-collapse ul {
         padding: 0 20px;
-        background: #f9f9f9;
+        background: #333;
         border-top: 1px solid #f2f2f2;
       }
     }
@@ -353,23 +349,19 @@ header {
 
 
 .intro {
-    margin: 7em 0 4em;
+    margin: 4em auto;
     max-width: 560px;
-    font-weight: 300;
     color: #777;
     font-size: 18px;
     img {
     border-radius: 100%;
+    margin: 0 auto;
+    border: 1px solid #e1e1e1;
+    padding: 5px;
+    display: block;
   }  
 }
-@media (min-width: 320px) {
-  .intro {
-    img {
-      float: left;
-      margin-right: 20px;        
-    }
-  }
-}
+
 
 
 
@@ -448,7 +440,7 @@ header {
 .col {
   flex: 1;
   margin-right: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 
@@ -471,63 +463,48 @@ header {
     display: block;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     padding: 20px 15px;
     position: relative;
-    span {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    color: #fff;
-    padding: 10px;
-    font-weight: 400;
-    font-size: 13px;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    background-color: transparent;
-    background-image: -webkit-linear-gradient(bottom, transparent 50%, rgba(0,0,0,0.7) 100%);
-    background-image: linear-gradient(to top, transparent 50%, rgba(0,0,0,0.7) 100%);
-    }
-    &:hover span {
-      display: block;
-      -webkit-transition: 0.2s ease;
-      -moz-transition: 0.2s ease;  
-      background: rgba(0,0,0,.6);    
-    }
   }
   p {
     text-align: center;
     margin-top: 10px;
     font-size: 14px;
+    span {
+      display: block;
+    }
   }
   &:last-of-type .col {
     margin-bottom: 0;
 }
 }
 .tiac {
-  background: url(img/reibc2.jpg);
+  background: url(img/gui.svg);
 }
 .western {
-  background: url(img/west.jpeg);
+  background: url(img/gear.svg);
 }
 .reibc {
-  background: url(img/secure.jpg);
+  background: url(img/hexagon.svg);
+  background-size: 150px !important;
 }
 .session {
   background: url(img/secure-login.jpg);
 }
 .reg-form {
-  background: url(img/code.jpeg);
+  background: url(img/code.svg);
+  background-size: 120px !important;
 }
 .aworks {
-  background: url(img/aworks.jpeg);
+  background: url(img/aworks.svg);
 }
 .earthart {
   background: url(img/earthart.jpg);
 }
 .greenworks {
-  background: url(img/paint.jpg);
+  background: url(img/green-works-logo.png);
+  background-size: 200px !important;
 }
 .good-guys {
   background: url(img/good-guys.png);
@@ -581,6 +558,9 @@ header {
       border: 1px solid #ddd;
     }
 
+  }
+  h2 {
+    margin-top: 40px;
   }
 }
 table {
@@ -693,11 +673,13 @@ ul.posts {
 .post {
   .post-intro {
     border-bottom: 1px solid #eee;
-    margin-bottom: 30px;
+    margin: 60px 0 40px;
+    padding-bottom: 20px;
+    text-align: center;
 }
   h1 {
     border: none;
-    font-size: 2.3em;
+    font-size: 2em;
     margin: 1.3em 0 10px;
   }
   .date {
@@ -708,15 +690,16 @@ ul.posts {
       margin-top: 0;
     }
     a {
-      color: #888;   
+      color: #aaa;
+      &:before {
+        font-family: FontAwesome;
+        content: '\f02c';
+        margin-right: 6px;
+      }
     }
   }
 }
-.post-categories {
-  a {
-    text-decoration: none !important;
-  }
-}
+
 .read-more {
   margin-top: 10px;
   a {
@@ -783,6 +766,11 @@ footer {
       color: #0085c3;
     }
     }
+  }
+  p {
+    font-size: 12px;
+    margin-top: 20px;
+    color: #aaa;
   }
 }
 
