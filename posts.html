@@ -7,11 +7,10 @@ title: Blog
 <ul>
   {% for post in site.posts %}
     <li>
+    <div class="date"><p>{{ post.date | date: "%B %e, %Y" }}</p></div>
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-	    <div class="date"><p>{{ post.date | date: "%B %e, %Y" }}</p></div>
 	    <p>{{ post.content | strip_html | truncatewords: 30 }}</p>
       {% if post.excerpt != post.content %}
-      <p class="read-more"><a href="{{ site.baseurl }}{{ post.url }}">Read more</a></p>
       {% endif %}
     </li>
   {% endfor %}
