@@ -2,119 +2,156 @@
 layout: default
 ---
 
+<article class="home-page">
 
-      <div class="intro">
-      <h1>Portfolio</h1>
-      <p>Hi, I'm Kris, a front end developer and designer from Vancouver, BC. Check out some of my latest work below. Feel free to <a href="/contact/">Contact me</a>.</p>
-    </div>
-
-
-
-<div class="button-group filters-button-group">
-  <button class="button is-checked" data-filter="*">All</button>
-  <button class="button" data-filter=".html-css">HTML &amp; CSS</button>
-  <button class="button" data-filter=".wordpress">WordPress</button>
-  <button class="button" data-filter=".e-commerce">E-commerce</button>
-  <button class="button" data-filter=".asp-net">ASP.NET</button>
+<section id="hero">
+   
+     <div class="intro">
+      <div class="container">
+      <img src="img/kris3.jpg">
+      <h1>Kris Wignes</h1>
+     <p>Hi, I'm Kris, a front-end developer &amp; designer from Vancouver, BC. I build responsive websites.</p>
+     </div>
 </div>
+
+<div class="header-homepage-arrow-c bounce">
+            <a href="#grid" class="down">
+              <svg class="arrow-down" version="1.0" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <polygon points="0.645,10.383 16,23.871 31.355,10.383 29.375,8.129 16,19.878 2.625,8.129 "></polygon>
+            </svg>
+            </a>
+        </div>
+
+</section>
+
+
+ <div class="container">
+
+
+<h2 id="grid">Recent Work</h2>
+
+<p class="desc">Some of the tools I work with include, HTML, CSS (SASS), JavaScript (jQuery), and WordPress.</p>
+
+<hr>
 
 <div class="grid">
-  <div class="element-item html-css" data-category="html-css">
-    <a class="tiac" href="/tiac/">    
-    <img src="img/gui.svg" />
-    <p>Tourism Industry Association of Canada</p>    
+
+  <div class="grid-sizer"></div>
+  <div class="grid-item">
+        <a href="#">
+            <img src="img/roads.jpg" />
+             <p>FWD Engineering<br> Coming Soon</p>
+        </a>
+       
+          </div>
+
+            <div class="grid-item">
+        <a href="/activity-profile/">
+        <img src="img/wireframe.jpg" />
+        <p>Activity Profile<br> ASP.NET</p>
     </a>
-  </div>
-  <div class="element-item asp-net" data-category="asp-net">
-    <a class="greenworks" href="/activity-profile/">
-      <img src="img/wireframe.jpg" />
-      <p>Activity Profile</p>
+          </div>
+
+
+  <div class="grid-item">
+        <a href="https://greenworksstore.com/" target="_blank">
+        <img src="img/store.png" />
+        <p>Greenworks Building Supply<br> Shopify E-commerce</p>
+        </a>
+        
+          </div>
+
+  <div class="grid-item">
+        <a href="/western-element/">
+            <img src="img/nvan.jpg" />
+            <p>Western Element Engineering<br> HTML &amp; CSS</p>
+        </a>
+        
+          </div>
+
+
+
+  <div class="grid-item">
+        <a href="http://dev-cb-technical-test.pantheonsite.io/" target="_blank">
+        <img src="img/reg-form.png" />
+         <p>Form Mockup<br> WordPress</p>
     </a>
-  </div>
-  <div class="element-item" data-category="html-css">
-    <a class="western" href="/western-element">
-      <img src="img/electric.png" />
-      <p>Western Element Engineering</p>
-    </a>
-  </div>
-  <div class="element-item wordpress" data-category="wordpress">
-    <a class="reg-form" href="http://dev-cb-technical-test.pantheonsite.io/" target="_blank">
-      <img src="img/reg-form.png" />
-      <p>Registration Form</p>
-    </a>
-  </div>
-  <div class="element-item html-css" data-category="html-css">
-    <a class="reibc" href="https://www.reibc.org/" target="_blank">
-      <img src="img/web-page.jpg" />
-      <p>Real Estate Institute of British Columbia</p>
-    </a>
-  </div>
-  <div class="element-item e-commerce" data-category="e-commerce">
-    <a class="greenworks" href="https://greenworksstore.com/" target="_blank">
-      <img src="img/store.png" />
-      <p>GreenWorks Building Supply</p>
-    </a>
-  </div>
+       
+          </div>   
+  <div class="grid-item">
+        <a href="/tiac/">
+            <img src="img/gui.svg" />
+            <p>Tourism Industry Association of Canada<br>HTML &amp; CSS</p>
+        </a>
+        
+          </div>
+
+
 </div>
 
 
 
-<!-- 
-<div class="flex-grid-thirds">
+<section id="clients">
+ <h2>Clients</h2>
 
-  <div class="col">
-    <a class="tiac" href="/tiac/">
-      
-<img src="img/gui.svg" />
-<p>Tourism Industry Association of Canada</p>
-      
-    </a>
-  </div>
+<p class="desc">I've had the opportunity to work with some fantastic clients from various industries including health care, engineering, real estate, and tourism.</p>
 
-  <div class="col">
-    <a class="greenworks" href="/activity-profile/">
-      <img src="img/wireframe.jpg" />
-      <p>Activity Profile</p>
-    </a>
-  </div>
+<hr>
+
+ <ul class="clients">
+  <li><a href="https://www.analysisworks.com/" target="_blank">AnalysisWorks</a></li>
+  <li><a href="http://www.greenworksbuildingsupply.com/" target="_blank">GreenWorks Building Supply</a></li>
+  <li><a href="https://www.bcmidwives.com/" target="_blank">Midwives Association of British Columbia</a></li>
+  <li><a href="https://www.reibc.org/" target="_blank">The Real Estate Institute of British Columbia</a></li>
+    <li><a href="https://www.mdpac.ca/" target="_blank"> Medical Psychotherapy Association Canada</a></li>
+  <li><a href="https://tiac-aitc.ca/" target="_blank">Tourism Industry Association of Canada</a></li>
+  <li><a href="http://westernelement.ca/" target="_blank">Western Element Engineering</a></li>
+    <li>FWD Engineering</li>
+ </ul>
+</section>
 
 
+<h2 id="grid">Contact</h2>
 
-  <div class="col">
-    <a class="western" href="/western-element">
-      <img src="img/electric.png" />
-      <p>Western Element Engineering</p>
-    </a>
-  </div> 
+<p class="desc">Feel free to contact me and about your project and let me know how I can help. I look forward to working together.</p>
+
+<hr>
+
+<ul class="clients contact-list">
+  <li><a href="https://github.com/kwignes" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Github</a></li>
+  <li><a href="https://ca.linkedin.com/in/kriswignes" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+  <li><a href="https://twitter.com/kriswignes?lang=en" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>
+ Twitter</a></li>
+  <li><a href="https://codepen.io/kwignes/" target="_blank"><i class="fa fa-codepen" aria-hidden="true"></i>
+ Codepen</a></li>
+</ul>
+
+<!-- <section id="contact">
+
+<div class="contact-rap">
+
+<h2>Contact</h2>
+
+
+<div id="formBlock">
+<form id="contactForm">
+<input type="text" id="name" placeholder="Name" required>
+<input type="email" id="email" placeholder="Email" required>
+<input type="text" name="_gotcha" style="display:none">
+<textarea id="comments" placeholder="Message" required></textarea>
+<input type="submit" value="Send" class="btn" title="Send">
+</form>
+</div>
+
+<div id="thankyouBlock" style="display:none">
+<p>Thanks for the message!</p>
+</div>
 
 </div>
 
-
-<div class="flex-grid-thirds">
-   
-  <div class="col">
-    <a class="reg-form" href="http://dev-cb-technical-test.pantheonsite.io/" target="_blank">
-      <img src="img/reg-form.png" />
-      <p>Registration Form</p>
-    </a>
-  </div>
-
-
-  <div class="col">
-    <a class="reibc" href="https://www.reibc.org/" target="_blank">
-      <img src="img/web-page.jpg" />
-      <p>Real Estate Institute of British Columbia</p>
-    </a>
-  </div> 
-
-  <div class="col">
-    <a class="greenworks" href="https://greenworksstore.com/" target="_blank">
-      <img src="img/store.png" />
-      <p>GreenWorks Building Supply</p>
-    </a>
-  </div> -->
-
-
-
+</section> -->
 
 </div>
+
+</article>
+
