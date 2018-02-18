@@ -1,9 +1,9 @@
 ---
 ---
 
-$primary: #343a40;
-$heading: #343a40;
-$link: #408FEC;
+$primary: #282828;
+$heading: #282828;
+$link: #878787;
 $font_family_1: 'Arimo', sans-serif;
 
 
@@ -29,7 +29,7 @@ body {
       -ms-text-size-adjust: 100%;  
         font-family: $font_family_1;
   line-height: 1.5;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 
@@ -40,7 +40,7 @@ a {
   color: $link;
   text-decoration: none;
   &:focus, &:hover {
-    color: #29b2ea;
+    color: #555;
   }
   strong {
   color: inherit;
@@ -101,7 +101,7 @@ ul, ol {
     color: $link;
     cursor: pointer;
     font-size: 18px;
-    padding: 4px 16px;
+    padding: 4px 16px 3px;
     margin-top: 10px;
   &:hover, &:focus, &:active {
     background: $link;
@@ -116,12 +116,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
+  font-family: 'Merriweather', 'Georgia', serif;
 }
 
 h1 {
     font-size: 2.4em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 
@@ -130,18 +129,16 @@ h1 {
 
 header {
   overflow: auto;
-  text-align: center;
   padding: 20px 0;
+  border-bottom: .0625rem solid #f8f8f8;
   .container {
     max-width: 100%;
-    padding: 0 25px;
   }
   .logo {
-  font-size: 20px;
-  text-transform: uppercase;
+  font-size: 22px;
   font-weight: bold;
   margin: 0 0 20px;
-  display: block;
+  display: none;
   padding: 0;
   color: $primary;
   float: none;  
@@ -155,16 +152,13 @@ header {
   }
 }
 
-@media (min-width: 991px) {
+@media (min-width: 768px) {
   header {
-      position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  z-index: 9999;
+    padding: 25px;
   }
-  header .container {
-    padding: 0 50px;
-  }
+}
+
+@media (min-width: 991px) {
   header .logo {
     padding: 0;
   }
@@ -178,26 +172,39 @@ header {
 
 .intro {
     clear: both;
-    text-align: center;
-    max-width: 400px;
     margin: 40px auto;
+    h1 {
+      letter-spacing: 1px;
+      font-size: 1.8em;
+    }
   img {
     border-radius: 100%;
   }
 }
+.intro p {
+  font-size: 20px;
+}
 @media (min-width: 480px) {
 #hero {
-  height: 100vh;
+  height: 90vh;
 }  
   .intro {
-    bottom: 50%;
-    transform: translateY(50%);
+    bottom: 60%;
+    transform: translateY(60%);
     position: absolute;
     margin: 0 auto;
     left: 0;
     right: 0;
   }
 }
+
+@media (min-width: 640px) { 
+  .intro {
+    h1 {
+      max-width: 500px;
+    }
+  }
+  }
 
 
 
@@ -298,7 +305,7 @@ header {
 
 .clients {
     list-style-type: none;
-    padding: 40px 0 60px;
+    padding: 40px 0 0;
     font-size: 18px;
 }
 .contact-list {
@@ -306,11 +313,20 @@ header {
 }
 
 ul.clients li {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     line-height: 1.3;
+    font-size: 20px;
     a {
-      border-bottom: 2px solid $primary;
-      color: $primary;
+  border-bottom: 2px solid currentColor;
+  display: inline-block;
+  color: $primary;
+  line-height: 0.85;
+  font-size: 20px;
+  text-shadow:
+    2px 2px white,
+    2px -2px white,
+    -2px 2px white,
+    -2px -2px white;
       &:hover {
         color:$link;
         border-bottom: 2px solid $link;
@@ -391,7 +407,7 @@ h2#grid {
 }
 
 .desc {
-  max-width: 600px;
+  max-width: 400px;
 }
 
 /* clear fix */
@@ -403,48 +419,19 @@ h2#grid {
 
 /* ---- .grid-item ---- */
 
-@media screen and (min-width: 480px) { 
-.grid-sizer,
-.grid-item {
-  width: 50%;
-  // width: calc(50% - 20px);
-  width: calc( ( 100% - 20px ) / 2 );
- }
- .grid-item {
-  margin-bottom: 20px;
- } 
-}
-// @media screen and (min-width: 768px) { 
-// .grid-sizer,
-// .grid-item {
-//   width: 33.33%;
-//   // width: calc( ( 100% - 20px ) / 2 );
-//   width: calc(33.33% - 20px);
-//  }
-
-// }
-
-
-
-// @media screen and (min-width: 768px) { 
-// .grid-sizer,
-// .grid-item {
-//   width: 33.333%;
-//   width: calc( ( 100% - 40px ) / 3 );
-//  }
-// }
-
-.gutter-sizer {
-  width: 4%;
-}
-
 .grid-item {
   float: left;
   margin-bottom: 20px;
 }
 
+.gutter-sizer {
+  width: 4%;
+}
 
 
+.grid-item span {
+  font-size: 20px;
+}
 
 
 .grid-item a {
@@ -454,6 +441,7 @@ h2#grid {
     color: #FFF;
         transition: none;
 }
+
 
 .grid-item p {
     position: absolute;
@@ -480,11 +468,6 @@ h2#grid {
   opacity: 1;
       position: relative;
     z-index: 0;
-    -webkit-transition: all 300ms ease-in-out;
-    -moz-transition: all 300ms ease-in-out;
-    -ms-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
     display: block;
     padding: 0;
   max-width: 100%;
@@ -507,6 +490,18 @@ h2#grid {
 .grid-item a:hover p {
     opacity: 1;
 }
+
+@media screen and (min-width: 480px) { 
+.grid-sizer,
+.grid-item {
+  width:50%;
+  width:calc( ( 100% - 60px ) / 2 );
+ }
+ .grid-item {
+  margin-bottom: 60px;
+ } 
+}
+
 
 @media (max-width: 991px) {
 .grid-item p {
@@ -555,24 +550,26 @@ h2#grid {
 
 
   nav {
-    text-align: center;
-    float: none;
+    text-align: right;
     ul {
         margin: 0;
         padding: 0;
         list-style-type: none;
     li {
-      display: inline-block;
+      display: block;
+      &:last-child a {
+        padding-right: 0;
+        padding-bottom: 0;
+      }
       a {
-        padding: 0 1em;
-        text-align: center;
+        padding: 0 0 2.5em 0;
         background: none;
-        font-size: 17px;
-        color: $primary;
+        display: block;
+        font-size: 16px;
+        color: $link;
         line-height: 30px;
         height: 30px;
         border-top: 0;
-        text-transform: uppercase;
         margin: 0;
         &:hover, &:active, &:focus {
           color: #777;
@@ -583,13 +580,26 @@ h2#grid {
   }
  }
 
-@media screen and (min-width: 480px) {
+
+ .active {
+  color: #bfbfbf;
+ }
+
+ @media (min-width: 320px) {
   nav {
-    float: right;
     ul li {
-      &:last-child a {
-        padding-right: 0;
+      display: inline-block;
+      a {
+        padding: 0 1em;
       }
+    }
+  }
+ }
+
+@media (min-width: 480px) {
+  nav {
+    ul li {
+      
     }
   }
 }
@@ -665,45 +675,17 @@ h2#grid {
   }
 }
 
-
-
-
-.project-article {
-  max-width: 760px;
-  margin: 40px auto 0;
-  padding: 0 25px;
-  img {
-    display: block;
-    margin: 0 auto;
+#clients h2 {
+    padding-top: 90px;
+    border-top: 2px solid #eee;
   }
-  h1 {
-    padding-top: 40px;
-    font-size: 1.4em;
-  }
+
+h2#contact  {
+  padding-top: 90px;
+    border-top: 2px solid #eee;
+    margin-top: 90px;
 }
 
-.live-link {
-  font-family: Merriweather, serif;
-  font-style: italic;
-  text-decoration: underline;
-  color: #4a4a4a;
-}
-
-
-@media screen and (min-width: 768px) {
-.project-article {
-  max-width: 760px;
-  margin: 140px auto 0;
-  img {
-    display: block;
-    margin: 0 auto;
-  }
-  h1 {
-    padding-top: 40px;
-    font-size: 2em;
-  }
-}
-}
 
 
 .contact-rap {
@@ -764,12 +746,13 @@ th {
 
 
 
-
+ul.clients.contact-list li {
+    margin-bottom: 20px;
+}
 
 
 .blog {
     max-width: 760px;
-    margin: 160px auto 0;
   h2 {
     margin: .667em 0 .333em;
     font-size: 1.5em;
@@ -840,13 +823,11 @@ ul.posts {
 
 .post {
   max-width: 760px;
-  margin: 40px auto 0;
   padding: 0 25px;
   .post-intro {
     border-bottom: 1px solid #eee;
     margin: 0 0 40px;
     padding-bottom: 20px;
-    text-align: center;
 }
   h1 {
     border: none;
@@ -859,9 +840,13 @@ ul.posts {
   }
 }
 
+.post, .blog {
+  margin: 50px auto 0;
+}
+
 @media screen and (min-width: 768px) {
-  .post { 
-    margin: 160px auto 0;
+  .post, .blog { 
+    margin: 100px auto 0;
       .post-intro {
     text-align: left;
 }

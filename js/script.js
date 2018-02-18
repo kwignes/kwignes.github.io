@@ -3,7 +3,7 @@ $(document).ready( function() {
 var $grid = $('.grid').masonry({
   itemSelector: '.grid-item',
   columnWidth: '.grid-sizer',
-  gutter: 20,
+  gutter: 60,
   percentPosition: true
 });
 
@@ -25,14 +25,14 @@ $(window).scroll(function() {
 $('#return-to-top').click(function() {      // When arrow is clicked
     $('body,html').animate({
         scrollTop : 0                       // Scroll to top of body
-    }, 300);
+    }, 800);
 });
 
 
 
 $(document).ready(function(){
   // Add smooth scrolling to all links
-  $("a.down").on('click', function(event) {
+  $("a.down, .intro a, nav li:last-child a").on('click', function(event) {
 
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
@@ -46,7 +46,7 @@ $(document).ready(function(){
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 300, function(){
+      }, 800, function(){
    
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
@@ -61,7 +61,7 @@ var nav = responsiveNav(".nav-collapse");
 
   $(document).on("scroll", function(){
     if
-      ($(document).scrollTop() > 100){
+      ($(document).scrollTop() > 300){
       $("header").addClass("shrink");
     }
     else
