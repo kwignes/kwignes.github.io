@@ -4,7 +4,7 @@
 $primary: #282828;
 $heading: #282828;
 $link: #878787;
-$font_family_1: 'Arimo', sans-serif;
+$font_family_1: 'Open Sans', sans-serif;
 
 
 * {
@@ -116,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
-  font-family: 'Merriweather', 'Georgia', serif;
+  font-weight: 600;
 }
 
 h1 {
@@ -129,8 +129,10 @@ h1 {
 
 header {
   overflow: auto;
-  padding: 20px 0;
-  border-bottom: .0625rem solid #f8f8f8;
+  padding: 0;
+  background-color: #cf4646;
+  text-align: center;
+  display: none;
   .container {
     max-width: 100%;
   }
@@ -152,12 +154,6 @@ header {
   }
 }
 
-@media (min-width: 768px) {
-  header {
-    padding: 25px;
-  }
-}
-
 @media (min-width: 991px) {
   header .logo {
     padding: 0;
@@ -165,85 +161,55 @@ header {
 }
 
 
-#hero {
-  position: relative;
-}
-
-
 .intro {
+    padding: 40px 0;
+     background: #3196da;
+     color: #fff;
     clear: both;
-    margin: 40px auto;
+    margin: 0 auto;
+    text-align: center;
     h1 {
       letter-spacing: 1px;
-      font-size: 1.8em;
+      font-size: 2.4em;
+      margin: 0;
+      text-transform: uppercase;
+    }
+    h2 {
+      margin: 0 0 25px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 400;
     }
   img {
     border-radius: 100%;
+    margin-bottom: 20px;
+  }
+  .fa {
+    color: #fff;
+    font-size: 26px;
+    margin: 10px 4px 0;
+    display: inline-block;
+    &:hover, &:active, &:focus {
+      background-color: #3196da;
+      color: #fff;
+    }
   }
 }
 .intro p {
   font-size: 20px;
 }
-@media (min-width: 480px) {
-#hero {
-  height: 90vh;
-}  
+@media (min-width: 991px) {
   .intro {
-    bottom: 60%;
-    transform: translateY(60%);
-    position: absolute;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
+    padding: 7% 0 6%;
+  }
+  .intro .fa {
+    margin: 10px 8px 0;
+  }
+  .intro h1 {
+    font-size: 3.2em;
   }
 }
 
-@media (min-width: 640px) { 
-  .intro {
-    h1 {
-      max-width: 500px;
-    }
-  }
-  }
-
-
-
-
-/***** Scroll Down Arrow *****/
-
-.header-homepage-arrow-c {
-    text-align: center;
-    z-index: 500;
-}
-
-@media screen and (min-width: 480px) { 
-.header-homepage-arrow-c {
-    position: absolute;
-    bottom: 40px;
-    left: 0;
-    right: 0;
-  }
-}
-
-// .header-homepage-arrow-c a {
-//   position: absolute;
-//     top: 0;
-//     left: 50%;
-//     width: 22px;
-//     height: 22px;
-//     margin-left: -12px;
-//     border-left: 3px solid $primary;
-//     border-bottom: 3px solid $primary;
-//     -webkit-transform: rotate(-45deg);
-//     transform: rotate(-45deg);
-//     z-index: 99999999999;
-// }
-
-.arrow-down {
-   width: 30px;
-   height: 30px;
-   fill: #3b3a3a;
-}
 
 .bounce {
   -moz-animation: bounce 3s infinite;
@@ -301,72 +267,6 @@ header {
 
 
 
-
-
-.clients {
-    list-style-type: none;
-    padding: 40px 0 0;
-    font-size: 18px;
-}
-.contact-list {
-  margin-bottom: 0;
-}
-
-ul.clients li {
-    margin-bottom: 20px;
-    line-height: 1.3;
-    font-size: 20px;
-    a {
-  border-bottom: 2px solid currentColor;
-  display: inline-block;
-  color: $primary;
-  line-height: 0.85;
-  font-size: 20px;
-  text-shadow:
-    2px 2px white,
-    2px -2px white,
-    -2px 2px white,
-    -2px -2px white;
-      &:hover {
-        color:$link;
-        border-bottom: 2px solid $link;
-      }
-    }
-}
-
-ul.clients.contact-list li a {
-  border: none;
-}
-
-@media screen and (min-width: 480px) { 
-.clients {
-    -webkit-columns: 2;
-    -moz-columns: 2;
-    columns: 2;
-    font-size: 20px;
-  }
-  .contact-list {
-    columns: 1;
-  }
-}
-@media screen and (min-width: 768px) { 
-.clients, .contact-list {
-    font-size: 26px;
-  }
-}
-.fa-github {
-  color: #333;
-}
-.fa-linkedin {
-  color: #0274b3;
-}
-.fa-twitter {
-  color: #1ea1f3;
-}
-.fa-codepen {
-  color: #111;
-}
-
 /***************** Scroll Up *****************/
 
 #return-to-top {
@@ -393,17 +293,11 @@ ul.clients.contact-list li a {
 
 
 
-
-
-
-
-
-
 h2#grid {
   padding: 20px 0 0;
 }
 .grid {
-  padding: 40px 0 60px;
+  padding: 50px 0 0;
 }
 
 .desc {
@@ -437,65 +331,97 @@ h2#grid {
 .grid-item a {
   position: relative;
   display: block;
-    z-index: 0;
-    color: #FFF;
-        transition: none;
+  z-index: 0;
+  color: #FFF;
+  transition: none;
+  text-align: center;
 }
 
 
 .grid-item p {
-    position: absolute;
-    z-index: 999;
-    text-align: center;
-    bottom: 50%;
-    transform: translateY(50%);
-    padding: 10px 15px;
-    width: 100%;
+    // position: absolute;
+    // z-index: 999;
+    // text-align: center;
+    // bottom: 50%;
+    // transform: translateY(50%);
+    // padding: 10px 15px;
+    // width: 100%;
+    // margin: 0;
+    // font-size: 26px;
+    // line-height: 1.4;
+    // opacity: 0;
+    // color: #fff;
+    // -webkit-transition: all 300ms ease-in-out;
+    // -moz-transition: all 300ms ease-in-out;
+    // -ms-transition: all 300ms ease-in-out;
+    // -o-transition: all 300ms ease-in-out;
+    // transition: all 300ms ease-in-out;
+    line-height: 1.95;
+    color: #999999;
+    font-weight: 600;
+}
+
+.grid h3 {
+    color: #444;
+    border-bottom: 1px solid #ccc;
+    font-size: 30px;
     margin: 0;
-    font-size: 26px;
-    line-height: 1.4;
-    opacity: 0;
-    color: #fff;
-    -webkit-transition: all 300ms ease-in-out;
-    -moz-transition: all 300ms ease-in-out;
-    -ms-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
+    padding: .75em 0;
 }
 
 .grid-item img {
   background-color: #fff;
   opacity: 1;
-      position: relative;
-    z-index: 0;
-    display: block;
-    padding: 0;
+  position: relative;
+  z-index: 0;
+  display: block;
+  padding: 0;
   max-width: 100%;
   width: 100%;
-    -webkit-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  box-shadow: 0 2px 1px 1px rgba(0,0,0,.2);
+  overflow: hidden;
 }
 
-.grid-item a:hover {
-  background-color: #000;
-}
+// .grid-item a:hover {
+//   background-color: #000;
+// }
 
-.grid-item a:hover img {
-  opacity: 0.6;
--webkit-transition: all 300ms ease-in-out;
-    -moz-transition: all 300ms ease-in-out;
-    -ms-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-}
-.grid-item a:hover p {
-    opacity: 1;
-}
+// .grid-item a:hover img {
+//   opacity: 0.6;
+// -webkit-transition: all 300ms ease-in-out;
+//     -moz-transition: all 300ms ease-in-out;
+//     -ms-transition: all 300ms ease-in-out;
+//     -o-transition: all 300ms ease-in-out;
+//     transition: all 300ms ease-in-out;
+// }
+// .grid-item a:hover p {
+//     opacity: 1;
+// }
 
-@media screen and (min-width: 480px) { 
+
+
+
+@media screen and (min-width: 480px) {
 .grid-sizer,
 .grid-item {
   width:50%;
-  width:calc( ( 100% - 60px ) / 2 );
+  width:calc( ( 100% - 40px ) / 2 );
+ }
+ .grid-item {
+  margin-bottom: 30px;
+ } 
+}
+
+@media screen and (min-width: 991px) {
+.grid {
+  padding: 100px 0 0;
+}
+.grid-sizer,
+.grid-item {
+  width:33.333%;
+  width:calc( ( 100% - 80px ) / 3 ); 
  }
  .grid-item {
   margin-bottom: 60px;
@@ -517,7 +443,6 @@ h2#grid {
 }
 .grid-item p {
   position: relative;
-  color: $primary;
     opacity: 1;
         bottom: 0;
     transform: none;
@@ -539,8 +464,8 @@ h2#grid {
 
 .container {
   margin: 0 auto;
-  padding: 0 25px;
-  max-width: 1200px;
+  padding: 0 20px;
+  max-width: 1320px;
 }
 
 
@@ -550,7 +475,7 @@ h2#grid {
 
 
   nav {
-    text-align: right;
+    text-align: center;
     ul {
         margin: 0;
         padding: 0;
@@ -565,10 +490,8 @@ h2#grid {
         padding: 0 0 2.5em 0;
         background: none;
         display: block;
-        font-size: 16px;
-        color: $link;
-        line-height: 30px;
-        height: 30px;
+        font-size: 22px;
+        color: #fff;
         border-top: 0;
         margin: 0;
         &:hover, &:active, &:focus {
@@ -581,16 +504,12 @@ h2#grid {
  }
 
 
- .active {
-  color: #bfbfbf;
- }
-
  @media (min-width: 320px) {
   nav {
     ul li {
       display: inline-block;
       a {
-        padding: 0 1em;
+        padding: 1em;
       }
     }
   }
@@ -675,16 +594,6 @@ h2#grid {
   }
 }
 
-#clients h2 {
-    padding-top: 90px;
-    border-top: 2px solid #eee;
-  }
-
-h2#contact  {
-  padding-top: 90px;
-    border-top: 2px solid #eee;
-    margin-top: 90px;
-}
 
 
 
@@ -905,14 +814,15 @@ footer {
     padding: 40px 0;
     text-align: center;
     clear: both;
+    background-color: #eee;
     a {
       color: #ababab;
       font-size: 26px;
       margin: 0 4px;
     }
   p {
-    font-size: 18px;
-    color: #ababab;
+    font-size: 16px;
+    color: #999;
     margin: 10px 0 0;
   }
 }
