@@ -3,7 +3,7 @@
 
 $primary: #282828;
 $heading: #282828;
-$link: #878787;
+$link: #227cb9;
 $font_family_1: 'Open Sans', sans-serif;
 
 
@@ -95,21 +95,27 @@ ul, ol {
 }
 
 .btn, input[type=submit] {
-    display: inline-block;
-    border: 1px solid $link;
-    background: #fff;
-    color: $link;
+display: inline-block;
+    background: #1a4f73;
+    color: #fff;
     cursor: pointer;
     font-size: 18px;
-    padding: 4px 16px 3px;
-    margin-top: 10px;
+    padding: 12px 24px;
+    margin-top: 20px;
   &:hover, &:focus, &:active {
-    background: $link;
+    background: #777;
     color: #fff;
   }
 }
+.btn:after {
+  font-family: FontAwesome;
+  content: '\f105';
+  padding-left: 12px;
+}
 
-
+.text-center {
+  text-align: center;
+}
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
@@ -163,7 +169,7 @@ header {
 
 .intro {
     padding: 40px 0;
-     background: #3196da;
+     background: #018abf;
      color: #fff;
     clear: both;
     margin: 0 auto;
@@ -179,6 +185,9 @@ header {
     text-transform: uppercase;
     letter-spacing: 3px;
     font-weight: 400;
+    }
+    .logo-center {
+      display: inline-block;
     }
     a {
         color: #fff;
@@ -196,8 +205,7 @@ header {
     margin: 10px 4px 0;
     display: inline-block;
     &:hover, &:active, &:focus {
-      background-color: #3196da;
-      color: #fff;
+      color: #03b9ff;
     }
   }
 }
@@ -474,8 +482,19 @@ h2#grid {
   max-width: 1320px;
 }
 
+.project-item {
+  max-width: 700px;
+  margin: 50px auto;
+}
 
-
+.project-item img {
+  margin: 0 auto 40px;
+  display: block;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  box-shadow: 0 2px 1px 1px rgba(0,0,0,0.2);
+  overflow: hidden;  
+}
 
 
 
@@ -827,7 +846,7 @@ footer {
       margin: 0 4px;
     }
   p {
-    font-size: 16px;
+    font-size: 15px;
     color: #999;
     margin: 10px 0 0;
   }
