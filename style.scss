@@ -3,7 +3,7 @@
 
 $primary: #282828;
 $heading: #282828;
-$link: #227cb9;
+$link: #0061ff;
 $font_family_1: 'Open Sans', sans-serif;
 
 
@@ -136,7 +136,7 @@ h1 {
 header {
   overflow: auto;
   padding: 0;
-  background-color: #cf4646;
+  background-color: #366dc7;
   text-align: center;
   display: none;
   .container {
@@ -144,11 +144,12 @@ header {
   }
   .logo {
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 600;
   margin: 0 0 20px;
-  display: none;
+  height: 64px;
+  line-height: 64px;
   padding: 0;
-  color: $primary;
+  color: #fff;
   float: none;  
   }
 }
@@ -169,7 +170,7 @@ header {
 
 .intro {
     padding: 40px 0;
-     background: #018abf;
+     background: #366dc7;
      color: #fff;
     clear: both;
     margin: 0 auto;
@@ -500,7 +501,7 @@ h2#grid {
 
 
   nav {
-    text-align: center;
+    text-align: right;
     ul {
         margin: 0;
         padding: 0;
@@ -515,12 +516,15 @@ h2#grid {
         padding: 0 0 2.5em 0;
         background: none;
         display: block;
-        font-size: 22px;
+        font-size: 16px;
+        height: 64px;
+        line-height: 64px;
         color: #fff;
         border-top: 0;
         margin: 0;
         &:hover, &:active, &:focus {
-          color: #777;
+          opacity: .7;
+          color: #fff;
         }
       }      
     }
@@ -534,19 +538,12 @@ h2#grid {
     ul li {
       display: inline-block;
       a {
-        padding: 1em;
+        padding: 0 1em;
       }
     }
   }
  }
 
-@media (min-width: 480px) {
-  nav {
-    ul li {
-      
-    }
-  }
-}
 
 
 
