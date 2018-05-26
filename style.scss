@@ -209,6 +209,9 @@ img {
   font-weight: 500;
   font-size: 28px;
   letter-spacing: 1px;
+  a:hover {
+    color: $darkGray;
+  }
 }
 
 .site-description {
@@ -228,6 +231,9 @@ nav {
 
   .active {
     border-bottom: 2px solid $darkGray;
+    &:hover {
+      color: $darkGray;
+    }
   }
 
   @include mobile {
