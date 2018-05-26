@@ -11,64 +11,40 @@ title: Contact
 
 <div class="contact">
 
-<div id="formBlock">
-<form id="contactForm">
-<label for="name">Name</label>
-<input type="text" id="name" placeholder="Enter your name..." required>
-<label for="email">Email</label>
-<input type="email" id="email" placeholder="Enter your email..." required>
-<label for="text">Message</label>
-<input type="text" name="_gotcha" style="display:none">
-<textarea id="comments" placeholder="How can I help?" required></textarea>
-<input type="submit" value="Send" class="btn" title="Send">
+<form id="contact-form" action="//formspree.io/kriswignes@gmail.com" method="post">
+    <input type="text" name="Name" placeholder="Name" required>
+    <input type="email" name="Email" placeholder="Email" required>
+    <textarea name="Message" cols="30" rows="6" placeholder="Message" required></textarea>
+    <!-- CONFIG -->
+    <input type="text" name="_gotcha" style="display:none">
+    <input type="hidden" name="_subject" value="Message from kriswignes.com">
+    <!-- /CONFIG -->
+    <input class="submit btn" type="submit" value="Send">
 </form>
-</div>
-
-<div id="thankyouBlock" style="display:none">
-<p>Thank you for the message</p>
-</div>
 
 </div>
 
 <script>
-
-$(document).ready(function() {
-
-    $('#contactForm').on('submit', function(e) {
-        e.preventDefault();
-        
-        //get the name field value
-        var name = $('#name').val();
-        //get the name field value
-        var email = $('#email').val();
-        //get the comments
-        var comments = $('#comments').val();
-                    
-        //pretend we don't need validation
-        
-        //send to formspree
-        $.ajax({
-            url:'https://formspree.io/kriswignes@gmail.com',
-            method:'POST',
-            data:{
-                name:name,
-                _replyto:email,
-                 email:email,
-                comments:comments,
-                _subject:'Form Submission from kriswignes.com',
-            },
-            dataType:"json",
-            success:function() {
-                console.log('success'); 
-                $('#formBlock').hide();
-                $('#thankyouBlock').show();
-            }   
-
-        });     
-        
+var $contactForm = $('#contact-form');
+$contactForm.submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+        url: '//formspree.io/kriswignes@gmail.com',
+        method: 'POST',
+        data: $(this).serialize(),
+        dataType: 'json',
+        beforeSend: function() {
+            $contactForm.append('<div class="alert alert--loading">Sending message…</div>');
+        },
+        success: function(data) {
+            $contactForm.find('.alert--loading').hide();
+            $contactForm.append('<div class="alert alert--success">Message sent!</div>');
+        },
+        error: function(err) {
+            $contactForm.find('.alert--loading').hide();
+            $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
+        }
     });
-
-}); 
-
+});
 </script>
 

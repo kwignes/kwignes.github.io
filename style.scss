@@ -427,9 +427,28 @@ border:2px #000 solid;
 border-radius:.2;
 }
 
+.alert {
+    padding: .75rem 1.25rem;
+    margin: 1rem 0;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
 
-
-
+.alert.alert--loading {
+    background-color: #fcf8e3;
+    border-color: #faf2cc;
+    color: #8a6d3b;
+}
+.alert.alert--success {
+    background-color: #dff0d8;
+    border-color: #d0e9c6;
+    color: #3c763d;
+}
+.alert.alert--error {
+    background-color: #f2dede;
+    border-color: #ebcccc;
+    color: #a94442;
+}
 
 
 
