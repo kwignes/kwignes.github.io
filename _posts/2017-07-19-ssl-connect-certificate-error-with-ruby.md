@@ -6,11 +6,14 @@ tags:
 - Ruby
 ---
 
+
 <p>While setting up a static environment, I came across this error from running: <code>gem install github-pages</code> (a gem for syncing Jekyll with GitHub Pages):</p>
 
 
-<pre>
+<pre class="highlight">
+	<code>
 Unable to download data from https://rubygems.org/ - SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (https://api.rubygems.org/specs.4.8.gz)
+</code>
 </pre>
 
 
