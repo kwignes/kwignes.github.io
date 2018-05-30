@@ -17,36 +17,37 @@ categories: [WAMP]
 <li><a href="#change-port">Change Port Number for Apache</a></li>
 </ul>
 
-<hr>
+
 <h3 id="install-service">Install Apache Service</h3>
 
 <p>Click on the <strong>WAMP icon &gt; Apache &gt; Service Administration &gt; Install Service</strong>.
 Restart All Services from the WampServer menu. Wait for the icon to turn green.</p>
-<hr>
+
+
 <h3 id="skype">Turn off Port 80 in Skype</h3>
 
 <p>Skype usually takes port 80 which causes a conflict with WampServer. To allow WampServer the use of port 80, change Skype settings so that it does not use that port.</p>
 
 <p>Within Skype, go to <strong>Tools &gt; options &gt; Advanced &gt; Connection</strong>. Uncheck, <strong>Use port 80 and 443 as an alternative for incoming connections</strong>. Save and restart Skype. Restart All Services from the WampServer icon menu.</p>
 
-<hr>
+
 <h3 id="wwwps">Stop World Wide Web Publishing Service</h3>
 
 <p>Upgrading to Windows 10 may cause an issue with WampServer, since Microsoft sets World Wide Web Publishing Service to listen on port 80. To stop this service, go to the search menu in Windows and type, <strong>services.msc</strong>, and open the app. From the list, find <strong>World Wide Web Publishing Service</strong>, right-click, and Stop. Restart All Services from the WampServer menu.</p>
 
 <p>Note: Newer versions of Windows 10 may not show World Wide Web Publishing Service in the list.</p>
 
-<hr>
+
 <h3 id="service-started">Make Sure Apache and MySQL is started</h3>
 
 <p>Go to the Search menu in Windows and type, <strong>services.msc</strong>, and open the app. Find <strong>wampapache64</strong> and <strong>wampmysqld64</strong> and view the status to make sure they are Running. If not, go to the <strong>WAMP icon &gt; Apache &gt; Service Administration &gt; Start/Resume Service</strong>. Repeat for MySQL.</p>
 
-<hr>
+
 <h3 id="uninstall-servers">Uninstall Servers Incompatible with WAMP</h3>
 
 <p>Before installing WampServer, make sure other servers are uninstalled such as XAMP and IIS, which may cause conflicts.</p>
 
-<hr>
+
 <h3 id="packages">Ensure Microsoft Redistributable Packages are Installed</h3>
 
 <p>Before installing WampServer, make sure you have important system elements installed. To check, go to <strong>Control Panel &gt; Programs &gt; Programs and Features</strong>. In the list of programs, look for Microsoft Visual C + + Redistributable packages.</p>
@@ -71,14 +72,14 @@ x86/x64 - <a href="https://www.microsoft.com/en-us/download/details.aspx?id=4078
 <h4>VC14 Packages</h4>
 x86/x64 - <a href="http://www.microsoft.com/fr-fr/download/details.aspx?id=48145" target="_blank">http://www.microsoft.com/fr-fr/download/details.aspx?id=48145</a><br>
 
-<hr>
+
 <h3 id="firewall">Adjust Firewall and Anti-Virus Settings</h3>
 
 <p>Allow access to port 80 on your firewall and anti-virus programs.</p>
 
 <p>To open port 80 in the Windows Firewall, go to <strong>Control Panel &gt; System and Security &gt; Windows Firewall &gt; Advanced Settings</strong>. Click on <strong>Inbound rules</strong> and select <strong>New Rule</strong> on the right. In the setup window, choose <strong>Port</strong>, <strong>TCP</strong>, Specific local ports set to <strong>80</strong>, <strong>Allow the connection</strong>, check each rule (Domain, Private, and Public), and provide a name for the rule (e.g. WAMP Access). <strong>Finish</strong>. Restart All Services from the WampServer icon menu.</p>
 
-<hr>
+
 <h3 id="change-port">Change Port Number for Apache</h3>
 
 <p>If port 80 is being used by another program, WampServer will not work, since it listens to port 80 by default. To change the port number, click on the <strong>WAMP icon &gt; Apache &gt; httpd.conf</strong>.</p>

@@ -1,519 +1,202 @@
 ---
 ---
 
-//
-// IMPORTS
-//
 
-@import "reset";
-@import "variables";
-// Syntax highlighting @import is at the bottom of this file
+// Variables
+$primary-color: #343a40;
+$link-color: #000;
+// $link-hover-color: darken($link-color, 20%);
+$link-hover-color: #7f8c8d;
 
-/**************/
-/* BASE RULES */
-/**************/
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i');
 
-html {
-  font-size: 100%;
+// Resets
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-  background: $white;
-  font: 18px/1.7 'Roboto', $helvetica;
-  color: $darkGray;
+  font-family: 'Arimo', sans-serif;
+  color: $primary-color;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 1.1em;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;  
+  line-height: 1.4;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 0 10px;
-  width: 100%;
-}
 
-h1, h2, h3, h4, h5, h6 {
-  color: $darkerGray;
-  font-weight: 500;
-
-  line-height: 1.7;
-  margin: 1em 0 15px;
-  padding: 0;
-
-  @include mobile {
-    line-height: 1.4;
-  }
+h1, h2, h3, h4 ,h5, h6 {
+  color: #111;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+  display: inline-block;
+  padding-bottom: 5px;
+  display: block;
 }
 
 h1 {
-  font-size: 30px;
-  a {
-    color: inherit;
-  }
+  font-size: 1.6em;
+  text-transform: uppercase;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 1.2em;
+  margin: 40px 0 20px;
 }
 
-h3 {
-  font-size: 20px;
+
+ul {
+  margin: 0;
+  padding-left: 0.9em;
 }
 
-h4 {
-  font-size: 18px;
-  color: $gray;
+li {
+  margin-bottom: .222em;
 }
 
-p {
-  margin: 15px 0;
+figure {
+    margin: 0;
+}
+pre {
+    padding: 5px 20px;
+}
+
+@media screen and (min-width: 48em) {
+  body{
+    font-size: 1.2em;
+  }
+  h1 {
+  font-size: 2em;
+   }
+   ul {
+    padding-left: 2.28em;
+   }
 }
 
 a {
-  color: $blue;
-  text-decoration: none;
-  cursor: pointer;
-  &:hover, &:active {
-    color: $blue;
+  position: relative;
+  color: $link-color;
+  // white-space: pre-wrap;  
+  // white-space: -moz-pre-wrap;  
+  // white-space: -pre-wrap;      
+  // white-space: -o-pre-wrap;  
+  // word-wrap: break-word;       
+  // &:hover:after, &:focus:after, &:active:after {
+  //   width: 100%;
+  // }
+  // &:after {
+  // content: '';
+  // position: absolute;
+  // left: 0;
+  // bottom: -3px;
+  // height: 1px;
+  // background-color: #ccc;
+  // width: 0;
+  // -webkit-transition: width .6s;
+  // transition: width .6s;
+  // }
+  &:hover {
+    color: blue;
   }
 }
 
-hr {
-  border-top: 1px solid #eee;
-}
-
-ul, ol {
-  margin: 15px 0;
-  padding-left: 30px;
-}
-
-ul {
-  list-style-type: disc;
-}
-
-ol {
-  list-style-type: decimal;
-}
-
-ol ul, ul ol, ul ul, ol ol {
-  margin: 0;
-}
-
-ul ul, ol ul {
-  list-style-type: circle;
-}
-
-em, i {
-  font-style: italic;
-}
-
-strong, b {
-  font-weight: bold;
-}
-
-img {
-  max-width: 100%;
-}
-
-// Fixes images in popup boxes from Google Translate
-.gmnoprint img {
-  max-width: none;
-}
-
-.date {
-  font-style: italic;
-  color: $gray;
-}
-
-// Specify the color of the selection
-::-moz-selection {
-  color: $black;
-  background: $lightGray;
-}
-::selection {
-  color: $black;
-  background: $lightGray;
-}
-
-// Nicolas Gallagher's micro clearfix hack
-// http://nicolasgallagher.com/micro-clearfix-hack/
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/*********************/
-/* LAYOUT / SECTIONS */
-/*********************/
-
-//
-// .masthead
-//
-
-.wrapper-masthead {
-  margin-bottom: 50px;
-  // border-bottom: 1px solid $lightGray;
-  background-color: #fafafa;
-}
-
-.masthead {
+header {
   padding: 20px 0;
-  
-  @include mobile {
-    text-align: center;
+  border-bottom: 1px solid #eee;
+  .container {
+    padding: 0 1.5em;
   }
-}
-
-.site-avatar {
-  float: right;
-  margin-left: 25px;
-
-  img {
-    border-radius: 10%;
-  }
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-
-}
-
-.site-info {
+ h1 {
   float: left;
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-.site-name {
   margin: 0;
-  color: $darkGray;
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 28px;
-  letter-spacing: 1px;
-  a:hover {
-    color: $darkGray;
-  }
-}
-
-.site-description {
-  margin: -5px 0 0 0;
-  color: $gray;
-  font-size: 16px;
-
-  @include mobile {
-    margin: 3px 0;
-  }
-}
-
-nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
-  font-size: 18px;
-
-  .active {
-    border-bottom: 2px solid $darkGray;
-    &:hover {
-      color: $darkGray;
-    }
-  }
-
-  @include mobile {
-    float: none;
-    margin-top: 9px;
-    display: block;
-    font-size: 16px;
-  }
-
+  border: none;
+  color: $primary-color;
   a {
-    margin-left: 20px;
-    color: $darkGray;
-    text-align: right;
-    font-weight: 300;
-    letter-spacing: 1px;
-
-    &:last-child {
-      background: #fdd077;
-      padding: 10px 20px;
-      &:hover {
-        background-color: #f5c973;
-        color: $darkGray
-      }
+    text-decoration: none;
+    &:hover {
+      color: $primary-color;
     }
-
-    @include mobile {
-      margin: 0 10px;
+  }
+  small {
+    font-weight: normal;
+    font-size: 18px;
+    display: block;
+  }
+    a:hover:after, a:focus:after, a:active:after {
+      display: none;
     }
+  }
+  nav {
+    float: right;
+    a {
+      text-decoration: none;
+      line-height: 83px;
+      height: 83px;
+      margin-left: 20px;
+      color: #343a40;
+      font-size: .9em;
+    }
+  }
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  } 
+}
+
+
+
+/****
+main content
+****/
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5em 4em;
+}
+
+@media screen and (min-width: 48em) {
+  #main {
+    padding: 2.5em 4.5em;
   }
 }
 
-//
-// .main
-//
-
-.posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
-}
-
-.posts > .post:last-child {
-  padding-bottom: 1em;
-  border-bottom: none;
-}
 
 .post {
-  blockquote {
-    margin: 1.8em .8em;
-    border-left: 2px solid $gray;
-    padding: 0.1em 1em;
-    color: $gray;
-    font-size: 22px;
-    font-style: italic;
-  }
-
-  .PageNavigation {
-  font-size: 14px;
-  display: block;
-  width: auto;
-  overflow: hidden;
-  margin-top: 2em;
-}
-
-.PageNavigation a {
-    display: block;
-    float: left;
-    margin: 1em;
-    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-    padding: 6px 16px;
-    &:hover {
-      background-color: #eee;
-    }
-}
-
-.PageNavigation .next {
-  text-align: right;
-}
-
-  .comments {
-    margin-top: 10px;
-  }
-
-  .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
-    margin-top: 10px;
-    display: inline-block;
-    &:after {
-      font-family: FontAwesome;
-      content: '\f105';
-      padding-left: 8px;
-    }
-  }
-}
-
-//
-// .projects
-//
-
-.projects h3 {
-  margin-bottom: 0;
-  font-weight: 400;
-}
-.projects ul {
-  margin-top: 0;
-  font-size: 16px;
-  border-bottom: 1px solid $lightGray;
-  padding-bottom: 20px;
-  list-style-type: none;
-}
-.projects ul:last-child {
-  border: none;
-  padding-bottom: 0;
-}
-.projects li:before {
-    content: '\f10c';
-    font-family: FontAwesome;
-    font-size: 8px;
-    position: relative;
-    bottom: 2px;
-    padding-right: 12px;
-}
-.projects a:after {
-    font-family: FontAwesome;
-    content: '\f08e';
-    text-align: right;
-    float: right;
-    color: #ccc;
-}
-
-
-
-
-//
-// .contact
-//
-.contact {
-background:#f7f7f7;
-max-width:800px;
-margin:2em auto;
-padding:1em;
-display:flex;
-flex-direction:column;
-align-items:center;
-font-size: 16px;
-}
-.contact form {
-margin:0 .5em;
-}
-.contact label {
-    font-weight: 500;
-    margin-top: 10px;
-    display: inline-block;
-}
-.contact form input {
-font-family: 'Roboto', $helvetica;
-font-size:1em;
-border:1px #ccc solid;
-background:#fff;
-padding:1em;
-width:100%;
-margin:.5em 0;
-color:#555;
-}
-.contact form textarea {
-font-family: 'Roboto', $helvetica;
-font-size:1em;
-border:1px #ccc solid;
-background:#fff;
-margin:.5em 0;
-width:100%;
-height:10em;
-padding:1em;
-}
-.contact form input:focus, .contact form textarea:focus {
-border:1px #000 solid;
-}
-
-.contact form .btn, .btn {
-cursor: pointer;
-    background-color: #4183C4;
+  h1 {
     border: none;
-    color: #fff;
+    margin: 40px 0 20px;
+    text-transform: none;
+  }
+  .date {
+    font-size: 14px;
+    border-bottom: 1px dotted #ccc;
     display: inline-block;
-    width: auto;
-    padding: 10px 20px;
-    &:hover {
-      background-color: #3f7cb9;
-      color: #fff;
-    }
-}
-#thankyouBlock {
-text-align:center;
-color:#fff;
-background:green;
-padding:1em;
-margin:1em;
-border:2px #000 solid;
-border-radius:.2;
+    margin-bottom: 20px;
+  }
+  .entry {
+      margin-bottom: 2em;
+  }
 }
 
-.alert {
-    padding: .75rem 1.25rem;
-    margin: 1rem 0;
-    border: 1px solid transparent;
-    border-radius: .25rem;
+.posts {
+  margin-top: 40px;
+  h2 {
+    border: none;
+    margin: 0 0 10px;
+    font-weight: normal;
+  }
+  .read-more:hover:after,
+  .read-more:active:after,
+  .read-more:focus:after {
+    display: none;
+  }
 }
-
-.alert.alert--loading {
-    background-color: #fcf8e3;
-    border-color: #faf2cc;
-    color: #8a6d3b;
-}
-.alert.alert--success {
-    background-color: #dff0d8;
-    border-color: #d0e9c6;
-    color: #3c763d;
-}
-.alert.alert--error {
-    background-color: #f2dede;
-    border-color: #ebcccc;
-    color: #a94442;
-}
-
-
-
-
-
-
-.wrapper-footer {
-  margin-top: 50px;
-}
-
-.wrapper-footer .footer {
-  border-top: 1px solid #ddd;
-}
-
-footer {
-  padding: 20px 0;
-  text-align: center;
-}
-
-/** Site footer */
-.site-footer { border-top: 1px solid #e8e8e8; padding: 20px 0; }
-
-.footer-heading { font-size: 18px; margin-bottom: 14px; }
-
-.footer-link { color: #828282; text-decoration: underline; }
-.footer-link:hover { color: #b31a30; }
-
-.contact-list, .social-media-list { list-style: none; margin: 0; padding: 0; }
-
-.contact-list li { display: inline; }
-.contact-list li:after { content: '|'; color: #b31a30; display: inline-block; margin-left: 5px; }
-.contact-list li:last-child:after { content: ''; }
-
-.footer-legal { display: inline; }
-
-.social-media-list li { display: inline-block; }
-.social-media-list li .icon > svg { height: 24px; width: 24px; margin-right: 5px; }
-.social-media-list li .icon--twitter > svg path { fill: #55acee; }
-.social-media-list li .icon--twitter:hover > svg path { fill: #0084b4; }
-.social-media-list li .icon--github > svg path { fill: #333333; }
-.social-media-list li .icon--github:hover > svg path { fill: #4183c4; }
-.social-media-list li .icon--linkedin > svg path { fill: #0077B5; }
-.social-media-list li .icon--linkedin:hover > svg path { fill: #0370a9; }
-.social-media-list li .icon--feed > svg path { fill: #f39c11; }
-.social-media-list li .icon--feed:hover > svg path { fill: #f29224; }
-.social-media-list li .icon--feed > svg { height: 22px; width: 22px; }
-
-.footer { font-size: 15px; color: #828282; margin-left: -14px; }
-
-.footer:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.footer-col { float: left; margin-bottom: 14px; padding-left: 14px; }
-
-.footer-col-1 { width: -webkit-calc(50% - (28px / 2)); width: calc(50% - (28px / 2)); text-align: left; }
-
-.footer-col-2 { width: -webkit-calc(50% - (28px / 2)); width: calc(50% - (28px / 2)); text-align: right; }
-
-@media screen and (max-width: 800px) { .footer-col-1, .footer-col-2 { width: -webkit-calc(50% - (28px / 2)); width: calc(50% - (28px / 2)); }
-  .footer-col-2 { text-align: right; } }
-@media screen and (max-width: 600px) { .footer-col { float: none; width: -webkit-calc(100% - (28px / 2)); width: calc(100% - (28px / 2)); text-align: left; } }
-
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";

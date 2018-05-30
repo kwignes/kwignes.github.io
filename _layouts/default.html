@@ -2,119 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta content="width=device-width,minimum-scale=1,maximum-scale=1" name="viewport">
+    <meta name="description" content="{{ site.description }}">
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
-
-    {% include meta.html %}
-
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
     <link href='{{ site.url }}/favicon.ico' rel='shortcut icon'>
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ site.url }}/style.css">
     {% include analytics.html %}
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   </head>
 <body>
-
-
-   
-   
-  <body>
-    <div class="wrapper-masthead">
+    <header>
       <div class="container">
-        <header class="masthead clearfix">
+      <h1><a href="/">Kris Wignes <small>Front-end developer</small></a></h1>
 
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-            <nav>
-
-                <a href="/" {% if page.url == "/" %}class="active"{% endif %}>About</a>
-
-                <a href="/projects/" {% if page.url == "/projects/" %}class="active"{% endif %}>Projects</a>
- 
-                <a href="/posts/"  {% if page.url == "/posts/" %}class="active"{% endif %}>Blog</a>
-
-                <a href="/contact/">Contact</a>
-            </nav>
-
-
-   </header>
-      </div>
+       <nav>
+        <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a>
+        <a href="/posts/"  {% if page.url == "/posts/" %}class="active"{% endif %}>Posts</a>
+      </nav>
     </div>
-
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-
-
-
-
-      <div class="footer-col  footer-col-1">
-        <ul class="social-media-list">
-          <li>
-            <a href="https://twitter.com/kriswignes" target="_blank">
-              <span class="icon  icon--twitter">
-                <svg viewbox="0 0 16 16">
-                  <path d="M16 3.038c-0.589 0.261-1.221 0.438-1.885 0.517 0.678-0.406 1.198-1.050 1.443-1.816-0.634 0.376-1.337 0.649-2.085 0.797-0.599-0.638-1.452-1.037-2.396-1.037-1.813 0-3.283 1.47-3.283 3.282 0 0.257 0.029 0.508 0.085 0.748-2.728-0.137-5.147-1.444-6.766-3.43-0.283 0.485-0.444 1.049-0.444 1.65 0 1.139 0.579 2.144 1.46 2.732-0.538-0.017-1.044-0.165-1.487-0.411-0 0.014-0 0.027-0 0.041 0 1.59 1.132 2.917 2.633 3.219-0.275 0.075-0.565 0.115-0.865 0.115-0.212 0-0.417-0.021-0.618-0.059 0.418 1.304 1.63 2.253 3.066 2.28-1.123 0.88-2.539 1.405-4.077 1.405-0.265 0-0.526-0.016-0.783-0.046 1.453 0.931 3.178 1.475 5.032 1.475 6.038 0 9.34-5.002 9.34-9.34 0-0.142-0.003-0.284-0.010-0.425 0.642-0.463 1.198-1.041 1.638-1.699z" fill="#828282"></path>
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/kwignes" target="_blank">
-              <span class="icon  icon--github">
-                <svg viewbox="0 0 16 16">
-                  <path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM12.751 12.751c-0.617 0.617-1.336 1.102-2.136 1.44-0.203 0.086-0.41 0.161-0.619 0.226v-1.199c0-0.63-0.216-1.094-0.648-1.391 0.271-0.026 0.52-0.063 0.746-0.109s0.466-0.115 0.719-0.203 0.479-0.194 0.68-0.316 0.393-0.281 0.578-0.477 0.34-0.417 0.465-0.664 0.224-0.544 0.297-0.891 0.109-0.728 0.109-1.145c0-0.807-0.263-1.495-0.789-2.063 0.24-0.625 0.214-1.305-0.078-2.039l-0.195-0.023c-0.135-0.016-0.379 0.042-0.73 0.172s-0.746 0.344-1.184 0.641c-0.62-0.172-1.263-0.258-1.93-0.258-0.672 0-1.313 0.086-1.922 0.258-0.276-0.188-0.538-0.342-0.785-0.465s-0.445-0.206-0.594-0.25-0.286-0.072-0.414-0.082-0.21-0.013-0.246-0.008-0.063 0.010-0.078 0.016c-0.292 0.74-0.318 1.419-0.078 2.039-0.526 0.568-0.789 1.255-0.789 2.063 0 0.417 0.036 0.798 0.109 1.145s0.172 0.643 0.297 0.891 0.28 0.469 0.465 0.664 0.378 0.354 0.578 0.477 0.427 0.228 0.68 0.316 0.492 0.156 0.719 0.203 0.475 0.083 0.746 0.109c-0.427 0.292-0.641 0.755-0.641 1.391v1.222c-0.236-0.070-0.468-0.153-0.697-0.25-0.8-0.338-1.519-0.823-2.136-1.44s-1.102-1.336-1.44-2.136c-0.35-0.827-0.527-1.707-0.527-2.615s0.177-1.787 0.527-2.615c0.338-0.8 0.823-1.519 1.44-2.136s1.336-1.102 2.136-1.44c0.827-0.35 1.707-0.527 2.615-0.527s1.787 0.177 2.615 0.527c0.8 0.338 1.519 0.823 2.136 1.44s1.102 1.336 1.44 2.136c0.35 0.827 0.527 1.707 0.527 2.615s-0.177 1.787-0.527 2.615c-0.338 0.8-0.823 1.519-1.44 2.136z" fill="#ed1c24"></path>
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="/feed.xml">
-              <span class="icon  icon--feed">
-                <svg viewbox="0 0 16 16">
-                  <path d="M13.333 0h-10.666c-1.467 0-2.667 1.2-2.667 2.667v10.666c0 1.468 1.2 2.667 2.667 2.667h10.666c1.467 0 2.667-1.199 2.667-2.667v-10.666c0-1.467-1.2-2.667-2.667-2.667zM4.359 12.988c-0.75 0-1.359-0.605-1.359-1.354 0-0.745 0.609-1.356 1.359-1.356 0.752 0 1.36 0.611 1.36 1.356-0 0.749-0.608 1.354-1.36 1.354zM7.773 13c0-1.278-0.497-2.482-1.398-3.382-0.902-0.902-2.1-1.4-3.373-1.4v-1.956c3.713 0 6.736 3.023 6.736 6.738l-1.965 0zM11.244 13c0-4.548-3.698-8.249-8.24-8.249v-1.957c5.625 0 10.202 4.58 10.202 10.206l-1.962-0z" fill="#828282"></path>
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/kriswignes" target="_blank">
-              <span class="icon  icon--linkedin">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>
-                </span>
-            </a>
-          </li>    
-        </ul>
-
-      </div>
-
-      <div class="footer-col  footer-col-2">
-        <span>
-           ©2018, made with <a href="http://jekyllrb.com/" class="footer-link" target="_blank">Jekyll</a>
-        </span>
-      </div>
-
-
-
-        </footer>
-      </div>
-    </div>
-
-
+    </header>
+  <main class="container">
+    {{ content }}
+  </main>
 </body>
 </html>
