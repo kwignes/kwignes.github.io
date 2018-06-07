@@ -162,6 +162,10 @@ background: #a77e7e;
 main content
 ****/
 
+main {
+  display: block;
+}
+
 .container {
   max-width: 860px;
   margin: 0 auto;
