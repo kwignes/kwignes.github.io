@@ -4,22 +4,37 @@ title: Vancouver Front-End Developer
 ---
 
 <article>
-	<section>
+	<section id="about">
 	<h2>About</h2>
-<p>Front-end developer from Vancouver building responsive, user-friendly websites. I studied web development at <a href="https://www.bcit.ca/" target="_blank">BCIT</a>  and have 3+ years experience in HTML, CSS, JavaScript, and WordPress. I love good design and clean code. A website has to look beautiful but also communicate a message. Feel free to <a href="mailto:kriswignes@gmail.com">contact me</a> about your next project.</p>
+<p>I'm a Front-end developer from Vancouver building responsive, user-friendly websites.</p> 
+
+<p>I studied web development at <a href="https://www.bcit.ca/" target="_blank">BCIT</a>  and have 3+ years experience in HTML, CSS, JavaScript, and WordPress. I love good design and clean code. A website has to look beautiful but also communicate a message. Feel free to <a href="mailto:kriswignes@gmail.com">contact me</a> about your next project.</p>
 </section>
 	<section>
+
+<section id="recentWork">
+	<div class="project-loader"></div>
+<div class="recent-work">
+      <div><img src="img/awf.png"> <p><b>Web Support:</b> <a href="https://www.womeninfinance.ca/" target="_blank">womeninfinance.ca</a></p></div>
+  <div><img src="img/good-guys.png"> <p><b>Form CSS:</b> <a href="https://members.good-guys.com/" target="_blank">members.good-guys.com</a></p></div>	
+  <div><img src="img/tiac.png"> <p><b>PSD to HTML:</b> <a href="https://tiac-aitc.ca/" target="_blank">tiac-aitc.ca</a></p></div>
+  <div><img src="img/d_oacuho.jpg"> <p><b>PSD to HTML</b> <a href="https://oacuho.com/" target="_blank">oacuho.com</a></p></div>
+</div>
+
+</section>
+
+<section id="projects">
 	<h2>Projects</h2>
 		<ul>
 		    <li><a href="https://tiac-aitc.ca/" target="_blank">Tourism Industry Association of Canada</a> - <small>PSD to HTML</small></li>
+		    <li><a href="https://www.womeninfinance.ca/" target="_blank">Women in Finance</a> - <small>Support & Maintenance</small></li>		    
 		   	<li><a href="/activity-profile/">Activity Profile</a> - <small>App for displaying hospital waitlist times</small></li>
-		    <li><a href="https://www.womeninfinance.ca/" target="_blank">Women in Finance</a> - <small>Support & Maintenance</small></li>
 		    <li><a href="https://github.com/kwignes/secure_session_login" target="_blank">Secure Session Login</a> - <small>MySQL login and database</small></li>
 		    <li><a href="https://greenworksstore.com/" target="_blank">Greenworks Building Supply</a> - <small>Shopify web design & development</small></li>
 
 		</ul>
 	</section>
-	<section> 
+	<section id="posts"> 
 		<h2>Posts</h2>
 		<ul>
 		  {% for post in site.posts %}
@@ -29,7 +44,7 @@ title: Vancouver Front-End Developer
 		  {% endfor %}
 		  </ul>
 	</section>
-	<section>  
+	<section id="contact">  
 	<h2>Contact</h2>
 		<ul>
 			<li><a href="https://github.com/kwignes?tab=repositories" target="_blank" title="github">GitHub</a></li>
@@ -39,3 +54,23 @@ title: Vancouver Front-End Developer
 		</ul>
 	</section>	
 </article>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+$('.recent-work').slick({
+  dots: true,
+  slidesToShow: 2,
+   centerPadding: '40px',
+});
+
+// Wait for window load
+$(window).load(function() {
+    // Animate loader off screen
+    $(".project-loader").fadeOut("slow");;
+});
+
+});
+</script>
