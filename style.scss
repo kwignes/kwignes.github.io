@@ -411,25 +411,4 @@ footer {
 }
 
 
-
-label.checkbox input[type="checkbox"] {display:none;}
-label.checkbox span {
-  display:inline-block;
-  cursor: pointer;
-  width:25px;
-  height:25px;
-  background:red;
-  vertical-align:middle;
-  margin:3px;
-border-radius: 10%;
-}
-label.checkbox {
-    font-size: 24px;
-    font-style: italic;
-    color: #999;
-    cursor: pointer;
-    display: block;
-    text-align: center;
-}
-
 @import "highlights";
