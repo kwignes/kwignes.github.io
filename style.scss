@@ -54,6 +54,9 @@ img {
   image-rendering: -webkit-optimize-contrast;
 }
 
+a img:hover {
+  opacity: .4;
+}
 
 ul {
   margin: 0;
@@ -68,7 +71,12 @@ figure {
     margin: 0;
 }
 pre {
-    padding: 5px 20px;
+    padding: 20px;
+        overflow: auto;
+}
+code {
+  color: #777;
+  font-weight: normal;
 }
 
 @media screen and (min-width: 48em) {
@@ -256,7 +264,7 @@ form#contact-form {
 .contact form input {
 font-size:1em;
 border:1px #fff solid;
-background:#fafafa;
+background:#ececec;
 padding:1em;
 width:100%;
 margin:.5em 0;
@@ -267,7 +275,7 @@ font-family: 'Arimo', sans-serif;
 font-size:1em;
 border:1px #fff solid;
 font-family: 'Arimo', sans-serif;
-background:#fafafa;
+background:#ececec;
 margin:.5em 0;
 width:100%;
 height:10em;
@@ -329,6 +337,99 @@ footer {
   height: 100%;
   z-index: 9999;
   background: url(../img/loading.gif) center no-repeat #fff;
+}
+
+
+.code-wrap {
+      border-top: 1px solid #ddd;
+   padding-top: 30px;
+   margin-top: 30px;
+}
+
+.grid img {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1; 
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards; 
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: .1s;
+  -moz-animation-delay: .1s;
+  animation-delay: .1s;
+}
+
+.fade-in.two {
+  -webkit-animation-delay: .8s;
+  -moz-animation-delay: .8s;
+  animation-delay: .8s;
+}
+
+.fade-in.three {
+  -webkit-animation-delay: 1.6s;
+  -moz-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+}
+
+.fade-in.four {
+  -webkit-animation-delay: 2.5s;
+  -moz-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+
+.fade-in.five {
+  -webkit-animation-delay: 3.2s;
+  -moz-animation-delay: 3.2s;
+  animation-delay: 3.2s;
+}
+
+.fade-in.six {
+  -webkit-animation-delay: 3.9s;
+  -moz-animation-delay: 3.9s;
+  animation-delay: 3.9s;
+}
+
+
+
+label.checkbox input[type="checkbox"] {display:none;}
+label.checkbox span {
+  display:inline-block;
+  cursor: pointer;
+  width:25px;
+  height:25px;
+  background:red;
+  vertical-align:middle;
+  margin:3px;
+border-radius: 10%;
+}
+label.checkbox {
+    font-size: 24px;
+    font-style: italic;
+    color: #999;
+    cursor: pointer;
+    display: block;
+    text-align: center;
 }
 
 @import "highlights";
