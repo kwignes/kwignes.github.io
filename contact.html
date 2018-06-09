@@ -27,33 +27,49 @@ title: Contact
             <li><a href="https://github.com/kwignes?tab=repositories" target="_blank" title="github">GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/kriswignes" target="_blank" title="codepen">LinkedIn</a></li>
             <li><a href="https://twitter.com/kriswignes?lang=en" target="_blank" title="twitter">Twitter</a></li>
-            <li><a href="mailto:kriswignes@gmail.com">Email</a></li>            
         </ul>
 </div>
 
 </div>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script>
+
 var $contactForm = $('#contact-form');
+
 $contactForm.submit(function(e) {
     e.preventDefault();
+    var $submit = $('input:submit', $contactForm);
+    var defaultSubmitText = $submit.val();
+
     $.ajax({
         url: '//formspree.io/kriswignes@gmail.com',
         method: 'POST',
         data: $(this).serialize(),
         dataType: 'json',
         beforeSend: function() {
-            $contactForm.append('<div class="alert alert--loading">Sending message…</div>');
+            //$contactForm.append('<div class="alert alert--loading">Sending message…</div>');
+            $submit.attr('disabled', true).val('Sending message…');
         },
         success: function(data) {
-            $contactForm.find('.alert--loading').hide();
-            $contactForm.append('<div class="alert alert--success">Message sent!</div>');
+            //$contactForm.append('<div class="alert alert--success">Message sent!</div>');
+            $submit.val('Message sent!');
+            setTimeout(function() {
+                //$('.alert--success').remove();
+                $submit.attr('disabled', false).val(defaultSubmitText);
+            }, 8000);
         },
         error: function(err) {
-            $contactForm.find('.alert--loading').hide();
-            $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
+            //$contactForm.find('.alert--loading').hide();
+            //$contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
+            $submit.val('Ops, there was an error.');
+            setTimeout(function() {
+                //$('.alert--error').remove();
+                $submit.attr('disabled', false).val(defaultSubmitText);
+            }, 8000);
         }
     });
 });
+
+
 </script>
 

@@ -17,6 +17,11 @@ $link-hover-color: #7f8c8d;
           box-sizing: border-box;
 }
 
+html,
+body {
+   height:100%;
+}
+
 body {
   font-family: 'Arimo', sans-serif;
   color: $primary-color;
@@ -124,11 +129,11 @@ header {
   float: left;
   margin: 0;
   border: none;
-  color: $primary-color;
   a {
     text-decoration: none;
+    color: #000;
     &:hover {
-      color: $primary-color;
+      color: #000;
     }
   }
   small {
@@ -164,11 +169,26 @@ background: #4cabab;
   } 
 }
 
+@media(max-width: 480px) {
+  header {
+    nav {
+      margin-top: 10px;
+      a {
+        margin: 0 10px;
+      }
+    }
+  }
+}
 
 
 /****
 main content
 ****/
+
+.page-wrap {
+   min-height:100%;
+   position:relative;
+}
 
 main {
   display: block;
@@ -177,7 +197,8 @@ main {
 .container {
   max-width: 860px;
   margin: 0 auto;
-  padding: 4em 1.5em;
+  padding: 4em 1.5em 120px;
+  height:100%;
   section {
     border-bottom: 1px solid #ddd;
     padding: 60px 0;
@@ -290,8 +311,8 @@ border:1px #ccc solid;
 cursor: pointer;
     background: #444;
     color: #fff;
-    max-width: 100px;
-    padding: 10px;
+    width: auto;
+    padding: 10px 20px;
     &:hover, &:focus, &:active {
       background-color: #111;
     }
@@ -300,6 +321,11 @@ cursor: pointer;
 
 
 footer {
+ position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+
     text-align: center;
     padding: 20px 1.5em;
     background: #eee;
