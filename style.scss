@@ -334,20 +334,20 @@ footer {
 }
 
 
-.slick-next {
-  right: -55px;
-  background-image: url(../img/next.png) !important;
-    width: 32px;
-    height: 32px;
-    opacity: .7 !important;
-}
-.slick-prev {
-  left: -55px;
-  background-image: url(../img/back.png) !important;
-    width: 32px;
-    height: 32px;
-    opacity: .7 !important;
-}
+// .slick-next {
+//   right: -55px;
+//   background-image: url(../img/next.png) !important;
+//     width: 32px;
+//     height: 32px;
+//     opacity: .7 !important;
+// }
+// .slick-prev {
+//   left: -55px;
+//   background-image: url(../img/back.png) !important;
+//     width: 32px;
+//     height: 32px;
+//     opacity: .7 !important;
+// }
 
 @media(max-width: 890px) {
   .slick-prev, .slick-next {
