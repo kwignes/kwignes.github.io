@@ -1,0 +1,71 @@
+---
+layout: page
+title: Fade transitions
+---
+
+<div class="grid">
+	<img class="fade-in one" src="http://via.placeholder.com/350x150" alt="">
+	<img class="fade-in two" src="http://via.placeholder.com/350x150" alt="">
+	<img class="fade-in three" src="http://via.placeholder.com/350x150" alt="">
+	<img class="fade-in four" src="http://via.placeholder.com/350x150" alt="">
+	<img class="fade-in five" src="http://via.placeholder.com/350x150" alt="">
+	<img class="fade-in six" src="http://via.placeholder.com/350x150" alt="">
+</div>
+<div class="code-wrap">
+{% highlight css %}
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: .1s;
+  -moz-animation-delay: .1s;
+  animation-delay: .1s;
+}
+
+.fade-in.two {
+  -webkit-animation-delay: .8s;
+  -moz-animation-delay: .8s;
+  animation-delay: .8s;
+}
+
+.fade-in.three {
+  -webkit-animation-delay: 1.6s;
+  -moz-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+}
+
+.fade-in.four {
+  -webkit-animation-delay: 2.5s;
+  -moz-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+
+.fade-in.five {
+  -webkit-animation-delay: 3.2s;
+  -moz-animation-delay: 3.2s;
+  animation-delay: 3.2s;
+}
+
+.fade-in.six {
+  -webkit-animation-delay: 3.9s;
+  -moz-animation-delay: 3.9s;
+  animation-delay: 3.9s;
+}
+{% endhighlight %}
+</div>
