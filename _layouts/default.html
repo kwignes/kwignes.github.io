@@ -23,11 +23,24 @@
       </nav>
     </div>
     </header>
+
+{% if page.url == "/" %}
+  <section id="about">
+     <div class="container">
+<img src="img/kris3.jpg">
+  <h1>Hi, I'm Kris</h1>
+
+<p>I build responsive, user-friendly websites in HTML, CSS, and JavaScript. I love to code and learn new technologies.</p>
+<p><a href="/contact/">Contact me</a></p>
+  </div>
+</section>
+{% endif %}
+
   <main class="container">
     {{ content }}
   </main>
   <footer>
-    &copy; 2018 Kris Wignes
+    &copy; 2018 Kris Wignes<div>Built with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a></div>
   </footer>
 </div>
 </body>
