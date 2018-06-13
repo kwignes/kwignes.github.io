@@ -155,6 +155,10 @@ header {
 
 @media(max-width: 480px) {
   header {
+    text-align: center;
+    h1, nav {
+      float: none;
+    }
     nav {
       margin-top: 10px;
       a {
@@ -197,9 +201,10 @@ main {
     text-align: center;
     color: #fff;
     .container {
-      padding: 4em 1.5em;
+      padding: 1em 1.5em 2em;
     h1 {
       color: #fff;
+      font-size: 1.6em;
     }
     img {
       border-radius: 100%;
@@ -233,6 +238,12 @@ main {
 @media screen and (min-width: 48em) {
   .container {
     padding: 4em 1.5em 140px;
+  }
+  #about .container {
+      padding: 2em 1.5em 4em;
+      h1 {
+        font-size: 2em;
+      }
   }
 }
 
