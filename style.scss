@@ -1,10 +1,10 @@
 ---
 ---
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,500,600,700');
 // Variables
 $primary-color: #343a40;
-$link-color: #3274FF;
+$link-color: #276ee3;
 
 // Resets
 * {
@@ -19,20 +19,19 @@ body {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   color: $primary-color;
-  font-weight: 400;
-  letter-spacing: 1px;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   margin: 0;
   padding: 0;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.4;
 }
 
 
 h1, h2, h3, h4 ,h5, h6 {
+  text-align: center;
   color: #111;
   font-weight: 700;
   text-rendering: optimizeLegibility;
@@ -72,12 +71,27 @@ figure {
     margin: 0;
 }
 pre {
-    padding: 20px;
+    padding: 10px 20px;
         overflow: auto;
 }
 code {
   color: #777;
   font-weight: normal;
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 @media screen and (min-width: 48em) {
@@ -96,27 +110,15 @@ a {
 }
 
 header {
-    padding: 20px 0;
-    background: #67b579;
-  .container {
-    padding: 0 3em;
-    max-width: 100%;
+  text-align: center;
+  img {
+    border-radius: 100%;
+        margin-bottom: 20px;
   }
  h1 {
-  float: left;
-  margin: 0;
   border: none;
-  font-size: 18px;
-  a {
-    text-decoration: none;
-    color: #fff;
-    &:hover {
-      color: #fff;
-    }
-  }
   small {
     font-weight: normal;
-    font-size: 16px;
     display: block;
   }
     a:hover:after, a:focus:after, a:active:after {
@@ -124,50 +126,27 @@ header {
     }
   }
   nav {
-    float: right;
+    margin: 20px 0;
+    border-bottom: 1px dotted #ddd;
+    border-top: 1px dotted #ddd;    
     a {
       text-decoration: none;
-      line-height: 47px;
-      height: 47px;
-      margin-left: 20px;
-      color: #fff;
-      font-size: .8em;
+      padding: 20px;
+      color: #111;
+      font-weight: 600;
+      font-size: .9em;
+      display: inline-block;
       &:hover {
-        color: #fff;
-        border-bottom: 2px solid #fff;
-      }
-    }
-  }
-  &:after {
-    content: '';
-    display: block;
-    clear: both;
-  } 
-}
-
-@media(max-width: 800px) {
-  header {
-    .container {
-      padding: 0 1.5em;
-    }
-  }
-}
-
-@media(max-width: 480px) {
-  header {
-    text-align: center;
-    h1, nav {
-      float: none;
-    }
-    nav {
-      margin-top: 10px;
-      a {
-        margin: 0 10px;
+        color: #111;
+        opacity: .7;
       }
     }
   }
 }
 
+.active {
+  opacity: .7;
+}
 
 /****
 main content
@@ -180,84 +159,40 @@ main content
 
 main {
   display: block;
+  padding: 20px 0;
 }
 
 .container {
-  max-width: 720px;
+  max-width: 750px;
   margin: 0 auto;
-  padding: 2em 1.5em 120px;
+  padding: 40px 25px 120px;
   height:100%;
-  section {
-    padding-bottom: 40px;
-    &:last-child {
-      padding-bottom: 0;
-    }
-  }
 }
 
-  #about {
-    background: #67b579;
-    font-size: 22px;
-    text-align: center;
-    color: #fff;
-    .container {
-      padding: 1em 1.5em 2em;
-    h1 {
-      color: #fff;
-      font-size: 1.6em;
-    }
-    img {
-      border-radius: 100%;
-      margin-bottom: 20px;
-    }
-    p {
-      margin-bottom: 0;
-    }
-    a {
-          background: #4c8459;
-    color: #fff;
-    padding: 8px 20px;
-    display: inline-block;
-    border-radius: 12px;
-    font-size: 14px;
-    &:hover {
-      background: #3b6544;
-    }
-    }      
-    }
-  }
-
-
-#projects {
+#home, #about {
+  max-width: 525px;
+  margin: 0 auto;
   h2 {
-    border-bottom: 1px solid #ddd;
+    text-align: center;
     margin-top: 0;
   }
-}
-
-@media screen and (min-width: 48em) {
-  .container {
-    padding: 4em 1.5em 140px;
+  ul {
+    list-style: none;
+    padding: 0;
   }
-  #about .container {
-      padding: 2em 1.5em 4em;
-      h1 {
-        font-size: 2em;
-      }
+  p {
+  text-align: center;
+  margin: 0 0 40px;
   }
 }
 
 
 .post {
-  h1 {
-    border: none;
-    text-transform: none;
-  }
   .date {
     font-size: 14px;
-    border-bottom: 1px dotted #ccc;
-    display: inline-block;
-    margin-bottom: 20px;
+    text-align: center;
+    margin: 20px 0 30px;
+    font-style: italic;
   }
   .entry {
       margin-bottom: 2em;
@@ -265,6 +200,7 @@ main {
 }
 
 .posts {
+  text-align: center;
   h2 {
     border: none;
     margin: 0 0 10px;
@@ -285,8 +221,11 @@ Section - Contact
 margin:2em auto;
 ul {
   list-style: none;
-  .fa {
-    color: #333;
+  a {
+    color: #5f656d;
+    &:hover, &:focus, &:active {
+      text-decoration: underline;
+    }
   }
 }
 }
@@ -340,12 +279,12 @@ border:1px #ccc solid;
 
 .contact form .btn {
 cursor: pointer;
-    background: #444;
+    background: #276ee3;
     color: #fff;
     width: auto;
     padding: 10px 20px;
     &:hover, &:focus, &:active {
-      background-color: #111;
+      background-color: #224eab;
     }
 }
 
@@ -355,19 +294,29 @@ footer {
     width: 100%;
     height: 70px;
     text-align: center;
+    background-color: #f9f9f9;
     padding: 20px 1.5em;
-    background: #eee;
     font-size: 12px;
-    div {
-      margin-top: 4px;
-      a {
-        color: #999;
-        &:hover {
-          color: #999;
-          text-decoration: underline;
-        }
+    .container {
+      padding: 0 1.5em;
+      line-height: 30px;
+    .footer-right {
+      float: right;
+    }
+    .copy {
+      float: left;
+    }
+  }
+}
+
+@media(max-width: 480px) { 
+  footer {
+      .container {
+       .copy, .footer-right {
+        float: none;
       }
     }
+  }
 }
 
 

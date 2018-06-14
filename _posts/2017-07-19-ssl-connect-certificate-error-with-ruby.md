@@ -10,11 +10,9 @@ tags:
 <p>While setting up a static environment, I came across this error from running: <code>gem install github-pages</code> (a gem for syncing Jekyll with GitHub Pages):</p>
 
 
-<pre class="highlight">
-	<code>
+{% highlight command %}
 Unable to download data from https://rubygems.org/ - SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (https://api.rubygems.org/specs.4.8.gz)
-</code>
-</pre>
+{% endhighlight %}
 
 
 <p>The problem came from outdated SSL certificates, as explained by Fletcher Nichol in this <a href="https://gist.github.com/fnichol/867550" target="_blank">gist</a>.</p>
