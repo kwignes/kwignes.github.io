@@ -1,8 +1,8 @@
 name: Kris Wignes
 description: Front-End Developer
-avatar: /img/kris3.jpg
+avatar: /img/kris.jpg
 
-
+# Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
   email:
@@ -17,7 +17,6 @@ footer-links:
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
-
 
 disqus: kriswignes
 google_analytics: UA-65288513-4
