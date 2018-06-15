@@ -1,323 +1,283 @@
 ---
 ---
 
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,500,600,700');
-// Variables
-$primary-color: #343a40;
-$link-color: #276ee3;
+//
+// IMPORTS
+//
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,500,600,700");
+@import "reset";
+@import "variables";
+// Syntax highlighting @import is at the bottom of this file
 
-// Resets
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+/**************/
+/* BASE RULES */
+/**************/
+
+body, html {
+    font-size: 62.5%;
 }
 
-html,
 body {
-   height:100%;
+  background: $white;
+  font: 15px/1.9 'Fira Sans', sans-serif;
+  color: $darkGray;
 }
 
-body {
-  font-family: 'Fira Sans', sans-serif;
-  color: $primary-color;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  margin: 0;
-  padding: 0;
-  font-size: 18px;
+.container {
+  margin: 0 auto;
+  max-width: 525px;
+  padding: 0 10px;
+  width: 100%;
+}
+.container.post,
+.container.project-page {
+  max-width: 740px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-weight: bold;
   line-height: 1.4;
 }
 
-
-h1, h2, h3, h4 ,h5, h6 {
-  text-align: center;
-  color: #111;
-  font-weight: 700;
-  text-rendering: optimizeLegibility;
-  display: inline-block;
-  display: block;
-}
-
 h1 {
-  font-size: 1.6em;
-  margin-top: 0;
+  font-size: 2.6rem;
+  a {
+    color: inherit;
+  }
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+  color: $gray;
+}
+
+p {
+  margin: 15px 0;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover, &:active {
+    color: $blue;
+  }
+}
+
+ul, ol {
+  margin: 15px 0;
+  padding-left: 30px;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ol ul, ul ol, ul ul, ol ol {
+  margin: 0;
+}
+
+ul ul, ol ul {
+  list-style-type: circle;
+}
+
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
 }
 
 img {
   max-width: 100%;
-  height: auto;
-  image-rendering: -webkit-optimize-contrast;
 }
 
-a img:hover {
-  opacity: .6;
+// Fixes images in popup boxes from Google Translate
+.gmnoprint img {
+  max-width: none;
 }
 
-ul {
-  margin: 0;
-  padding-left: 0.9em;
+.date {
+  font-style: italic;
+  color: $gray;
 }
 
-li {
-  margin-bottom: .222em;
+
+// Nicolas Gallagher's micro clearfix hack
+// http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
 }
 
-figure {
-    margin: 0;
-}
-pre {
-    padding: 10px 20px;
-        overflow: auto;
-}
-code {
-  color: #777;
-  font-weight: normal;
-  /* These are technically the same, but use both */
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-
-  -ms-word-break: break-all;
-  /* This is the dangerous one in WebKit, as it breaks things wherever */
-  word-break: break-all;
-  /* Instead use this non-standard one: */
-  word-break: break-word;
-
-  /* Adds a hyphen where the word breaks, if supported (No Blink) */
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
+.clearfix:after {
+    clear: both;
 }
 
-@media screen and (min-width: 48em) {
-   ul {
-    padding-left: 2.28em;
-   }
-}
+/*********************/
+/* LAYOUT / SECTIONS */
+/*********************/
 
-a {
-  position: relative;
-  color: $link-color;
-  text-decoration: none;
-  &:hover {
-    color: #224eab;
-  }
-}
+//
+// .masthead
+//
 
 header {
-  text-align: center;
-  img {
-    border-radius: 100%;
-        margin-bottom: 20px;
-  }
- h1 {
-  border: none;
-  small {
-    font-weight: normal;
-    display: block;
-  }
-    a:hover:after, a:focus:after, a:active:after {
-      display: none;
+    text-align: center;
+    padding: 60px 0 40px;
+    margin-bottom: 20px;
+  .site-avatar {
+    img {
+      border-radius: 100%;
+      margin-bottom: 25px;
     }
   }
+  .site-name {
+    font-size: 4rem;
+    margin: 0 0 13px;
+    line-height: 1;
+  }
+  .site-description {
+    margin: 0 auto 30px;
+    color: $gray;
+    font-size: 1.85rem;
+    font-weight: normal;
+  }
   nav {
-    margin: 20px 0;
-    border-bottom: 1px dotted #ddd;
-    border-top: 1px dotted #ddd;    
+    font-size: 2rem;
     a {
-      text-decoration: none;
-      padding: 20px;
-      color: #111;
-      font-weight: 600;
-      font-size: .9em;
+      margin: 0 10px;
+      color: $darkGray;
+    }
+    .active {
+      border-bottom: 2px solid #333;
+    }    
+  }  
+}
+
+
+
+//
+// .main
+//
+
+.posts > .post {
+  padding-bottom: 2em;
+  border-bottom: 1px solid $lightGray;
+}
+
+.posts > .post:last-child {
+  padding-bottom: 1em;
+  border-bottom: none;
+}
+
+.post {
+  blockquote {
+    margin: 1.8em .8em;
+    border-left: 2px solid $gray;
+    padding: 0.1em 1em;
+    color: $gray;
+    font-size: 22px;
+    font-style: italic;
+  }
+
+  .comments {
+    margin-top: 10px;
+  }
+
+  .read-more {
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+}
+
+
+footer {
+  padding: 60px 0 20px;
+  text-align: center;
+  font-size: 15px;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 3px;
+    li {
       display: inline-block;
-      &:hover {
-        color: #111;
-        opacity: .7;
+      margin: 0 10px;
+      a {
+        display: block;
+        color: $darkGray;
+        &:hover {
+          opacity: .6;
+          color: $darkGray;
+        }
       }
     }
   }
 }
 
-.active {
-  opacity: .7;
-}
 
-/****
-main content
-****/
-
-.page-wrap {
-   min-height:100%;
-   position:relative;
-}
-
-main {
-  display: block;
-  padding: 20px 0;
-}
-
-.container {
-  max-width: 750px;
-  margin: 0 auto;
-  padding: 40px 25px 120px;
-  height:100%;
-}
-
-#home, #about {
-  max-width: 525px;
-  margin: 0 auto;
-  h2 {
-    text-align: center;
-    margin-top: 0;
-  }
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  p {
-  text-align: center;
-  margin: 0 0 40px;
-  }
-}
-
-
-.post {
-  .date {
-    font-size: 14px;
-    text-align: center;
-    margin: 20px 0 30px;
-    font-style: italic;
-  }
-  .entry {
-      margin-bottom: 2em;
-  }
-}
-
-.posts {
-  text-align: center;
-  h2 {
-    border: none;
-    margin: 0 0 10px;
-    font-weight: normal;
-  }
-  .read-more:hover:after,
-  .read-more:active:after,
-  .read-more:focus:after {
-    display: none;
-  }
-}
-
-
-/*---------------------
-Section - Contact
----------------------*/
-.contact {
-margin:2em auto;
-ul {
-  list-style: none;
-  a {
-    color: #5f656d;
-    &:hover, &:focus, &:active {
-      text-decoration: underline;
-    }
-  }
-}
-}
-.contact:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-@media(min-width: 480px) {
-  .contact .col-2-3 {
-    width: 66.66%;
-  }
-  .contact .col-1-3 {
-    width: 33.33%;
-  }
-  .contact [class*='col-'] {
-    padding-right: 20px;
-    float: left;
-  }
-  .contact [class*='col-']:last-of-type {
-    padding-right: 0;
-  }
-}
 form#contact-form {
-    max-width: 500px;
+    max-width: 500px
 }
+
 .contact form input {
-font-size:1em;
-border:1px #fff solid;
-background:#ececec;
-padding:1em;
-width:100%;
-margin:.5em 0;
-color:#555;
-font-family: 'Arimo', sans-serif;
+    font-size: 1em;
+    border: 1px #fff solid;
+    background: #ececec;
+    padding: 1em;
+    width: 100%;
+    margin: .5em 0;
+    color: #555;
+    font-family: 'Arimo', sans-serif
 }
+
 .contact form textarea {
-font-size:1em;
-border:1px #fff solid;
-font-family: 'Arimo', sans-serif;
-background:#ececec;
-margin:.5em 0;
-width:100%;
-height:10em;
-padding:1em;
-min-width: 220px;
+    font-size: 1em;
+    border: 1px #fff solid;
+    font-family: 'Arimo', sans-serif;
+    background: #ececec;
+    margin: .5em 0;
+    width: 100%;
+    height: 10em;
+    padding: 1em;
+    min-width: 220px
 }
-.contact form input:focus, .contact-rap form textarea:focus {
-border:1px #ccc solid;
+
+.contact form input:focus,
+.contact-rap form textarea:focus {
+    border: 1px #ccc solid
 }
 
 .contact form .btn {
-cursor: pointer;
+    cursor: pointer;
     background: #276ee3;
     color: #fff;
     width: auto;
-    padding: 10px 20px;
-    &:hover, &:focus, &:active {
-      background-color: #224eab;
-    }
+    padding: 10px 20px
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 70px;
-    text-align: center;
-    background-color: #f9f9f9;
-    padding: 20px 1.5em;
-    font-size: 12px;
-    .container {
-      padding: 0 1.5em;
-      line-height: 30px;
-    .footer-right {
-      float: right;
-    }
-    .copy {
-      float: left;
-    }
-  }
+.contact form .btn:hover,
+.contact form .btn:focus,
+.contact form .btn:active {
+    background-color: #224eab
 }
 
-@media(max-width: 480px) { 
-  footer {
-      .container {
-       .copy, .footer-right {
-        float: none;
-      }
-    }
-  }
-}
 
 
 @import "highlights";

@@ -1,0 +1,15 @@
+<header>
+  <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+
+  <div class="site-info">
+    <h1 class="site-name">{{ site.name }}</h1>
+    <p class="site-description">{{ site.description }}</p>
+  </div>
+
+  <nav>
+    <a {% if page.url == '/' %} class="active"{% endif %} href="{{ site.baseurl }}/">Blog</a>
+    <a {% if page.url == '/projects/' %} class="active"{% endif %} href="{{ site.baseurl }}/projects">Projects</a>
+    <a {% if page.url == '/about/' %} class="active"{% endif %} href="{{ site.baseurl }}/about">About</a>
+    <a {% if page.url == '/contact/' %} class="active"{% endif %} href="{{ site.baseurl }}/contact">Contact</a>
+  </nav>
+</header>
