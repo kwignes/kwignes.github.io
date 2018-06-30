@@ -23,15 +23,16 @@ body {
   color: $darkGray;
 }
 
-.container {
+.container,
+.container.post {
   margin: 0 auto;
-  max-width: 525px;
+  max-width: 720px;
   padding: 0 10px;
   width: 100%;
 }
-.container.post,
+
 .container.project-page {
-  max-width: 740px;
+  max-width: 840px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,7 +43,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.6rem;
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
   a {
     color: inherit;
   }
@@ -63,7 +67,7 @@ h4 {
 }
 
 p {
-  margin: 15px 0;
+  margin: 0 0 25px;
 }
 
 a {
@@ -73,6 +77,10 @@ a {
   &:hover, &:active {
     color: $blue;
   }
+}
+
+a:hover img {
+    opacity: .6;
 }
 
 ul, ol {
@@ -106,6 +114,8 @@ strong, b {
 
 img {
   max-width: 100%;
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 hr {
@@ -146,27 +156,37 @@ hr {
 
 header {
     text-align: center;
-    padding: 60px 0 40px;
-    margin-bottom: 20px;
+    padding: 0 0 40px;
   .site-avatar {
+    margin-bottom: 25px;
+    display: inline-block;
     img {
       border-radius: 100%;
-      margin-bottom: 25px;
+    }
+    &:hover img {
+      opacity: 1;
     }
   }
   .site-name {
+    text-transform: uppercase;
     font-size: 4rem;
     margin: 0 0 13px;
+    padding: 0;
     line-height: 1;
+    border: none;
   }
   .site-description {
-    margin: 0 auto 30px;
-    color: $gray;
+    margin: 0;
+    color: rgba(0,0,0,.54);
     font-size: 1.85rem;
     font-weight: normal;
   }
   nav {
-    font-size: 2rem;
+    background-color: #f4f2f0;
+    font-size: 1.4rem;
+    padding: 25px;
+    text-transform: uppercase;
+    margin-bottom: 80px;
     a {
       margin: 0 10px;
       color: $darkGray;
@@ -256,9 +276,6 @@ footer {
 }
 
 
-form#contact-form {
-    max-width: 500px
-}
 
 .contact form input {
     font-size: 1em;
@@ -300,6 +317,22 @@ form#contact-form {
 .contact form .btn:focus,
 .contact form .btn:active {
     background-color: #224eab
+}
+
+
+.grid:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.grid .col-1-2 {
+  float: left;
+  width: 50%;
+  padding: 1em;
+}
+.grid .col-1-2 p {
+  margin: 10px 0 0;
 }
 
 

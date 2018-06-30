@@ -1,20 +1,57 @@
 ---
-layout: default
-title: Vancouver Front-End Developer
+layout: project-page
+title: Portfolio
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+<div class="projects">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+<div class="project-loader"></div>
 
-      <div class="entry">
-        {{ post.content | strip_html | truncatewords:30 }}
-      </div>
+<div class="grid">
+	<div class="col-1-2">
+		<img src="../img/ccma2018.png" alt="CCMA">
+		<p><strong>Canadian Country Music Association</strong> <br>Coming soon - HTML5 & CSS3</p>
+	</div>
+	<div class="col-1-2">
+		<a href="https://greenworksstore.com/" target="_blank"><img src="../img/greenworks.png" alt="Greenworks Building Supply"></a>
+		<p><strong>Greenworks Building Supply</strong> <br>Shopify</p>
+	</div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
 </div>
+
+<div class="grid">
+	<div class="col-1-2">
+		<a href="https://events.cimvhr.ca/" target="_blank"><img src="../img/cimvhr.png" alt="Tourism Industry Association of Canada"></a>
+		<p><strong>Military Health Research</strong> <br>HTML5 & CSS3</p>
+	</div>
+	<div class="col-1-2">
+		<a href="http://dev-cb-technical-test.pantheonsite.io/" target="_blank"><img src="../img/fontana-east.png" alt="Fontana East"></a>
+		<p><strong>H&W Development Corp.</strong> <br>WordPress</p>
+	</div>	
+</div>
+
+<div class="grid">
+	<div class="col-1-2">
+		<a href="https://www.analysisworks.com/" target="_blank"><img src="../img/analysis-works.png" alt="AnalysisWorks"></a>
+		<p><strong>AnalysisWorks</strong> <br>HTML & CSS</p>
+	</div>
+	<div class="col-1-2">
+		<a href="https://tiac-aitc.ca/" target="_blank"><img src="../img/tiac.png" alt="Tourism Industry Association of Canada"></a>
+		<p><strong>Tourism Industry Association of Canada</strong> <br>HTML5 & CSS3</p>
+	</div>
+</div>
+
+<hr>
+
+<p>Other work</p>
+
+	<ul>
+		<li><a href="/tinymce/">TinyMCE Grid</a> - <small>An alternative to tables</small></li>
+	   	<li><a href="/activity-profile/">Activity Profile</a> - <small>Surgical Cost Management app</small></li>
+	    <li><a href="https://github.com/kwignes/secure_session_login" title="Github" target="_blank">Secure Session Login (github)</a> - <small>MySQL login and database BCIT project</small></li>
+	</ul>
+
+
+</div>
+
 
