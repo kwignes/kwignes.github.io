@@ -11,6 +11,7 @@
     {% include analytics.html %}
   </head>
   <body>
+<div id="page-wrap">
 {% include header.html %}
   <div class="container post">
     <div id="main" role="main">
@@ -27,7 +28,8 @@
       {% include disqus.html %}
 		</article>
     </div>
-  {% include footer.html %}
   </div>
+  {% include footer.html %}
+</div>
 </body>
 </html>
