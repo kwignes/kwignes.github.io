@@ -80,6 +80,8 @@ a {
   color: $blue;
   text-decoration: none;
   cursor: pointer;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
   &:hover, &:active {
     color: $blue;
   }
@@ -189,6 +191,13 @@ header {
     padding: 0;
     line-height: 1;
     border: none;
+    a {
+      &:hover,
+      &:active,
+      &:focus {
+        color: #fff;
+      }
+    }
   }
   .site-description {
     margin: 0;
@@ -201,7 +210,10 @@ header {
     text-transform: uppercase;
     a {
       margin: 0 15px;
+      font-weight: 500;
+      padding-bottom: 2px;
       color: #fff;
+      border-bottom: 2px solid transparent;
       &:hover,
       &:active,
       &:focus {
