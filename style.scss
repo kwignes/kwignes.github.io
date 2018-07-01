@@ -53,8 +53,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 1.6rem;
-    margin-bottom: 25px;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
   a {
     color: inherit;
   }
@@ -165,8 +167,9 @@ hr {
 //
 
 header {
-    background: #fff;
-    padding: 40px 0;
+     border-bottom: 1px solid #eee;
+    padding: 20px 0;
+    margin-bottom: 60px;
     &:after {
     content: " ";
     display: block;
@@ -174,9 +177,7 @@ header {
   }
   .container {
     padding-bottom: 0;
-    .header-wrap {
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
+    .header-wrap {   
     overflow: auto;
     }
   }
@@ -196,7 +197,7 @@ header {
   }
   .site-name {
     text-transform: uppercase;
-    font-size: 3.2rem;
+    font-size: 2.4rem;
     margin: 0;
     padding: 0;
     line-height: 1;
@@ -212,11 +213,12 @@ header {
   .site-description {
     margin: 0;
     font-size: 1.85rem;
+    line-height: 1.4;
     font-weight: normal;
   }
   nav {
     float: right;
-    line-height: 67px;
+    line-height: 49px;
     font-size: 1.4rem;
     text-transform: uppercase;
     a {
