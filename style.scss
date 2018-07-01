@@ -194,6 +194,14 @@ header {
   }
   .site-info {
       float: left;
+    a {
+      color: #333;
+      &:hover,
+      &:active,
+      &:focus {
+        color: #333;
+      }
+    }
   }
   .site-name {
     text-transform: uppercase;
@@ -202,13 +210,6 @@ header {
     padding: 0;
     line-height: 1;
     border: none;
-    a {
-      &:hover,
-      &:active,
-      &:focus {
-        color: #333;
-      }
-    }
   }
   .site-description {
     margin: 0;
