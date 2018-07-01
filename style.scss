@@ -32,7 +32,7 @@ body {
 .container,
 .container.post {
   margin: 0 auto;
-  max-width: 740px;
+  max-width: 900px;
   width: 100%;
   padding: 0 20px 140px; 
 }
@@ -163,13 +163,10 @@ hr {
 //
 
 header {
-    text-align: center;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/banner.jpg');
-    margin-bottom: 25px;
-    background-position: center;
-    background-repeat:no-repeat;
-    background-size: cover;
-    color: #fff;
+    padding: 40px 0;
+  .container {
+    padding: 0 20px;
+  }
   .site-avatar {
     margin-bottom: 15px;
     display: inline-block;
@@ -182,12 +179,12 @@ header {
     }
   }
   .site-info {
-      padding: 6% 0;
+      float: left;
   }
   .site-name {
     text-transform: uppercase;
-    font-size: 4rem;
-    margin: 0 0 13px;
+    font-size: 3.2rem;
+    margin: 0;
     padding: 0;
     line-height: 1;
     border: none;
@@ -195,7 +192,7 @@ header {
       &:hover,
       &:active,
       &:focus {
-        color: #fff;
+        color: #333;
       }
     }
   }
@@ -205,6 +202,7 @@ header {
     font-weight: normal;
   }
   nav {
+    float: right;
     font-size: 1.4rem;
     padding: 15px;
     text-transform: uppercase;
@@ -212,19 +210,24 @@ header {
       margin: 0 15px;
       font-weight: 500;
       padding-bottom: 2px;
-      color: #fff;
+      color: #333;
       border-bottom: 2px solid transparent;
       &:hover,
       &:active,
       &:focus {
-        color: #fff;
-        border-bottom: 2px solid #fff;
+        color: #333;
+        border-bottom: 2px solid #333;
       }
     }
     .active {
-      border-bottom: 2px solid #fff;
+      border-bottom: 2px solid #333;
     }    
-  }  
+  }
+  &:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
 }
 
 
@@ -250,7 +253,7 @@ header {
     font-size: 3rem;
     border-bottom: 1px solid #eee;
     margin-bottom: 20px;
-    padding-bottom: 10px;    
+    padding-bottom: 10px;
   }
   blockquote {
     margin: 1.8em .8em;
@@ -330,7 +333,7 @@ footer {
     background: #ececec;
     margin: .5em 0;
     width: 100%;
-    height: 10em;
+    height: 15em;
     padding: 1em;
     min-width: 220px
 }
@@ -446,19 +449,8 @@ footer {
 }
 
 
-@media (max-width: 768px) {
-header {
-  padding: 0 0 50px;
-}
-header .site-name {
-  font-size: 3.6rem;
-}
-header nav {
-  margin-bottom: 50px;
-  }
-}
 
-@media (max-width: 390px) {
+@media (max-width: 640px) {
   header nav a {
     margin: 0 5px;
     &:first-child {
@@ -469,7 +461,13 @@ header nav {
     }    
   }
 }
-
+@media (max-width: 530px) {
+  header nav,
+  header .site-info  {
+    float: none;
+    text-align: center;
+  }
+}
 
 
 
