@@ -99,7 +99,27 @@ img {
 header {
   padding: 200px 0 60px;
   margin-bottom: 60px;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #ccc;
+  ul {
+    list-style-type: none;
+    margin: 25px 0 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      svg.icon {
+        width: 4rem;
+        fill: currentColor;
+        color: rgba(0, 0, 0, 0.4);
+        &:hover {
+          fill: #333;
+          color: #333;
+        }
+      }
+      a {
+        display: inline-block;
+      }
+    }
+  }
 }
 
 /* Container
@@ -141,22 +161,6 @@ footer {
   padding: 20px 0;
   background: #eee;
   margin-top: 20px;
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    li {
-      display: inline-block;
-      .icon {
-        fill: currentColor;
-        color: inherit;
-        width: auto;
-        height: auto;
-        width: 3.2rem;
-        color: rgba(0, 0, 0, 0.4);
-      }
-    }
-  }
 }
 
 
@@ -199,3 +203,27 @@ footer {
    ========================================================================== */
 
 
+@media (max-width: 991px) {
+  .container .intro .intro__main {
+    font-size: 3.6rem;
+  }
+}
+@media (max-width: 640px) {
+  header {
+      padding: 40px 0;
+      margin-bottom: 40px;
+  }
+  .container .intro {
+    max-width: 100%;
+  }
+  .container .intro .intro__main {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+.grid .col-1-2 {
+  width: 100%;
+  margin-bottom: 40px;
+  }
+}
