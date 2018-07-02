@@ -99,7 +99,7 @@ img {
 header {
   padding: 200px 0 60px;
   margin-bottom: 60px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ddd;
   ul {
     list-style-type: none;
     margin: 25px 0 0;
@@ -107,6 +107,8 @@ header {
     li {
       display: inline-block;
       svg.icon {
+        -webkit-transition: all .25s ease;
+        transition: all .25s ease;
         width: 4rem;
         fill: currentColor;
         color: rgba(0, 0, 0, 0.4);
