@@ -14,13 +14,14 @@ body, html {
 body {
   background: #fafafa;
   font: 16px/1.5 'Roboto', sans-serif;
-  color: #333;
+  color: #444;
 }
 
 h1, h2, h3, h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-weight: bold;
+  color: #333;
   line-height: 1.4;
 }
 
@@ -97,8 +98,8 @@ img {
    ========================================================================== */
 
 header {
-  padding: 200px 0 60px;
-  margin-bottom: 60px;
+  padding: 10% 0 5em;
+  margin-bottom: 5em;
   border-bottom: 1px solid #ddd;
   ul {
     list-style-type: none;
@@ -112,10 +113,17 @@ header {
         width: 4rem;
         fill: currentColor;
         color: rgba(0, 0, 0, 0.4);
+        vertical-align: middle;
         &:hover {
           fill: #333;
           color: #333;
         }
+      }
+      svg#github-icon {
+        width: 3rem;
+      }
+      svg#twitter-icon {
+        width: 3.5rem;
       }
       a {
         display: inline-block;
@@ -138,9 +146,10 @@ header {
     max-width: 60%;
     .intro__main {
     font-size: 3.7rem;
-    line-height: 1.2;
+    line-height: 1.25;
     font-weight: bold;
     margin: 10px 0 20px;
+    color: #333;
     }
     .intro__pre, .intro__post {
     text-transform: uppercase;
@@ -159,10 +168,8 @@ header {
 
 footer {
   text-align: center;
-  font-size: 15px;
+  font-size: 14px;
   padding: 20px 0;
-  background: #eee;
-  margin-top: 20px;
 }
 
 
@@ -181,12 +188,17 @@ footer {
         padding-right: 15px;
         position: relative;
         margin-bottom: 60px;
+        &:nth-last-child(2),
+        &:last-child {
+          margin-bottom: 0;
+        }        
         p {
         line-height: 1.5;
         font-size: 1.5rem;
         margin-bottom: 5px;
         a {
           border-bottom: 1px solid #ddd;
+          font-size: 17px;
           &:hover {
             border-bottom: 1px solid #333;
           }            
@@ -201,6 +213,69 @@ footer {
   }
 
 
+/* Contact
+   ========================================================================== */
+.contact {
+background:#f7f7f7;
+border-top: 1px solid #ddd;
+border-bottom: 1px solid #ddd;
+padding: 5em 0;
+margin-top: 5em;
+font-size: 14px;
+}
+
+.contact form input {
+font-family: 'Roboto', sans-serif;
+font-size:1em;
+border:1px #ddd solid;
+background:#fff;
+padding:1em;
+color:#555;
+margin-bottom: 7px;
+margin-right: 4px;
+}
+.contact form textarea {
+  font-family: 'Roboto', sans-serif;
+font-size:1em;
+border:1px #ddd solid;
+background:#fff;
+min-height:15em;
+padding:1em;
+width: 100%;
+max-width: 830px;
+margin-right: 0;
+    display: block;
+}
+
+.contact form .btn {
+  cursor:pointer;
+  padding: 8px 20px;
+  margin: 20px 0 0;
+  text-transform: uppercase;
+  color: #359173;
+  font-weight: 600;
+  background: transparent;
+  border: 2px solid #359173;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+  &:hover, &:active, &:focus {
+    background: transparent;
+    border: 2px solid #777;
+    color: #777;
+  }
+}
+#thankyouBlock {
+text-align:center;
+color:#fff;
+background:green;
+padding:1em;
+margin:1em;
+border:2px #000 solid;
+border-radius:.2
+}
+
+
+
 /* Mobile
    ========================================================================== */
 
@@ -209,14 +284,8 @@ footer {
   .container .intro .intro__main {
     font-size: 3.6rem;
   }
-}
-@media (max-width: 640px) {
-  header {
-      padding: 40px 0;
-      margin-bottom: 40px;
-  }
   .container .intro {
-    max-width: 100%;
+        max-width: 400px;
   }
   .container .intro .intro__main {
     font-size: 3rem;
