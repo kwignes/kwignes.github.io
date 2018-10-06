@@ -1,0 +1,23 @@
+
+//
+// VARIABLES
+//
+
+// Colors
+$blue: #428bca;
+
+// Grays
+$black: #000;
+$darkerGray: #222;
+$darkGray: #494e52;
+$gray: #555;
+$lightGray: #f2f3f3;
+$white: #fff;
+
+
+// Mobile breakpoints
+@mixin mobile {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}

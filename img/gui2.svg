@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="650" height="500" version="1.1" viewBox="0 0 650.00001 500.00001" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="a" x="-.068536" y="-.10456" width="1.1371" height="1.2091" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="13.463792"/>
+  </filter>
+ </defs>
+ <g transform="translate(0 -552.36)">
+  <rect y="552.36" width="650" height="500" fill="#6dd4c7"/>
+ </g>
+ <rect x="89.262" y="110.62" width="471.48" height="309.03" ry="0" fill-opacity=".090426" filter="url(#a)"/>
+ <rect x="89.262" y="95.484" width="471.48" height="309.03" ry="0" fill="#fff"/>
+ <rect x="89.262" y="95.484" width="471.48" height="16.293" fill="#ededed"/>
+ <circle cx="97.408" cy="103.63" r="2.812" fill="#62d5e9"/>
+ <circle cx="114.28" cy="103.63" r="2.812" fill="#ff8d72"/>
+ <circle cx="105.84" cy="103.63" r="2.812" fill="#58f9a2"/>
+ <rect x="114.68" y="131.85" width="128.14" height="141.77" ry="2.7263" fill="none"/>
+ <rect x="114.68" y="131.85" width="128.14" height="117.24" ry="2.7263" fill="#fff" stroke="#ededed" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+ <path d="m117.41 131.85c-1.5104 0-2.7266 1.2142-2.7266 2.7246v65.866h128.14v-65.866c0-1.5104-1.2162-2.7246-2.7266-2.7246z" fill="#62d5e9"/>
+ <g transform="translate(-2.003e-5 -29.863)" fill="#ededed">
+  <rect x="121.66" y="239.41" width="99.734" height="9.9115" ry="0"/>
+  <rect x="121.66" y="254.6" width="73.835" height="5.2768" ry="0"/>
+  <rect x="121.66" y="265.15" width="96.463" height="5.2768" ry="0"/>
+ </g>
+ <rect x="114.68" y="267.2" width="128.14" height="117.24" ry="2.7263" fill="#fff" stroke="#ededed" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+ <path d="m117.41 267.21c-1.5104 0-2.7266 1.2142-2.7266 2.7246v65.866h128.14v-65.866c0-1.5104-1.2162-2.7246-2.7266-2.7246z" fill="#ff8d72"/>
+ <g transform="translate(-2.0199e-5 105.49)" fill="#ededed">
+  <rect x="121.66" y="239.41" width="99.734" height="9.9115" ry="0"/>
+  <rect x="121.66" y="254.6" width="73.835" height="5.2768" ry="0"/>
+  <rect x="121.66" y="265.15" width="96.463" height="5.2768" ry="0"/>
+ </g>
+ <rect x="260.93" y="131.85" width="128.14" height="117.24" ry="2.7263" fill="#fff" stroke="#ededed" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+ <path d="m263.66 131.85c-1.5104 0-2.7266 1.2142-2.7266 2.7246v65.866h128.14v-65.866c0-1.5104-1.2162-2.7246-2.7266-2.7246z" fill="#f0ef94"/>
+ <g transform="translate(146.25 -29.863)" fill="#ededed">
+  <rect x="121.66" y="239.41" width="99.734" height="9.9115" ry="0"/>
+  <rect x="121.66" y="254.6" width="73.835" height="5.2768" ry="0"/>
+  <rect x="121.66" y="265.15" width="96.463" height="5.2768" ry="0"/>
+ </g>
+ <rect x="260.93" y="267.2" width="128.14" height="117.24" ry="2.7263" fill="#fff" stroke="#ededed" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+ <path d="m263.66 267.21c-1.5104 0-2.7266 1.2142-2.7266 2.7246v65.866h128.14v-65.866c0-1.5104-1.2162-2.7246-2.7266-2.7246z" fill="#62d5e9"/>
+ <g transform="translate(146.25 105.49)" fill="#ededed">
+  <rect x="121.66" y="239.41" width="99.734" height="9.9115" ry="0"/>
+  <rect x="121.66" y="254.6" width="73.835" height="5.2768" ry="0"/>
+  <rect x="121.66" y="265.15" width="96.463" height="5.2768" ry="0"/>
+ </g>
+ <rect x="407.18" y="131.85" width="128.14" height="117.24" ry="2.7263" fill="#fff" stroke="#ededed" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+ <path d="m409.91 131.85c-1.5104 0-2.7266 1.2142-2.7266 2.7246v65.866h128.14v-65.866c0-1.5104-1.2162-2.7246-2.7266-2.7246z" fill="#ff8d72"/>
+ <g transform="translate(292.5 -29.863)" fill="#ededed">
+  <rect x="121.66" y="239.41" width="99.734" height="9.9115" ry="0"/>
+  <rect x="121.66" y="254.6" width="73.835" height="5.2768" ry="0"/>
+  <rect x="121.66" y="265.15" width="96.463" height="5.2768" ry="0"/>
+ </g>
+ <rect x="407.18" y="267.2" width="128.14" height="117.24" ry="2.7263" fill="#fff" stroke="#ededed" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+ <path d="m409.91 267.21c-1.5104 0-2.7266 1.2142-2.7266 2.7246v65.866h128.14v-65.866c0-1.5104-1.2162-2.7246-2.7266-2.7246z" fill="#f0ef94"/>
+ <g transform="translate(292.5 105.49)" fill="#ededed">
+  <rect x="121.66" y="239.41" width="99.734" height="9.9115" ry="0"/>
+  <rect x="121.66" y="254.6" width="73.835" height="5.2768" ry="0"/>
+  <rect x="121.66" y="265.15" width="96.463" height="5.2768" ry="0"/>
+ </g>
+</svg>
