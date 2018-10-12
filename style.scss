@@ -37,6 +37,8 @@ h1 {
   color: #aaa;
 }
 
+
+
 a {
   color: $link;
   text-decoration: none;
@@ -101,8 +103,10 @@ ul, ol {
     background: #fff;
     color: $link;
     cursor: pointer;
+    border-radius: 3px;
+    font-weight: 500;
     font-size: 18px;
-    padding: 4px 16px;
+    padding: 8px 16px;
   &:hover, &:focus, &:active {
     background: $link;
     color: #fff;
@@ -114,9 +118,12 @@ ul, ol {
   color: #fff;
   font-size: 14px;
   border: none;
-  margin-top: 20px;
+  margin-top: 30px;
 }
-
+.btn.dark:hover,.btn.dark:active,
+.btn.dark:focus {
+  background: #111;
+}
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
@@ -142,14 +149,14 @@ h1 {
   }
   }
 
+#h1{
+  padding-top: 0;
+}
 
 header {
   overflow: auto;
   background: #f6f6f6;
   padding: 0 25px;
-  .container {
-    max-width: 100%;
-  }
   .logo {
   font-weight: 700;
   font-size: 16px;
@@ -178,6 +185,7 @@ header {
   text-transform: uppercase;
  }
  p {
+  padding-top: 100px;
   margin: 20px 0 0;
   font-size: 22px;
  }
@@ -499,6 +507,7 @@ header {
       top: 0;
       bottom: 0px;
       left: 0px;
+      font-weight: bold;
       right: 0px;
       padding: 12px;
       margin: 0;
@@ -508,6 +517,11 @@ header {
       -moz-transition: opacity 200ms;
       -o-transition: opacity 500ms;
       transition: opacity 200ms;
+      line-height: 1.4;
+      small {
+        font-weight: normal;
+        font-size: 14px;
+      }
       span {
         display: block;
       }
@@ -526,7 +540,7 @@ header {
     content: " ";
     display: block;
     width: 25px;
-    height: 2px;
+    height: 3px;
     background: #fdc741;
     margin: 10px 0;
     font-weight: normal;
@@ -665,7 +679,7 @@ th {
   padding-top: 100px;
   h2 {
     margin: .667em 0 .333em;
-    font-size: 1.6em;
+    font-size: 1.4em;
     line-height: 1.4;
     a {
       color: $heading;
@@ -829,4 +843,6 @@ footer {
 
 .highlight .err {
   border: none;
+  background: none;
+  color: #333;
 }
