@@ -1,8 +1,8 @@
 ---
 ---
 
-$primary: #333;
-$heading: #333;
+$primary: #070e24;
+$heading: #070e24;
 $link: #408FEC;
 $font_family_1: 'Roboto', sans-serif;
 
@@ -22,14 +22,15 @@ body {
 html {
   font-family: $font_family_1;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 18px;
   min-height: 100%;
   text-rendering: optimizeLegibility;
 }
 body {
   color: $primary;
   -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;  
+      -ms-text-size-adjust: 100%;
+      background-color: #f8f8f8;
 }
 
 
@@ -135,12 +136,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 34px;
   padding-top: 100px;
   color: $heading;
-  margin: 0 0 1em;
+  margin: 0 0 10px;
   line-height: 1.4;
-  text-transform: uppercase;
 }
 
 @media (max-width: 930px) {
@@ -155,18 +155,19 @@ h1 {
 
 header {
   overflow: auto;
-  background: #f6f6f6;
+  background: #fff;
   padding: 0 25px;
   .container {
-    max-width: 1400px;
+    max-width: 100%;
+     padding: 0 25px;
   }
   .logo {
   font-weight: 700;
-  font-size: 16px;
-  line-height: 76px;
+  font-size: 20px;
+  line-height: 80px;
   margin: 0;
   padding: 0;
-  color: #595959;
+  color: #070e24;
   text-transform: uppercase;  
   float: left;  
   }
@@ -177,28 +178,26 @@ header {
 .intro {
   padding: 0 0 50px;
   clear: both;
-  max-width: 400px;
+  max-width: 450px;
   img {
     border-radius: 100%;
     margin-bottom: 20px;
   }
-  h1 {
-  font-size: 20px;
-  color: $heading;
-  text-transform: uppercase;
- }
  p {
-  padding-top: 100px;
   margin: 20px 0 0;
-  font-size: 22px;
+  font-size: 20px;
  }
+}
+
+#home {
+    max-width: 960px;
 }
 
 
 .container {
   margin: 0 auto;
-  padding: 0 25px;
-  max-width: 760px;
+  padding: 0 25px 70px;
+  max-width: 660px;
 }
 
 
@@ -365,9 +364,9 @@ header {
       }
       a {
         padding: 0 1em;
-        line-height: 76px;
+        line-height: 80px;
         text-align: center;
-        color: #595959;
+        color: #aaa;
         background: none;
         font-size: 14px;
         border-top: 0;
@@ -493,10 +492,10 @@ header {
 .flex-grid-thirds {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 20px;
   .col {
     width: 32%;
-    margin-right: 10px;
+    margin-right: 20px;
     a {
       color: #fff;
       position: relative;
@@ -505,12 +504,12 @@ header {
         display: block;
       }
       p {
-      font-size: 16px;
+      font-size: 20px;
       position: absolute;
       top: 0;
       bottom: 0px;
       left: 0px;
-      font-weight: bold;
+      font-weight: 500;
       right: 0px;
       padding: 12px;
       margin: 0;
@@ -538,7 +537,11 @@ header {
 .col a:hover p {
   visibility:visible;
   opacity: 1;
-  background: rgba(0,0,0,.7);
+  background: rgba(0,0,0,.9);
+}
+
+.col:hover {
+      box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .05);
 }
 
 
@@ -608,7 +611,7 @@ header {
 
 .contact-rap {
   form {
-    background:#f9f9f9;
+    background:#eee;
     padding:25px;
     input[type=text], input[type=email] {     
     padding: .5em;
@@ -762,8 +765,6 @@ ul.posts {
 }
   h1 {
     border: none;
-    font-size: 1.6em;
-    margin: 0 0 10px;
   }
   .date {
     font-size: .8125em;
@@ -838,6 +839,7 @@ a.next {
 footer {
     padding: 60px 0;
     text-align: center;
+    background-color: #fff;
     a {
       color: #ababab;
       font-size: 26px;
@@ -852,9 +854,9 @@ footer {
 
 #about {
   img {
-    float: left;
-    margin: 0 20px 20px 0;
-    border-radius: 6px;
+    float: right;
+    margin: 0 0 20px 20px;
+    border-radius: 1px;
   }
   &:after {
     content: " ";
