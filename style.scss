@@ -1,7 +1,7 @@
 ---
 ---
 
-$primary: rgba( 45, 55, 65, .85 );
+$primary: #7a8894;
 $heading: rgba( 45, 55, 65, .85 );
 $link: #408FEC;
 $font_family_1: 'Roboto', sans-serif;
@@ -124,7 +124,7 @@ ul, ol {
     -webkit-transform: translate(0px, 0px);
     -ms-transform: translate(0px, 0px);
     transform: translate(0px, 0px);
-    color: rgba(7, 14, 36, .5);
+    color: rgba(7, 14, 36, .3);
   }
  }
 
@@ -150,7 +150,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 44px;
+  font-size: 54px;
   padding-top: 100px;
   color: $heading;
   margin: 0 0 10px;
@@ -169,10 +169,10 @@ h1 {
 
 header {
   overflow: auto;
-  background-color: #e7f5f5;
+  border-bottom: 1px solid #eee;
   // .container {
   //       padding: 0 25px;
-  //   max-width: 1170px;
+  //   max-width: 100%;
   // }
   .logo {
   font-weight: 700;
@@ -180,28 +180,27 @@ header {
   line-height: 80px;
   margin: 0;
   padding: 0;
-  color: $primary;
+  color: $heading;
   text-transform: uppercase;  
   float: left;  
   }
 }
 
 .home-banner {
-    border-bottom: 1px solid #eee;
     margin-bottom: 50px;
-    background-color: #e7f5f5;
+    border-bottom: 1px solid #eee;
 .intro {
   clear: both;
   margin: 0 auto;
-  padding: 0 25px 50px;
-  max-width: 660px;
+  padding: 0 25px 100px;
   img {
     border-radius: 100%;
     margin-bottom: 20px;
   }
  p {
   margin: 20px 0 0;
-  font-size: 24px;
+  font-size: 20px;
+  max-width: 500px;
  }
  a {
   font-size: 14px;
@@ -230,7 +229,7 @@ header {
     -webkit-transform: translate(0px, 0px);
     -ms-transform: translate(0px, 0px);
     transform: translate(0px, 0px);
-    color: rgba(7, 14, 36, .5);
+    color: rgba(7, 14, 36, .3);
   }
  }
 }
@@ -239,12 +238,9 @@ header {
 
 .container {
   margin: 0 auto;
-  padding: 0 25px 50px;
-  max-width: 660px;
+  padding: 0 25px 70px;
+  max-width: 960px;
 }
-
-
-
 
 .nav-collapse {  
   width: 100%;
@@ -267,14 +263,13 @@ header {
         -webkit-tap-highlight-color: transparent;
         text-decoration: none;
         padding: 0.7em 1em 0.7em 0;
-        color: #fff;
+        color: $primary;
         width: 100%;
         font-weight: 500;
         float: left;
-        background: #333;
         text-align: center;
         &:hover {
-          color: #fff;
+          color: #aaa;
         }
       }      
     }    
@@ -411,7 +406,6 @@ header {
         padding: 0 1em;
         line-height: 80px;
         text-align: center;
-         color: rgba( 45, 55, 65, .85 );
         background: none;
         font-size: 14px;
         border-top: 0;
@@ -433,7 +427,7 @@ header {
 }
 
 .active {
-  color: $link !important;
+  color: $heading !important;
 }
 
 
@@ -450,7 +444,6 @@ header {
       }
       .nav-collapse ul {
         padding: 0 20px;
-        background: #333;
         border-top: 1px solid #f2f2f2;
       }
     }
@@ -549,7 +542,7 @@ header {
         display: block;
       }
       p {
-      font-size: 20px;
+      font-size: 24px;
       position: absolute;
       top: 0;
       bottom: 0px;
@@ -571,7 +564,6 @@ header {
       }
       span {
         display: block;
-        text-decoration: underline;
       }
     }    
   }
@@ -614,8 +606,11 @@ header {
       width: 100%;
       margin: 0 0 20px 0;
       a {
-        color: #070e24;
+        color: $primary;
         p {
+          span {
+            color: $heading;
+          }
           position: relative;
           opacity: 1;
           visibility: visible;
@@ -671,13 +666,12 @@ header {
 
 .contact-rap {
   form {
-    background:#eee;
-    padding:25px;
     input[type=text], input[type=email] {     
-    padding: .5em;
+    padding: 1em;
     width: 100%;
     margin: 1em 0;
-    border: 1px solid #ccc;
+    border: 1px solid #fff;
+    background: #f1f1f1;
     display: block;
     }
     h3 {
@@ -691,11 +685,11 @@ header {
       font-family: sans-serif;
       margin: .5em 0;
       display: block;
-      max-width: 740px;
       width: 100%;
       height: 14em;
-      padding: .5em;
-      border: 1px solid #ccc;
+      padding: 1em;
+      border: 1px solid #fff;
+    background: #f1f1f1;
     }
   &:after {
     content:" ";
@@ -717,9 +711,8 @@ header {
     background: $link;
     color: #fff;
     cursor: pointer;
-    border-radius: 3px;
     font-size: 14px;
-    padding: 8px 16px;
+    padding: 12px 22px;
       margin-top: 30px;
   &:hover, &:focus, &:active {
     background: #fff;
@@ -757,9 +750,9 @@ th {
 
 
 .column-list {
-      -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
+      -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
     -webkit-column-gap: 20px;
     -moz-column-gap: 20px;
     column-gap: 20px;
@@ -934,7 +927,6 @@ a.next {
 footer {
     padding: 60px 0;
     text-align: center;
-        background: #ededed;
     a {
       color: #ababab;
       font-size: 26px;
@@ -951,8 +943,7 @@ footer {
   img {
     float: right;
     margin: 0 0 20px 20px;
-    border-radius: 100%;
-    max-width: 150px;
+    max-width: 225px;
   }
   &:after {
     content: " ";
