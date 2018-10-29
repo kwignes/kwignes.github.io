@@ -1,8 +1,8 @@
 ---
 ---
 
-$primary: #070e24;
-$heading: #070e24;
+$primary: rgba( 45, 55, 65, .85 );
+$heading: rgba( 45, 55, 65, .85 );
 $link: #408FEC;
 $font_family_1: 'Roboto', sans-serif;
 
@@ -23,7 +23,6 @@ html {
   font-family: $font_family_1;
   line-height: 1.5;
   font-size: 18px;
-  font-weight: 300;
   min-height: 100%;
   text-rendering: optimizeLegibility;
 }
@@ -31,7 +30,6 @@ body {
   color: $primary;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
-      background-color: #f8f8f8;
 }
 
 
@@ -101,7 +99,7 @@ ul, ol {
 
  .btn {
   font-size: 14px;
-  border-bottom: 1px solid #070e24;
+  border-bottom: 1px solid rgba( 45, 55, 65, .25 );
   font-weight: 500;
   position: relative;
   left: 0px;
@@ -110,7 +108,7 @@ ul, ol {
   bottom: 0px;
   margin: 0px;
   padding: 3px 0px;
-  color: #070e24;
+  color: $primary;
   background-color: rgba(7, 14, 36, 0);
   -webkit-transform: translate(0px, 0px);
   -ms-transform: translate(0px, 0px);
@@ -152,7 +150,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 34px;
+  font-size: 44px;
   padding-top: 100px;
   color: $heading;
   margin: 0 0 10px;
@@ -171,30 +169,32 @@ h1 {
 
 header {
   overflow: auto;
-  background: #fff;
-  padding: 0 25px;
-  .container {
-    max-width: 100%;
-     padding: 0 25px;
-  }
+  background-color: #e7f5f5;
+  // .container {
+  //       padding: 0 25px;
+  //   max-width: 1170px;
+  // }
   .logo {
   font-weight: 700;
   font-size: 20px;
   line-height: 80px;
   margin: 0;
   padding: 0;
-  color: #070e24;
+  color: $primary;
   text-transform: uppercase;  
   float: left;  
   }
 }
 
-
-
+.home-banner {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 50px;
+    background-color: #e7f5f5;
 .intro {
-  padding: 0 0 50px;
   clear: both;
-  max-width: 400px;
+  margin: 0 auto;
+  padding: 0 25px 50px;
+  max-width: 660px;
   img {
     border-radius: 100%;
     margin-bottom: 20px;
@@ -202,11 +202,10 @@ header {
  p {
   margin: 20px 0 0;
   font-size: 24px;
-  font-weight: 300;
  }
  a {
   font-size: 14px;
-  border-bottom: 1px solid #070e24;
+  border-bottom: 1px solid rgba( 45, 55, 65, .25 );
   font-weight: 500;
   position: relative;
   left: 0px;
@@ -215,7 +214,7 @@ header {
   bottom: 0px;
   margin: 0px;
   padding: 3px 0px;
-  color: #070e24;
+  color: $primary;
   background-color: rgba(7, 14, 36, 0);
   -webkit-transform: translate(0px, 0px);
   -ms-transform: translate(0px, 0px);
@@ -235,17 +234,16 @@ header {
   }
  }
 }
-
-#home {
-    max-width: 1170px;
 }
 
 
 .container {
   margin: 0 auto;
-  padding: 0 25px 70px;
+  padding: 0 25px 50px;
   max-width: 660px;
 }
+
+
 
 
 .nav-collapse {  
@@ -413,7 +411,7 @@ header {
         padding: 0 1em;
         line-height: 80px;
         text-align: center;
-         color: #070e24;
+         color: rgba( 45, 55, 65, .85 );
         background: none;
         font-size: 14px;
         border-top: 0;
@@ -541,7 +539,7 @@ header {
   justify-content: space-between;
   margin-top: 20px;
   .col {
-    width: 32%;
+    width: 50%;
     margin-right: 20px;
     a {
       color: #fff;
@@ -573,6 +571,7 @@ header {
       }
       span {
         display: block;
+        text-decoration: underline;
       }
     }    
   }
@@ -584,7 +583,7 @@ header {
 .col a:hover p {
   visibility:visible;
   opacity: 1;
-  background: rgba(0,0,0,.9);
+  background: rgba(0,0,0,.75);
 }
 
 .col:hover {
@@ -614,7 +613,21 @@ header {
     .col {
       width: 100%;
       margin: 0 0 20px 0;
+      a {
+        color: #070e24;
+        p {
+          position: relative;
+          opacity: 1;
+          visibility: visible;
+          padding-left: 0;
+        }
+      }
     }
+  }
+  .col a:hover p {
+    visibility:visible;
+    opacity: 1;
+    background: none;
   }
 }
 
@@ -767,7 +780,9 @@ th {
 
 
 .blog {
-  padding-top: 100px;
+  h1 {
+  padding: 100px 0 20px;
+  }
   h2 {
     margin: .667em 0 .333em;
     font-size: 1.4em;
@@ -919,6 +934,7 @@ a.next {
 footer {
     padding: 60px 0;
     text-align: center;
+        background: #ededed;
     a {
       color: #ababab;
       font-size: 26px;
@@ -935,6 +951,8 @@ footer {
   img {
     float: right;
     margin: 0 0 20px 20px;
+    border-radius: 100%;
+    max-width: 150px;
   }
   &:after {
     content: " ";
