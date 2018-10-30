@@ -1,7 +1,7 @@
 ---
 ---
 
-$primary: #76828e;
+$primary: rgba( 45, 55, 65, .85 );
 $heading: rgba( 45, 55, 65, .85 );
 $link: #408FEC;
 $font_family_1: 'Roboto', sans-serif;
@@ -152,7 +152,7 @@ h1 {
 
 header {
   overflow: auto;
-  border-bottom: 1px solid #eee;
+  background: #f8f8f8;
   // .container {
   //       padding: 0 25px;
   //   max-width: 100%;
@@ -160,7 +160,7 @@ header {
   .logo {
   font-weight: 700;
   font-size: 20px;
-  line-height: 80px;
+  line-height: 100px;
   margin: 0;
   padding: 0;
   color: $heading;
@@ -171,11 +171,10 @@ header {
 
 .home-banner {
     margin-bottom: 50px;
-    border-bottom: 1px solid #eee;
 .intro {
   clear: both;
   margin: 0 auto;
-  padding: 6% 25px;
+  padding: 3% 25px;
   img {
     border-radius: 100%;
     margin-bottom: 20px;
@@ -387,7 +386,7 @@ header {
       }
       a {
         padding: 0 1em;
-        line-height: 80px;
+        line-height: 100px;
         text-align: center;
         background: none;
         font-size: 14px;
