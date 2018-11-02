@@ -6,7 +6,7 @@ markdown: kramdown
 highlighter: rouge
 logo: false
 paginate: 15
-baseurl: http://kriswignes.com/
+baseurl: /
 domain_name: http://kriswignes.com/
 google_analytics: UA-65288513-4
 plugins: [jekyll-paginate]
