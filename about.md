@@ -4,9 +4,9 @@ title: About me
 ---
 
 
-I'm a front-end developer and designer from Vancouver, BC. 
+Hi, I'm Kris. I'm a front-end developer and designer from Vancouver, BC. 
 
-I design and build responsive websites in WordPress, Bootstrap, and from scratch. I'm most skilled at HTML and CSS, but also experienced with JavaScript, jQuery, SEO, and PhotoShop.
+I build responsive, easy-to-use websites for large and small companies across North America. I'm most skilled at HTML and CSS, but also experienced with PHP, JavaScript, jQuery, SEO, and PhotoShop.
 
 Outside of the web, I love to play soccer, run marathons and stay active. I'm a highly motivated and friendly individual, driven to deliver the best quality products. Feel free to contact me about your next project.
 

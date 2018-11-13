@@ -178,7 +178,7 @@ body {
     max-height: 100%;
     font-family: "Merriweather", serif;
     letter-spacing: 0.01rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 1.75em;
     color: #3A4145;
     -webkit-font-feature-settings: 'kern' 1;
@@ -221,7 +221,8 @@ h3 {
 }
 
 h4 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    margin: 0 0 0.2em 0;
 }
 
 h5 {
@@ -406,11 +407,6 @@ table thead:first-child tr:first-child td {
 table tbody + tbody { border-top: #EFEFEF 2px solid; }
 
 table table table { background-color: #FFF; }
-
-table tbody > tr:nth-child(odd) > td,
-table tbody > tr:nth-child(odd) > th {
-    background-color: #F6F6F6;
-}
 
 table.plain tbody > tr:nth-child(odd) > td,
 table.plain tbody > tr:nth-child(odd) > th {
@@ -685,16 +681,17 @@ margin on the iframe, cause it breaks stuff. */
 /* The details of your blog. Defined in ghost/settings/ */
 .page-title {
     margin: 10px 0 10px 0;
-    font-size: 5rem;
+    font-size: 3rem;
     letter-spacing: -1px;
     font-weight: 700;
     font-family: "Open Sans", sans-serif;
     color: #fff;
+    text-transform: uppercase;
 }
 
 .page-description {
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.72rem;
     line-height: 1.5em;
     font-weight: 400;
     font-family: "Merriweather", serif;
@@ -709,6 +706,7 @@ margin on the iframe, cause it breaks stuff. */
     min-height: 160px;
     max-height: 40%;
     background: #f5f8fa;
+    background: #f4f2f0;
 }
 
 .no-cover .page-title {
@@ -771,7 +769,8 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 body:not(.post-template) .post-title {
-    font-size: 3.4rem;
+    font-size: 3rem;
+    margin: 0 0 .2em 0;
 }
 
 .post-title a {
@@ -1746,8 +1745,11 @@ body:not(.post-template) .post-title {
     width: 100%;
 }
 .responsive-table th, .overflow-table th {
-    background-color: #c2e5fd !important;
+    background-color: #4db380 !important;
     vertical-align: middle;
+}
+.responsive-table th h3, .overflow-table th h3 {
+    color:#fff;
 }
 .responsive-table th,
 .responsive-table td,
@@ -1767,21 +1769,22 @@ body:not(.post-template) .post-title {
 .overflow-table tr:nth-child(even) {
     background-color: #eeeeee;
 }
-.overflow-table {
-    display: block;
-    overflow-x: auto;
-}
+
 @media (max-width: 600px) {
 .responsive-table td, .responsive-table th {
   display: block;
  }
 .responsive-table tr td {  
-  width: 100%;
   float: left\9; /* IE9 */
+  width: 100%;
  }
 .responsive-table td {
   border: none;
  }
+ .overflow-table {
+    display: block;
+    overflow-x: auto;
+}
 }
 
 .social {
@@ -1846,10 +1849,6 @@ table {
   margin: 10px 0;
   padding: 5px;
 }
-table td {
-  width: 150px;
-  font-weight: 500;
-}
 td {
   padding: 5px;
 }
@@ -1870,13 +1869,40 @@ th {
   }
 }
 
+/* Return to top
+   ========================================================================== */
+#return-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 45px;
+    font-size: 28px;
+    color: #888888;
+    display: none;
+    z-index: 99999;
+    line-height: 42px;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid #888888;
+    -webkit-backface-visibility: hidden;
+}
+#return-to-top i {
+    position: relative;
+    bottom: 1px;
+}
+#return-to-top:hover {
+  -webkit-transform:translate3d(0, -3px, 0);
+  transform:translate3d(0, -3px, 0)
+}
+
+
 
 /* ==========================================================================
    12. Animations
    ========================================================================== */
 
 /* Used to fade in title/desc on the home page */
-/*@-webkit-keyframes fade-in-down {
+@-webkit-keyframes fade-in-down {
     0% {
         opacity: 0;
         -webkit-transform: translateY(-10px);
@@ -1900,9 +1926,9 @@ th {
         transform: translateY(0);
     }
 }
-*/
+
 /* Used to bounce .scroll-down on home page */
-/*@-webkit-keyframes bounce {
+@-webkit-keyframes bounce {
     0%, 10%, 25%, 40%, 50% {
         -webkit-transform: translateY(0) rotate(-90deg);
                 transform: translateY(0) rotate(-90deg);
@@ -1930,7 +1956,7 @@ th {
                 transform: translateY(-5px) rotate(-90deg);
     }
 }
-*/
+
 
 /* ==========================================================================
    End of file. Animations should be the last thing here. Do not add stuff
