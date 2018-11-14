@@ -480,6 +480,9 @@ margin on the iframe, cause it breaks stuff. */
 .main-header-content.inner img {
     max-width: 100px;
     border-radius: 100px;
+    background: #fff;
+    padding: 5px;
+    border: 1px solid #ddd;
 }
 
 .main-header .inner {
