@@ -487,6 +487,7 @@ margin on the iframe, cause it breaks stuff. */
 
 .main-header .inner {
     width: 80%;
+    padding: 20px 0;
 }
 
 .main-header-content.inner .fa {
@@ -669,7 +670,11 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .main-header nav a {
-    margin: 0 10px;
+    border-right: 1px solid #ccc;
+    padding: 0 15px;
+}
+.main-header nav a:last-child {
+    border: none;
 }
 
 
