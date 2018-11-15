@@ -480,9 +480,6 @@ margin on the iframe, cause it breaks stuff. */
 .main-header-content.inner img {
     max-width: 100px;
     border-radius: 100px;
-    background: #fff;
-    padding: 5px;
-    border: 1px solid #ddd;
 }
 
 .main-header .inner {
@@ -670,8 +667,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .main-header nav a {
-    border-right: 1px solid #ccc;
-    padding: 0 15px;
+    padding: 0 10px;
 }
 .main-header .vertical nav a:last-child {
     border: none;
@@ -694,7 +690,6 @@ margin on the iframe, cause it breaks stuff. */
     font-weight: 700;
     font-family: "Open Sans", sans-serif;
     color: #fff;
-    text-transform: uppercase;
 }
 
 .page-description {
@@ -714,7 +709,6 @@ margin on the iframe, cause it breaks stuff. */
     min-height: 160px;
     max-height: 40%;
     background: #f5f8fa;
-    background: #f4f2f0;
 }
 
 .no-cover .page-title {
@@ -777,7 +771,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 body:not(.post-template) .post-title {
-    font-size: 3rem;
+    font-size: 3.4rem;
     margin: 0 0 .2em 0;
 }
 

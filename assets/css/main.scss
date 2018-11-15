@@ -12,3 +12,21 @@
 @import
 	"syntax"
 ;
+
+
+.menu {
+    margin-top: 4px;
+    text-align: right;
+}
+.menu a {
+	padding: 0 10px;
+}
+
+.menu.home {
+	text-align: center;
+	margin-top: 15px;
+}
+
+.no-cover .main-nav.overlay, .no-cover .back-button, .no-cover .subscribe-button {
+	margin-left: 15px;
+}
