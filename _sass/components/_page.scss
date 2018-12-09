@@ -42,29 +42,38 @@
         color: $c-base__01;
     }
 }
-
-
-.c-page__header h1 {
-    float: left;
-    margin: 0;
+header {
+      text-align: center;
 }
+header img {
+      width: 100px;
+    border-radius: 100%;
+    margin-bottom: 3rem;
+  }
+
+
+// .c-page__header h1 {
+//     float: left;
+//     margin: 0;
+// }
 .c-page__header h1 a {
     color: #163541;
+    display: inline-block;
 }
-.c-page__header p {
-    float: right;
-    padding-top: 10px;
-}
-.c-page__header {
-    background: #f9f9f9;
-    padding: 10px 20px;
-    margin-bottom: 0;
-}
-.c-page__header:after {
-    content: " ";
-    display: block;
-    clear: both;
-}
+// .c-page__header p {
+//     float: right;
+//     line-height: 3.35;
+// }
+// .c-page__header {
+//     background: #f9f9f9;
+//     padding: 10px 20px;
+//     margin-bottom: 0;
+// }
+// .c-page__header:after {
+//     content: " ";
+//     display: block;
+//     clear: both;
+// }
 .projects p {
     margin-bottom: 2.5rem;
     padding-bottom: 2.5rem;
