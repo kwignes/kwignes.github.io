@@ -1,37 +1,9 @@
 ---
 layout: default
-post_class: post-template page-template
 ---
-
-<nav class="main-nav clearfix">
-    <a class="back-button icon-arrow-left" href="{{ site.url }}">Home</a>
-    <a class="subscribe-button icon-feed" href="{{ site.url }}feed.xml">Subscribe</a>
-<div class="menu">
-                <a href="{{ site.url }}about">About</a>
-                <a href="{{ site.url }}projects">Projects</a>
-                <a href="{{ site.url }}contact">Contact</a>
+<div class="c-page">
+    <div class="c-page__main">
+    {{ content }}
+    </div>
+    {% include footer.html %}
 </div>
-</nav>
-
-
-<main class="content" role="main">
-    <article class="post">
-        <!-- <header class="post-header">
-            <a id="blog-logo" href="{{site.baseurl}}">
-                {% if site.logo %}
-                    <img src="{{site.logo}}" alt="{{ site.name }}" />
-                {% else %}
-                    <span class="blog-title">{{ site.name }}</span>
-                {%endif%}
-            </a>
-        </header> -->
-
-        <h1 class="post-title">{{ page.title }}</h1>
-
-        <section class="post-content">
-            {{content}}
-        </section>
-
-    </article>
-
-</main>

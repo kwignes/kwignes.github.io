@@ -1,5 +1,5 @@
 _site
+.idea
 .DS_Store
-*.swp
+.jekyll-metadata
 .sass-cache
-

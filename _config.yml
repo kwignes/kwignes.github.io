@@ -1,16 +1,17 @@
-name: Kris Wignes
-description: Front-End Developer
-meta_description: "Front-End Developer"
+# Site settings
+title: Kris Wignes
+description: >
+    Kris Wignes
+author: Kris Wignes
+email: kriswignes@gmail.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://kriswignes.com/" # the base hostname & protocol for your site
+linkedin_username: kriswignes
+github_username:  kwignes
 
+# Build settings
+include: [_pages]
 markdown: kramdown
-highlighter: rouge
-logo: false
-paginate: 15
-baseurl: /
-domain_name: http://kriswignes.com/
-google_analytics: UA-65288513-4
-plugins: [jekyll-paginate]
-
-# Details for the RSS feed generator
-url:            http://kriswignes.com/
-author:         'Kris Wignes'
+permalink: /:year/:month/:title
+sass:
+    style: compressed
