@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700|Merriweather:300,300i,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          
+          <div class="site-info">
+            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+            <p class="site-description">{{ site.description }}</p>
+          </div>
+          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.baseurl }}/img/kris.jpg" /></a>
+          <nav>
+            <a href="{{ site.baseurl }}/" {% if page.url == "/" %}class="active"{% endif %}>Portfolio</a>      
+            <a href="{{ site.baseurl }}/posts/" {% if page.url == "/posts/" %}class="active"{% endif %}>Blog</a>
+            <a href="https://ca.linkedin.com/in/kriswignes" target="_blank" class="external"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://github.com/kwignes" target="_blank" class="external"><i class="fa fa-github" aria-hidden="true"></i></a>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      {{ content }}
+    </div>
+
+    <div class="wrapper-contact">
+    <div class="container">
+        <h2 style="margin:40px 0 0;">Contact me</h2>
+             <p class="contact"><i class="fa fa-envelope-o" aria-hidden="true"></i> Have a project? I'm on <a href="https://ca.linkedin.com/in/kriswignes" target="_blank" class="external">LinkedIn (@kriswignes)</a> and <a href="https://github.com/kwignes" target="_blank" class="external">Github (kwignes)</a>!</p>
+           </div>
+
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          <p>Copyright 2019, Kris Wignes</p>
+          <p><a href="#">Github</a> - <a href="#">Twitter</a> - <a href="#">LinkedIn</a></p>
+        </footer>
+      </div>
+    </div>
+
+    {% include analytics.html %}
+  </body>
+</html>

@@ -1,0 +1,446 @@
+---
+---
+
+//
+// IMPORTS
+//
+
+@import "reset";
+@import "variables";
+// Syntax highlighting @import is at the bottom of this file
+
+/**************/
+/* BASE RULES */
+/**************/
+
+html {
+  font-size: 100%;
+}
+
+body {
+	background: $white;
+  font: 17px/34px 'Merriweather', sans-serif;
+  font-weight: 300;
+  letter-spacing: .5px;
+  color: $darkGray;
+}
+
+.container {
+    max-width: 720px;
+    padding: 20px;
+    margin: 0 auto;
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
+  font-weight: bold;
+
+  line-height: 1.7;
+  margin: 1em 0 15px;
+  padding: 0;
+
+  @include mobile {
+    line-height: 1.4;
+  }
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 2em;
+  color: #404040;
+  font-weight: 700;
+  margin-top: 0;
+  a {
+    color: inherit;
+  }
+}
+
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+  color: $gray;
+}
+
+p {
+  margin: 15px 0;
+}
+hr {
+    border: none;
+    border-top: solid 1px #ddd;
+    margin-top: 20px;
+    padding: 0 0 20px 0;
+}
+a {
+  color: #007998;
+  text-decoration: none;
+  -webkit-transition: color 0.25s ease-in-out;
+  -moz-transition: color 0.25s ease-in-out;
+  -o-transition: color 0.25s ease-in-out;
+  -ms-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
+  &:hover, &:active {
+    color: rgba(0,121,152,0.5);
+  }
+}
+
+ul, ol {
+  margin: 15px 0;
+  padding-left: 30px;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ol ul, ul ol, ul ul, ol ol {
+  margin: 0;
+}
+
+ul ul, ol ul {
+  list-style-type: circle;
+}
+
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+}
+
+// Fixes images in popup boxes from Google Translate
+.gmnoprint img {
+  max-width: none;
+}
+
+.date {
+  font-style: italic;
+  color: $gray;
+}
+
+// Specify the color of the selection
+::-moz-selection {
+  color: $black;
+  background: $lightGray;
+}
+::selection {
+  color: $black;
+  background: $lightGray;
+}
+
+// Nicolas Gallagher's micro clearfix hack
+// http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*********************/
+/* LAYOUT / SECTIONS */
+/*********************/
+
+//
+// .masthead
+//
+
+.wrapper-masthead {
+  background: #f8f8f8;
+}
+
+.masthead {
+  @include mobile {
+    text-align: center;
+  }
+}
+
+.site-avatar {
+    max-width: 370px;
+    width: 100%;
+    height: 100px;
+    margin-right: 15px;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+
+  @include mobile {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+
+  img {
+    border-radius: 100%;
+  }
+}
+
+.site-info {
+  float: left;
+
+  @include mobile {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.site-name {
+  font-family: 'Merriweather', sans-serif;
+  margin: 22px 0 0;
+  font-size: 16px;
+  color: #565656;
+  letter-spacing: 1px;
+}
+
+.site-description {
+  margin: 2px 0 0;
+  color: #888888;
+  font-size: 14px;
+
+  @include mobile {
+    margin: 3px 0;
+  }
+}
+
+nav {
+  float: right;
+  margin-top: 30px; // @TODO: Vertically middle align
+  font-size: 18px;
+
+  @include mobile {
+    float: none;
+    margin-top: 9px;
+    display: block;
+    font-size: 16px;
+  }
+
+  a {
+    margin-left: 20px;
+    color: #888888;
+    font-size: 14px;
+    text-align: right;
+    font-weight: 300;
+
+    @include mobile {
+      margin: 0 10px;
+      color: $blue;
+    }
+    .fa {
+      font-size: 24px;
+      color: #007998;
+      display: none;
+      &:hover {
+        color: #888;
+      }
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-left: 5px;
+    }
+  }
+}
+
+.active {
+  color: #000;
+  text-decoration: underline;
+}
+
+//
+// .main
+//
+.project-list {
+    column-count: 2;
+    -moz-column-count: 2;
+    a {
+      text-decoration: underline;
+      font-size: 0.85em;
+    }
+}
+
+.posts > .post {
+  padding-bottom: 2em;
+  border-bottom: 1px solid $lightGray;
+}
+
+.posts > .post:last-child {
+  padding-bottom: 1em;
+  border-bottom: none;
+}
+
+.posts > .post h1, .post h1 {
+    margin: 1em 0 15px;
+    line-height: 1.2;
+}
+
+.post {
+  blockquote {
+    margin: 1.8em .8em;
+    border-left: 2px solid $gray;
+    padding: 0.1em 1em;
+    color: $gray;
+    font-size: 22px;
+    font-style: italic;
+  }
+
+  .comments {
+    margin-top: 10px;
+  }
+
+  .read-more {
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+}
+
+.wrapper-contact .container {
+  padding: 0 20px;
+}
+.contact {
+    display: block;
+    font-size: 0.8em;
+    background-color: #eee;
+    line-height: 1.2em;
+    padding: 20px 20px 20px 50px;
+    margin-bottom: 0;
+    position: relative;
+.fa {
+    color: #757575;
+    font-size: 16px;
+    position: absolute;
+    left: 10px;
+    top: 9px;
+    border: 1px solid #757575;
+    border-radius: 100%;
+    padding: 6px;
+}    
+}
+
+
+
+.responsive-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.responsive-table th, .overflow-table th {
+    background-color: rgba(0,121,152,1) !important;
+    vertical-align: middle;
+}
+.responsive-table th h3, .overflow-table th h3 {
+    color:#fff;
+}
+.responsive-table th,
+.responsive-table td,
+.overflow-table th,
+.overflow-table td {
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+.responsive-table th h3 {
+  margin: 5px 0;
+}
+.overflow-table h3 {
+    font-size: 15px;
+    margin: 0;
+}
+.responsive-table tr:nth-child(even),
+.overflow-table tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+@media (max-width: 600px) {
+.responsive-table td, .responsive-table th {
+  display: block;
+ }
+.responsive-table tr td {  
+  float: left\9; /* IE9 */
+  width: 100%;
+ }
+.responsive-table td {
+  border: none;
+ }
+ .overflow-table {
+    display: block;
+    overflow-x: auto;
+}
+}
+
+
+
+
+form input[type=text], form input[type=email] {
+  padding: 1em;
+  width: 100%;
+  margin: 1em 0;
+  border: 1px solid #fff;
+  background: #f1f1f1;
+  display: block;
+}
+form h3 {
+  margin: 0 0 25px;
+}
+form input[type=submit] {
+  float: right;
+  margin-top: 20px;
+}
+form textarea {
+  font-family: sans-serif;
+  margin: 0.5em 0;
+  display: block;
+  width: 100%;
+  height: 14em;
+  padding: 1em;
+  border: 1px solid #fff;
+  background: #f1f1f1;
+}
+form:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+
+
+.wrapper-footer {
+  margin-top: 50px;
+}
+
+footer {
+  padding: 30px 0;
+  text-align: center;
+}
+footer p, footer a {
+    color: #959595;
+}
+footer p {
+    text-align: center;
+    font-size: 0.7em;
+    line-height: 10px;
+}
+
+// Settled on moving the import of syntax highlighting to the bottom of the CSS
+// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+@import "highlights";
+@import "svg-icons";
