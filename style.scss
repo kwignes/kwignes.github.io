@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-    max-width: 640px;
+    max-width: 680px;
     padding: 0 20px;
     margin: 0 auto;
     position: relative;
@@ -53,6 +53,24 @@ h1 {
 }
 
 
+.entry h1 {
+    color: #595959;
+    font-size: .8em;
+    letter-spacing: .15em;
+    margin: 0;
+    text-align: left;
+    text-transform: uppercase;
+    word-spacing: .5em;
+    border-bottom: 1px solid #f0edea;
+    margin-bottom: 1.5em;
+    padding: 0 0 1.5em;
+    text-align: center;
+}
+.post-date {
+    color: #595959;
+    font-size: .8em;
+}
+
 h2 {
   font-size: 24px;
 }
@@ -67,7 +85,7 @@ h4 {
 }
 
 p {
-  margin: 15px 0;
+  margin: 0 0 1.5em;
 }
 hr {
     border: none;
@@ -85,7 +103,7 @@ a {
   transition: color 0.25s ease-in-out;
   &:hover, &:active {
     color: #3498db;
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 
@@ -129,8 +147,10 @@ img {
 
 .date {
     font-size: .875em;
-    margin: 1em 0 0;
   color: $gray;
+      border-bottom: 1px solid #f0edea;
+    margin-bottom: 1.5em;
+    padding: 0 0 1.5em;
 }
 
 // Specify the color of the selection
@@ -168,13 +188,13 @@ img {
   margin-bottom: 2.5em;
   .container {
     max-width: 100%;
-    padding: 1.5em;
+    padding: 1.6em;
   }
 }
 
 @media (min-width: 48em) {
   .wrapper-masthead {
-    margin-bottom: 4.5em;
+    margin-bottom: 5.5em;
   }
 }
 
@@ -206,11 +226,11 @@ img {
 
 .site-name {
     font-weight: 600;
-    font-size: 1.4em;
+    font-size: 1.2em;
     line-height: 1;
     margin: 0;
     text-transform: uppercase;
-    word-spacing: .08em;
+        word-spacing: .25em;
         letter-spacing: .025em;
         a {
           color: #666666;
@@ -249,7 +269,6 @@ nav {
 
     @include mobile {
       margin: 0 10px;
-      color: $blue;
     }
   }
 }
@@ -257,12 +276,15 @@ nav {
 .social {
     text-align: center;
   a {
-    color: #fff;
+color: #fff;
     font-size: 1.2em;
-    margin: 0 2px;
+    margin: 0 3px;
     background: #ababab;
     border-radius: 100%;
-    padding: 0px 6px;
+    padding: 0px 5px;
+    &:hover {
+      background: $blue;
+    }   
   }
 }
 
@@ -283,24 +305,45 @@ nav {
 //
 // .main
 //
+#main {
+  a {
+    color: #666;
+    text-decoration: underline;
+    &:hover, &:focus, &:active {
+      color: #3498db;
+    }
+  }
+}
 .project-list p {
   margin-top: 0;
+  display: none;
 }
 
 .posts > .post {
-  padding-bottom: 2em;
   border-bottom: 1px solid $lightGray;
+  padding: 1.75em 0;
   h2 {
     margin-bottom: 0;
     font-size: 1.6em;
     a {
-      color: #333;
+      color: #333 !important;
+      text-decoration: none !important;
+    &:hover, &:focus, &:active {
+      color: #3498db !important;
+    }      
     }
   }
   .entry {
     p {
-      margin-top: 5px;
+      margin: 8px 0 0;
+      font-size: 15px;
     }
+  }
+}
+.about.entry {
+  text-align: center;
+    img {
+      margin-bottom: 1.5em;
   }
 }
 
@@ -330,31 +373,94 @@ nav {
 
   .read-more {
     font-size: 15px;
+    display: none;
   }
 }
 
-.wrapper-contact .container {
-  padding: 0 20px;
-}
-.contact {
+
+.contact-rap {
+  form {
+    input[type=text], input[type=email] {     
+    padding: 1em;
+    width: 100%;
+    margin: 1em 0;
+    border: 1px solid #fff;
+    background: #f1f1f1;
     display: block;
-    font-size: 0.8em;
-    background-color: #eee;
-    line-height: 1.2em;
-    padding: 20px 20px 20px 50px;
-    margin-bottom: 0;
-    position: relative;
-.fa {
-    color: #757575;
-    font-size: 16px;
-    position: absolute;
-    left: 10px;
-    top: 9px;
-    border: 1px solid #757575;
-    border-radius: 100%;
-    padding: 6px;
-}    
+    }
+    h3 {
+      margin: 0 0 25px;
+    }
+    input[type=submit] {
+      float: right;
+      margin-top: 20px;
+    }
+    textarea {
+      font-family: sans-serif;
+      margin: .5em 0;
+      display: block;
+      width: 100%;
+      height: 14em;
+      padding: 1em;
+      border: 1px solid #fff;
+    background: #f1f1f1;
+    }
+  &:after {
+    content:" ";
+    display: block;
+    clear: both;
+  }
+  }
+  h2 {
+    margin-top: 40px;
+  }
+  &:after {
+    content:" ";
+    display: block;
+    clear: both;
+  }
+.btn-contact, input[type=submit] {
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    background: #3498db;
+    border: none;
+    font-size: 14px;
+    padding: 12px 22px;
+      margin-top: 30px;
+  &:hover, &:focus, &:active {
+    background: #2c7bb1;
+  }
 }
+}
+table {
+  border-collapse: collapse;
+  margin: 10px 0;
+  padding: 5px;
+  td {
+    width: 150px;
+    font-weight: 500;
+  }
+}
+td {
+  padding: 5px;
+}
+th {
+  padding: 5px;
+}
+
+
+#thankyouBlock {
+  text-align: center;
+  border: 1px solid #0085c3;
+  padding: 1em;
+  font-size: 1.4em;
+  p {
+    margin: 0;
+    color: #0085c3;
+  }
+}
+
 
 
 
