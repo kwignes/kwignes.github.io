@@ -1,18 +1,17 @@
 html {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 19px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
   line-height: 1.5;
 }
 
 body {
-  color: #515151;
+  color: #222;
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
 a {
-  color: #e67e22;
-  border-bottom: 1px solid #e67e22;
+  color: #3498db;
   text-decoration: none;
 }
 a strong {
@@ -47,17 +46,17 @@ img {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  margin: 20px 0;
+  margin: 30px 0 10px;
   font-weight: 400;
   line-height: 1.25;
   color: #2c3e50;
   text-rendering: optimizeLegibility;
 }
 h1 {
-  font-size: 30px;
+  font-size: 26px;
 }
 h2 {
-  font-size: 28px;
+  font-size: 24px;
 }
 h3 {
   font-size: 22px;
@@ -101,28 +100,30 @@ footer {
 
 /* Header
    ========================================================================== */
-
 header {
-    background: #f9f9f9;
+  background: #333;
 }
-header .container {
-	max-width: 100%;
+
+header nav {
+  padding: 10px 0;
 }
 header nav p {
     float: left;
-    line-height: 60px;
     margin: 0;
     font-weight: bold;
-    font-size: 18px;
-    text-transform: uppercase;
 }
 header nav p a,
 header nav p a:hover,
 header nav p a:active,
-header nav p a:focus {
-	color: #2c3e50;
+header nav p a:focus,
+.social li a,
+.social li a:hover,
+.social li a:active,
+.social li a:focus {
+	color: #fff;
 	text-decoration: none;
 	border: none;
+  font-size: 20px;
 }
 header nav .social {
 	float: right;
@@ -133,41 +134,18 @@ header nav:after {
 	clear: both;
 }
 .social {
-    line-height: 60px;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 .social li {
     display: inline-block;
-    margin: 0 3px;
-    font-size: 12px;
-    padding: 5px 0;
+    margin: 0 6px;
 }
 .social li a {
-    background-color: #aaa;
-    border-radius: 100%;
-    font-size: 16px;
     font-family: fontawesome;
-    text-align: center;
-    display: inline-block;
-    line-height: 30px;
-    height: 30px;
-    width: 30px;
-    color: #fff;
-    display: block;
-    border: none;
 }
-.social li a:hover,
-.social li a:active,
-.social li a:focus {
-    background: #e67e22;
-    text-decoration: none;
-}
-li.github a:before {
-    position: relative;
-    right: .5px;
-}
+
 li.linkedin a:before {
     content: '\f0e1';
     font-family: FontAwesome;
@@ -178,6 +156,10 @@ li.twitter a:before {
 }
 li.github a:before {
     content: '\f09b';
+    font-family: FontAwesome;
+}
+li.codepen a:before {
+    content: '\f1cb';
     font-family: FontAwesome;
 }
 span.screen-reader-text {
@@ -194,11 +176,11 @@ span.screen-reader-text {
    ========================================================================== */
 
 section {
-	padding: 60px 0;
+	padding: 50px 0;
 	text-align: center;
 }
 .container {
-	max-width: 560px;
+	max-width: 440px;
 	margin: 0 auto;
 	padding: 0 20px;
 }
@@ -218,27 +200,12 @@ img {
    ========================================================================== */
 
 footer {
+  background: #eee;
 	text-align: center;
-	border-top: 1px solid #ddd;
 }
 footer p {
 	margin: 0;
 	line-height: 60px;
-	font-size: 14px;
-}
-
-
-
-@media (max-width: 767px) {
-	html {
-		font-size: 18px;
-	}
-	h1 {
-		font-size: 24px;
-		font-weight: bold;
-	}
-header nav p {
-    font-size: 16px;
-    font-weight: bold;
-	}
+	font-size: 12px;
+  text-transform: uppercase;
 }
