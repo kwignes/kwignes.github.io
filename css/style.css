@@ -1,11 +1,18 @@
 html {
-  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 body {
-  color: #222;
+  color: #494949;
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -46,14 +53,13 @@ img {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  margin: 30px 0 10px;
+  margin: 20px 0 5px;
   font-weight: 400;
   line-height: 1.25;
-  color: #2c3e50;
   text-rendering: optimizeLegibility;
 }
 h1 {
-  font-size: 26px;
+  font-size: 32px;
 }
 h2 {
   font-size: 24px;
@@ -101,16 +107,15 @@ footer {
 /* Header
    ========================================================================== */
 header {
-  background: #333;
+  background: #1abc9c;
 }
 
 header nav {
-  padding: 10px 0;
+  padding: 20px 0;
 }
 header nav p {
     float: left;
     margin: 0;
-    font-weight: bold;
 }
 header nav p a,
 header nav p a:hover,
@@ -123,7 +128,7 @@ header nav p a:focus,
 	color: #fff;
 	text-decoration: none;
 	border: none;
-  font-size: 20px;
+  font-size: 24px;
 }
 header nav .social {
 	float: right;
@@ -174,13 +179,14 @@ span.screen-reader-text {
 
 /* Main
    ========================================================================== */
-
 section {
 	padding: 50px 0;
-	text-align: center;
+}
+section a {
+  border-bottom: 1px solid;
 }
 .container {
-	max-width: 440px;
+	max-width: 780px;
 	margin: 0 auto;
 	padding: 0 20px;
 }
@@ -195,12 +201,40 @@ img {
 }
 
 
+.layout {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#me summary {
+    color: #6d6d6d;
+}
+#avatar-container {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    padding: 4px;
+    flex-shrink: 0;
+    background-color: #fff;
+    margin-right: 20px;
+}
+.shadow {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 -1px 5px 0 rgba(0,0,0,.12), 0 3px 1px -2px rgba(0,0,0,.2);
+}
+.avatar {
+    background: url(../img/kris1.jpg) no-repeat 50% 50%;
+    background-size: contain;
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+}
+
 
 /* Footer
    ========================================================================== */
 
 footer {
-  background: #eee;
+  background: #ddd;
 	text-align: center;
 }
 footer p {
