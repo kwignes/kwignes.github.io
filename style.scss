@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  font: 1em/1.6 'Source Sans Pro', sans-serif;
+  font: 1em/1.8 'Source Sans Pro', sans-serif;
   color: #333;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -29,6 +29,7 @@ body {
 @media (min-width: 34em) {
   body {
       font-size: 1.15em;
+      line-height: 1.9;
   }
 }
 
@@ -134,11 +135,14 @@ footer {
 .header {
     background-color: #fff;
 background: #f8f8f8;
-    border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid #e4e4e4;
     width: 100%;
     background: #f8f8f8;
 }
 
+.header .container {
+  max-width: 100%;
+}
 
 .header .container:after {
   display: block;
@@ -167,12 +171,6 @@ header .logo img {
   text-decoration: none;
 }
 
-.header li a.active {
-  color: #333;
-  background-color: #f4f4f4;
-  border-bottom: 1px solid;
-}
-
 
 .header li a:hover,
 .header .menu-btn:hover {
@@ -182,9 +180,11 @@ header .logo img {
 .header .logo {
   display: block;
   float: left;
-  padding: 15px 0;
   text-decoration: none;
-    letter-spacing: 2px;
+  font-size: 1.4em;
+    letter-spacing: 1px;
+    color: #333;
+    line-height: 64px;
 }
 
 /* menu */
@@ -421,10 +421,11 @@ h1 span {
 }
 
 #me summary {
-    color: #6d6d6d;
+    font-size: .85em;
+    color: #666666;
 }
 #me h1 {
-  margin: 0 0 10px;
+  margin: 0;
 }
 #avatar-container {
     border-radius: 50%;
@@ -455,7 +456,8 @@ h1 span {
     border-bottom: 1px solid #eee;
 }
 .posts .entry p {
-    margin: 0 0 10px;
+margin: 0 0 10px;
+    line-height: 1.6;
 }
 a.read-more {
     border-bottom: 1px solid;
@@ -469,6 +471,7 @@ a.read-more {
    ========================================================================== */
 
 footer {
+  text-align: center;
 background: #f8f8f8;
     background: linear-gradient(#f0f0f0, #f8f8f8 25%);
 }
@@ -480,14 +483,6 @@ footer:after {
 footer p {
   margin: 0;
   line-height: 60px;
-}
-
-footer .social {
-  float: right;
-  line-height: 60px;
-}
-footer .copyright {
-  float: left;
 }
 
 
