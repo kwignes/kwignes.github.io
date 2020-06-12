@@ -1,3 +1,17 @@
+---
+---
+
+//
+// IMPORTS
+//
+
+@import "variables";
+// Syntax highlighting @import is at the bottom of this file
+
+/**************/
+/* BASE RULES */
+/**************/
+
 html {
   box-sizing: border-box;
 }
@@ -6,7 +20,7 @@ html {
 }
 
 body {
-  font: 1em/1.8 'Source Sans Pro', sans-serif;
+  font: 1em/1.6 'Source Sans Pro', sans-serif;
   color: #333;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -15,7 +29,6 @@ body {
 @media (min-width: 34em) {
   body {
       font-size: 1.15em;
-      line-height: 1.9;
   }
 }
 
@@ -33,7 +46,7 @@ a:focus {
 }
 
 .button {
-	padding: 10px 30px;
+  padding: 10px 30px;
     background: none;
     display: inline-block;
     -moz-border-radius: 4px;
@@ -48,19 +61,20 @@ a:focus {
 }
 
 img {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  margin: 20px 0 5px;
+  margin: 1em 0 0.5em;
   font-weight: 400;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
 }
 h1 {
   font-size: 2.33em;
+  margin-top: 0;
 }
 @media (min-width: 34em) {
   h1 {
@@ -68,14 +82,9 @@ h1 {
   }
 }
 
-h2 {
-  font-size: 2em;
-}
-@media (min-width: 34em) {
-  h1 {
-      font-size: 2.33em;
+  h2 {
+      font-size: 1.66em;
   }
-}
 
 
 h3 {
@@ -86,7 +95,7 @@ h4, h5, h6 {
 }
 
 /* Body text */
-p, ol, ul {
+p, ol, ul, table {
     margin-top: 0;
     margin-bottom: 1.4em;
 }
@@ -124,19 +133,26 @@ footer {
 
 .header {
     background-color: #fff;
-    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+background: #f8f8f8;
+    border-bottom: 1px solid #ddd;
     width: 100%;
     background: #f8f8f8;
 }
-.header .container {
-  max-width: 48em;
-}
+
+
 .header .container:after {
   display: block;
   clear: both;
   content: "";
 }
-
+header .logo img {
+  max-width: 30px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 12px;
+      position: relative;
+    bottom: 2px;
+}
 .header ul {
   margin: 0;
   padding: 0;
@@ -146,15 +162,17 @@ footer {
 
 .header li a {
   display: block;
-  padding: 20px 20px;
+  padding: 15px;
   border-right: 1px solid #f4f4f4;
   text-decoration: none;
 }
 
-.header .logo,
-.header li a {
-  line-height: 1.4;
+.header li a.active {
+  color: #333;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid;
 }
+
 
 .header li a:hover,
 .header .menu-btn:hover {
@@ -164,10 +182,8 @@ footer {
 .header .logo {
   display: block;
   float: left;
-  padding: 20px 0;
+  padding: 15px 0;
   text-decoration: none;
-    font-weight: 600;
-    text-transform: uppercase;
     letter-spacing: 2px;
 }
 
@@ -251,9 +267,6 @@ footer {
   .header li {
     float: left;
   }
-  .header li a {
-    padding: 20px 30px;
-  }
   .header .menu {
     clear: none;
     float: right;
@@ -314,27 +327,91 @@ span.screen-reader-text {
 
 
 
+
+
+
+
+// Responsive Tables
+
+.responsive-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.responsive-table th {
+    background-color: #666666;
+    color: #fff;
+    vertical-align: middle;
+}
+.responsive-table th h2,
+.responsive-table th h3,
+.responsive-table th h4 {
+  margin: 0;
+}
+.responsive-table th,
+.responsive-table td {
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+.responsive-table tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+.overflow-table {
+  margin-bottom: 20px;
+}
+
+.overflow-table table {
+  width: 585px;
+  margin: 0;
+}
+ .overflow-table .responsive-table td, 
+ .overflow-table .responsive-table  th {
+  font-size: 15px;
+ }
+
+@media (max-width: 600px) {
+.responsive-table td, .responsive-table th {
+  display: block;
+ }
+ .overflow-table .responsive-table td, 
+ .overflow-table .responsive-table  th {
+  display: table-cell;
+ }
+.responsive-table tr td {  
+  width: 100%;
+  float: left\9; /* IE9 */
+ }
+.responsive-table td {
+  border: none;
+ }
+.overflow-table {
+    display: block;
+    overflow-x: auto;
+}
+}
+
+
+
+
+
 /* Main
    ========================================================================== */
 section {
-	padding: 50px 0;
-}
-section a {
-  border-bottom: 1px solid;
+  padding: 50px 0;
 }
 .container {
-	max-width: 34em;
-	margin: 0 auto;
-	padding: 0 20px;
+  max-width: 34em;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 h1 span {
-	display: block;
+  display: block;
 }
-img {
-	border-radius: 100%;
-	display: block;
-	margin: 0 auto 10px;
+.logo img,
+.avatar img {
+  border-radius: 100%;
+  display: block;
 }
 
 
@@ -345,6 +422,9 @@ img {
 
 #me summary {
     color: #6d6d6d;
+}
+#me h1 {
+  margin: 0 0 10px;
 }
 #avatar-container {
     border-radius: 50%;
@@ -367,6 +447,24 @@ img {
 }
 
 
+
+
+.posts .post {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+.posts .entry p {
+    margin: 0 0 10px;
+}
+a.read-more {
+    border-bottom: 1px solid;
+}
+
+
+
+
+
 /* Footer
    ========================================================================== */
 
@@ -374,9 +472,25 @@ footer {
 background: #f8f8f8;
     background: linear-gradient(#f0f0f0, #f8f8f8 25%);
 }
-footer p {
-	margin: 0;
-	line-height: 60px;
-	font-size: 12px;
-  text-transform: uppercase;
+footer:after {
+  display: block;
+  clear: both;
+  content: "";
 }
+footer p {
+  margin: 0;
+  line-height: 60px;
+}
+
+footer .social {
+  float: right;
+  line-height: 60px;
+}
+footer .copyright {
+  float: left;
+}
+
+
+// Settled on moving the import of syntax highlighting to the bottom of the CSS
+// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+@import "highlights";

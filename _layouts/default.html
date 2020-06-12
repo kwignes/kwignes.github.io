@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include meta.html %}
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="canonical" href="https://kriswignes.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    {% include analytics.html %}
+  </head>
+
+  <body>
+
+<div class="page-wrap">
+
+<header class="header">
+  <div class="container">
+  <a class="logo" href="{{ site.baseurl }}/">{{ site.name }}</a>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a href="{{ site.baseurl }}/" {% if page.url == "/" %}class="active"{% endif %}>About</a></li>
+    <li><a href="{{ site.baseurl }}/notes/" {% if page.url == "/notes/" %}class="active"{% endif %}>Notes</a></li>
+  </ul>
+</div>
+</header>
+
+<main>
+  <section>
+    <div class="container">
+      {{ content }}
+    </div>
+    <!-- / Container -->
+  </section>
+</main>
+
+
+<footer>
+  <div class="container">
+    <ul class="social">
+      <li class="linkedin"><a href="https://ca.linkedin.com/in/kriswignes" title="LinkedIn" target="_blank"><span class="screen-reader-text">linkedin</span></a></li>
+      <li class="twitter"><a href="https://twitter.com/kriswignes?lang=en" title="Twitter" target="_blank"><span class="screen-reader-text">twitter</span></a></li>
+      <li class="github"><a href="https://github.com/kwignes?tab=repositories" title="GitHub" target="_blank"><span class="screen-reader-text">github</span></a></li>
+      <li class="codepen"><a href="https://codepen.io/kwignes" title="Codepen" target="_blank"><span class="screen-reader-text">codepen</span></a></li>
+    </ul>
+  <p class="copyright">&copy; Kris Wignes 2019</p>
+</div>
+</footer>
+
+</div>
+  </body>
+</html>
