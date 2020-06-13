@@ -20,21 +20,17 @@ html {
 }
 
 body {
-  font: 1em/1.8 'Source Sans Pro', sans-serif;
-  color: #333;
+  font-family: 'Roboto', sans-serif;
+  color: #494949;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
+      font-size: 1.1em;
+      line-height: 1.5;
 }
 
-@media (min-width: 34em) {
-  body {
-      font-size: 1.15em;
-      line-height: 1.9;
-  }
-}
 
 a {
-  color: #177960;
+  color: #5996b3;
   text-decoration: none;
 }
 a strong {
@@ -69,7 +65,7 @@ img {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   margin: 1em 0 0.5em;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
 }
@@ -82,11 +78,6 @@ h1 {
       font-size: 3em;
   }
 }
-
-  h2 {
-      font-size: 1.66em;
-  }
-
 
 h3 {
   font-size: 22px;
@@ -133,16 +124,14 @@ footer {
    ========================================================================== */
 
 .header {
-    background-color: #fff;
-background: #f8f8f8;
-        border-bottom: 1px solid #e4e4e4;
+background: #f4f4f4;
     width: 100%;
-    background: #f8f8f8;
 }
 
 .header .container {
-  max-width: 100%;
+  max-width: 48em;
 }
+
 
 .header .container:after {
   display: block;
@@ -167,24 +156,24 @@ header .logo img {
 .header li a {
   display: block;
   padding: 15px;
-  border-right: 1px solid #f4f4f4;
   text-decoration: none;
+  color: #333;
 }
 
 
 .header li a:hover,
-.header .menu-btn:hover {
-  background-color: #f4f4f4;
+.header .menu-btn:hover,
+.header .active {
+  background-color: #eee;
 }
 
 .header .logo {
   display: block;
   float: left;
   text-decoration: none;
-  font-size: 1.4em;
     letter-spacing: 1px;
+    padding: 15px 0;
     color: #333;
-    line-height: 64px;
 }
 
 /* menu */
@@ -205,6 +194,7 @@ header .logo img {
   position: relative;
   user-select: none;
 }
+
 
 .header .menu-icon .navicon {
   background: #333;
@@ -397,12 +387,15 @@ span.screen-reader-text {
 /* Main
    ========================================================================== */
 section {
-  padding: 50px 0;
+  padding: 70px 0;
 }
 .container {
-  max-width: 34em;
+  max-width: 38em;
   margin: 0 auto;
   padding: 0 20px;
+}
+.home-wrap {
+  max-width: 34em;
 }
 
 h1 span {
@@ -416,8 +409,10 @@ h1 span {
 
 
 .layout {
-    display: flex;
     margin-bottom: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
 }
 
 #me summary {
@@ -432,9 +427,8 @@ h1 span {
     height: 100px;
     width: 100px;
     padding: 4px;
-    flex-shrink: 0;
     background-color: #fff;
-    margin-right: 20px;
+    margin: 0 auto 20px;
 }
 .shadow {
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 -1px 5px 0 rgba(0,0,0,.12), 0 3px 1px -2px rgba(0,0,0,.2);
@@ -451,18 +445,22 @@ h1 span {
 
 
 .posts .post {
-    margin-bottom: 30px;
-    padding-bottom: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
     border-bottom: 1px solid #eee;
 }
 .posts .entry p {
 margin: 0 0 10px;
-    line-height: 1.6;
 }
-a.read-more {
-    border-bottom: 1px solid;
+.posts .post a {
+  color: #5996b3;
+  text-decoration: none;
 }
 
+a.read-more {
+  color: #aaa;
+  display: none;
+}
 
 
 
@@ -472,8 +470,7 @@ a.read-more {
 
 footer {
   text-align: center;
-background: #f8f8f8;
-    background: linear-gradient(#f0f0f0, #f8f8f8 25%);
+  font-size: .85em;
 }
 footer:after {
   display: block;
