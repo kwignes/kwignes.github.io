@@ -87,10 +87,18 @@ h1 {
 h1 {
   font-size: 32px;
 }
+.post h1, .page h1 {
+  font-size: 42px;
+}
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 18px;
+}
+h3:before {
+    font-family: FontAwesome;
+    content: "\f101";
+    padding-right: 6px;
 }
 h4, h5, h6 {
   font-size: 18px;
@@ -482,7 +490,7 @@ h1 span {
 .posts .post {
     margin-bottom: 20px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #ddd;
 }
 .posts .entry p {
 margin: 0 0 10px;
