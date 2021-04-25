@@ -1,71 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="shortcut icon" href="img/favicon.ico">
-<title>Kris Wignes - Front-End Web Developer & Designer</title>
-<link rel="canonical" href="https://kriswignes.com/">
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<!-- Google Analytics -->
-<script>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Kris Wignes</title>
+	<!-- Google Analytics -->
+	<script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
 	ga('create', 'UA-65288513-4', 'auto');
-	ga('send', 'pageview', {
-	  'page': '{{ site.baseurl }}{{ page.url }}',
-	  'title': '{{ page.title | replace: "'", "\\'" }}'
-	});
-</script>
-<!-- End Google Analytics -->
-</head>
-
-<body>
-<div class="page-wrap">
-
-<header>
-	<div class="container">
-	<nav>
-		<p><a href="/">Kris Wignes</a></p>
+	ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->  
+  </head>
+  <body>
+  	<header>
+  		<div class="container">
+  			<div id="avatar-container">
+	    		<a class="avatar" href="/"></a>
+	  		</div>
+  		</div>
+  	</header>
+  	<main>
+  		<h1><span>Kris</span> Wignes</h1>
+	  	<p>Front-End Web Developer & Designer</p>
 		<ul class="social">
-			<li class="linkedin"><a href="https://ca.linkedin.com/in/kriswignes" title="LinkedIn" target="_blank"><span class="screen-reader-text">linkedin</span></a></li>
-			<li class="twitter"><a href="https://twitter.com/kriswignes?lang=en" title="Twitter" target="_blank"><span class="screen-reader-text">twitter</span></a></li>
-			<li class="github"><a href="https://github.com/kwignes?tab=repositories" title="GitHub" target="_blank"><span class="screen-reader-text">github</span></a></li>
-		</ul>
-	</nav>
-	</div>
-	<!-- / Container -->
-</header>
-
-<main>
-<section>
-<div class="container">
-	<img src="img/kris1.jpg" alt="Kris Wignes">
-		<h1>Front-End Web <span>Developer & Designer</span></h1>
-			<p>Hi, I'm Kris, a Front-End Developer from Vancouver, BC. I build high quality, responsive websites at <a href="https://www.exware.com/solutions/design/" target="_blank">Exware</a> for clients across North America.</p>
-		</div>
-		<!-- / Container -->
-	</section>
-</main>
-
-<footer>
-	<p>&copy; Kris Wignes 2019</p>
-</footer>
-
-
-</div>
-</body>
+		  <li><a href="https://ca.linkedin.com/in/kriswignes" title="LinkedIn" target="_blank">LinkedIn</a></li>
+		  <li><a href="https://github.com/kwignes?tab=repositories" title="GitHub" target="_blank">Github</a></li>
+		  <li><a href="https://codepen.io/kwignes" title="Codepen" target="_blank">Codepen</a></li>
+		</ul>	  	
+  	</main>
+  </body>
 </html>
