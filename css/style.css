@@ -1,21 +1,21 @@
 /* General */
 body {
-	font-family: 'Work Sans', sans-serif;
-	color: #000;
-	font-size: 16px;
+  font-family: 'Work Sans', sans-serif;
+  color: #000;
+  font-size: 16px;
 }
 a {
     color: #4a4a4a;
     text-decoration: none;
 }
 h1 {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 /* Header */
 header {
-	text-align: center;
-	padding: 40px 0 15px;
+  text-align: center;
+  padding: 40px 0 15px;
 }
 header .logo {
   text-decoration: none;
@@ -28,7 +28,7 @@ header .logo {
 
 /* Body */
 main {
-	text-align: center;
+  text-align: center;
 }
 #avatar-container {
     border-radius: 50%;
